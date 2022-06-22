@@ -83,6 +83,9 @@ hr {
     text-decoration: none;
     margin-top: 100px;   
 }
+#name span {
+    color: black;
+}
 /* hover 시 화면 커짐 */
 #search{
     transform: scale(1);
@@ -93,11 +96,11 @@ hr {
     transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
 }
 #search:hover {
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 #coffee{
     transform: scale(1);
@@ -108,11 +111,11 @@ hr {
     transition: all 0.3s ease-in-out;
 }
 #coffee:hover {
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 .banner{
@@ -124,11 +127,11 @@ hr {
     transition: all 0.3s ease-in-out;
 }
 .banner:hover {
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 /* hover 시 화면 커짐 end */
 .Store{
@@ -138,38 +141,99 @@ hr {
 
 }
 #coffee {
-    display: in;
+    display: inline;
     float: right;
-    width: 27%;
+    width: 30%;
+    height: 100%;
     margin-top: 0;
     margin-right: 0;
+
 }
 #search {
-    display: in;
-    float: left;
+    display: inline-block;
+    /* float: left; */
     width: 25%;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 20px;
+    /* margin-bottom: 75px; */
     margin-left: 120px;
-    margin-right: 120px;
+    /* margin-right: 120px; */
     background-color: #CFB7A3;
     
 }
 #ex2 {
-    float: left;
-    margin-left: 300px;
+    display:inline-block;
+    margin-left: 16%;
     color: rgb(39, 39, 39);
-    margin-top: 50px;
-    width: 16%;
+    margin-top: 30px;
+    width: 19%;
     background-color:#A88665 ;
 }
 video{
-    width: 100%;
-    height: 500px;
-    background-color: #CFB7A3;
-    display:block;
-    float: right;
-    margin: 0;
-    padding: 0;
+    display: inline;
+    width: 70%;
+    height: 0%;
+    display:inline-block;
+    /* float: right; */
+    background-color:#A88665 ;
+    /* background-color: #CFB7A3; */
 }
+
+  #ex3 {
+    width: 35px;
+    height: 44px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+
+  }
+
+  #introduce {
+    background-color: white;
+    margin-left: 50px;
+  }
+  #c1 {
+    position: relative;
+    display: inline-block;
+    /* margin-left: 50px; */
+    width: 5%;
+    height: 5%;
+    margin-bottom: 30px;
+  }
+  #c2 {
+    position: relative;
+    display: inline-block;
+    width: 5%;
+    height: 5%;
+  }
+  #c3 {
+    position: relative;
+    display: inline-block;
+    width: 5%;
+    height: 5%;
+  }
+  #ex4 {
+    position: relative;
+    display: inline-block;
+    
+  }
+  #ex3 img {
+    width: 35px;
+    height: 47px;
+    margin-top: 10px;
+  }
+  #wrapper{
+    height : 100%;
+  }
+  footer{
+    position : relative;
+    transform : translateY(-100%);
+    text-align: center;
+    margin-top: 0;
+    background-color: silver;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
 
