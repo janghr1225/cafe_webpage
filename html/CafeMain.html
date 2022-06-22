@@ -11,13 +11,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style type="text/css">	
         /* banner */
-        .banner {position: relative; width: 1665px; height: 500px; top: 0px;  margin:0 auto; padding:0; overflow: hidden;}
+        .banner {position: relative; width: 1870px; height: 450px; top: 0px;  margin:0 auto; padding:0; overflow: hidden;}
 	    .banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
-	    .banner ul li {float: left; width: 1665px; height: 500px; margin:0; padding:0;}
+	    .banner ul li {float: left; width: 1870px; height: 450px; margin:0; padding:0;}
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script language="JavaScript">
-        
+    <script language="JavaScript">   
         $(document).ready(function() {
 		var $banner = $(".banner").find("ul");
 
@@ -51,13 +50,9 @@
 <body>
     <header>        
         <nav>
-<<<<<<< HEAD:CafeMain.html
-            <a href="./CafeMain.html">
-                <img id="logo"src="./img/logo4.png" alt="로고">
-=======
-            <a>
+            <a id="name" href="./CafeMain.html">
                 <img id="logo"src="../img/logo4.png" alt="로고">
->>>>>>> 6dca22f903d30f0f95204474572eef2d6d23b517:html/CafeMain.html
+                <span>MAHALO</span>
             </a>
              <a href="#" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg" style="width: 20px;height: 20px; margin-top: 10px;">
             <ul id="menu">
@@ -77,44 +72,51 @@
     </header>
 		<div class="banner">
 			<ul>
-<<<<<<< HEAD:CafeMain.html
-				<li><a href="./menu_DRINKS_main.html"><img src="./img/mainBanner1.jpg" width="1665" height="500px"></a></li>
-				<li><a href="./menu_DRINKS_main.html"><img src="./img/mainBanner2.jpg" width="1665" height="500px"></a></li>
-				<li><a href="./menu_DRINKS_main.html"><img src="./img/mainBanner3.jpg" width="1665" height="500px"></a></li>
-				<li><a href="./menu_DRINKS_main.html"><img src="./img/mainBanner4.jpg" width="1665" height="500px"></a></li>
+				<li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner1.jpg" width="1870" height="450px"></a></li>
+				<li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner2.jpg" width="1870" height="450px"></a></li>
+				<li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner3.jpg" width="1870" height="450px"></a></li>
+				<li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner4.jpg" width="1870" height="450px"></a></li>
 			</ul>
 		</div>
-        <div>
-            <canvas class="background"> </canvas>
-        </div>
         <div class="Store">
-        <img src="./img/search.png" alt="매장찾기">
-=======
-				<li><a href="#"><img src="../img/mainBanner1.jpg" width="1700" height="500px"></a></li>
-				<li><a href="#"><img src="../img/mainBanner2.jpg" width="1700" height="500px"></a></li>
-				<li><a href="#"><img src="../img/mainBanner3.jpg" width="1700" height="500px"></a></li>
-				<li><a href="#"><img src="../img/mainBanner4.jpg" width="1700" height="500px"></a></li>
-			</ul>
-		</div>
-	</div>
-    <div class="Store">
-        <img src="../img/search.png" alt="매장찾기">
->>>>>>> 6dca22f903d30f0f95204474572eef2d6d23b517:html/CafeMain.html
-    </div>
-    <div class="ex1"></div>
-    
+            <tr>
+                <td> <a href="#"><img id="search" src="../img/search.png" alt="매장찾기" </a></td>
+                <td>
+                    <span id="ex2">
+                        <h2> &nbsp; 뉴크롭 원두를 즐겨보세요! </h2>
+                        <h4><br>
+                            생두를 구성하는 모든 성분은 시간이 지나면<br>
+                            조금씩 변하기 시작합니다.<br>
+                            <br>
+                            뉴크롭 커피는 당해년도 생산한 생두를 이용<br>
+                            하여 만든 커피입니다.<br>
+                            <br>
+                            신선한 향과 맛을 가진 뉴크롭 원두로 새로운<br>
+                            하루를 보내보세요!
+                        </h4>
+                    </span>
+                </td>
+                <td <a href="#"><img id="coffee" src="../img/coffee.png" alt="커피" </a></td>
+            </tr>
+            <div>
+            <article id="video"> <!--비디오 -->
+                <video style="margin-left: 500px;" muted autoplay loop>
+                    <source src="../img/mp4/coffee1.mp4" type="video/mp4">
+                    <strong>Your browser does not support the video tag.</strong>
+                </video> <!-- 비디오 끝 -->
+            </div>
   
 
 
 </body>
 </html>
 <script>
-    // $('#menu2').hover(()=>{ //Menu hover시 Drinks로 변화
-    //     $('#menu2').html('<p><a class="dfm" style= ""href="./menu_DRINKS_main.html"> Drinks </a><a class="dfm"  style="margin:0;" href="./menu_FOOD_main.html"> Food </a></p>');
+    $('#menu2').hover(()=>{ //Menu hover시 Drinks로 변화
+        $('#menu2').html('<span><a class="dfm" href="./menu_DRINKS_main.html"> Drinks </a> <a class="dfm"  style="margin:0;" href="./menu_FOOD_main.html"> Food </a></span>');
 
-    // },()=>{
-    //     $('#menu2').html('Menu');
-    // });
+    },()=>{
+        $('#menu2').html('Menu');
+    });
     
 
   
