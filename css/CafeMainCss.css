@@ -76,6 +76,7 @@ hr {
     margin-top: 120px;
     margin-left: 100px;
     z-index: 10;
+    
 }
 .background {
     display: inline;
@@ -84,6 +85,7 @@ hr {
     z-index: -5;
     width: 1700px;
     height: 500px;
+    
 }
 .mid article {
     display: inline-block;

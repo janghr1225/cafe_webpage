@@ -1,5 +1,6 @@
 # cafe project
 
+- cafename : MAHALO
 - color-theme
   - Main
     - #E15C2D :Full Of Life
