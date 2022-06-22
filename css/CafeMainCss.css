@@ -70,18 +70,6 @@ hr {
     color: silver;
 }
 
-/* .Store img {
-    position: relative;
-    display: inline-block;
-    margin-top: 30px;
-    margin-left: 150px; 
-} */
-.Store{
-    background-color: #A88665;
-    margin-bottom: 50px;
-    height: 417px;
-
-}
 
 #ex1 article h1 {
     display: inline-block;
@@ -143,30 +131,45 @@ hr {
     -o-transform: scale(1.2);
 }
 /* hover 시 화면 커짐 end */
+.Store{
+    background-color: #A88665;
+    margin-bottom: 50px;
+    height: 417px;
+
+}
 #coffee {
     display: in;
-    float: left;
+    float: right;
+    width: 27%;
     margin-top: 0;
-    margin-left: 150px;
     margin-right: 0;
 }
 #search {
     display: in;
     float: left;
-    margin-left: 150px;
-    margin-top: 60px;
-    margin-right: 0;
+    width: 25%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: #CFB7A3;
+    
 }
 #ex2 {
-    float: right;
-    margin-right: 160px;
-    color: #62442F;
-    margin-top: 30px;
+    float: left;
+    margin-left: 300px;
+    color: rgb(39, 39, 39);
+    margin-top: 50px;
+    width: 16%;
+    background-color:#A88665 ;
 }
 video{
     width: 100%;
     height: 500px;
     background-color: #CFB7A3;
-    display: inline;
+    display:block;
     float: right;
+    margin: 0;
+    padding: 0;
 }
+
