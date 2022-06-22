@@ -5,12 +5,8 @@ li{  /*초기화*/
     margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-#menu  li ul li {
-    float: none;
+	/* font: inherit; */
+	/* vertical-align: baseline; */
 }
 
 #menu li {
@@ -26,9 +22,13 @@ li{  /*초기화*/
     width: 80px;
     float: left;
     margin-top: 20px;
-    margin-left: 40px;
+    margin-left: 80px;
 }
-#menu li a {
+.m2 {
+    display: none;
+}
+
+#menu li a{
     display: block;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
@@ -62,26 +62,41 @@ hr {
     background-color: #e15c2d;
     height: 5px;
     border: none;
-    width: 100%;
+    width: 1665px;
     margin: 0px;
 }
 #menu li:hover > a {
     color: silver;
 }
 
-.Store {
+.Store img {
+    display: inline;
     position: relative;
     display: inline-block;
-    margin-top: 60px;
-    margin-left: 60px;
-    margin-bottom: 60px;
+    margin-top: 120px;
+    margin-left: 100px;
     z-index: 10;
 }
-.back {
+.background {
     display: inline;
-    background-color: #e15c2d;
+    background-color: #ee9878;
     position: relative;
-    z-index: 0;
+    z-index: -5;
+    width: 1700px;
+    height: 500px;
+}
+.mid article {
+    display: inline-block;
+    vertical-align: top;
+}
+.mid video {
     width: 100%;
     height: 500px;
+}
+.mid article p {
+    float: left;
+}
+#ex1 p{
+    display: inline-block;
+    
 }
