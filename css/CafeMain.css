@@ -10,7 +10,7 @@ li{  /*초기화*/
 
 #menu li {
     float: right;
-    display: inline-block;
+    display: block;
     position: relative;
     padding: 0;
     list-style: none;
@@ -33,7 +33,7 @@ li{  /*초기화*/
     display: inline-block;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     margin: 0;
     color: black;
     text-decoration: none;
@@ -41,7 +41,7 @@ li{  /*초기화*/
 #sign { /*sign in, sign out */
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
     color: black;
     text-decoration: none;
     float: right;
@@ -94,8 +94,8 @@ hr {
 /* 배너 넘기기 */
 .banner {
     position: relative;
-    width: 1870px;
-    height: 450px;
+    width: 2000px;
+    height: 500px;
     top: 0px;
     margin: 0 auto;
     padding: 0;
@@ -111,8 +111,8 @@ hr {
 
 .banner ul li {
     float: left;
-    width: 1870px;
-    height: 450px;
+    width: 2000px;
+    height: 500px;
     margin: 0;
     padding: 0;
 }
@@ -183,14 +183,12 @@ hr {
     width: 25%;
     margin-top: 50px;
     margin-left: 120px;
-    border-top: 140px;
-    border-left: 150px;
-    border-color: #A88665;
+
     
 }
 #ex2 { /*원두 설명*/
     display:inline-block;
-    margin-left: 16%;
+    margin-left: 18%;
     color: rgb(39, 39, 39);
     margin-top: 16px;
     width: 19%;
@@ -215,6 +213,7 @@ hr {
     display: inline-block;
     margin-top: 170px;
     margin-left: 170px;
+    font-size: larger;
 /* 이미지 */
 }
 #cafe1{ 
@@ -268,6 +267,9 @@ video{
     margin-left: 150px;
 }
 /* 비디오 끝 */
+#ex5{
+    font-size: larger;
+}
 
 /*  footer 부분 */
   #logo2 { /*footer 로고*/
@@ -285,7 +287,7 @@ video{
     margin-bottom: 10px;
   }
   #wrapper{ /* footer화면 내림*/
-    height : 240%;
+    height : 270%;
     display: block;
   }
   footer {
@@ -293,10 +295,10 @@ video{
     transform : translateY(-100%);
     text-align: center;
     margin-top: 0;
-    background-color: silver;
+    background-color: #CFB7A3;
     font-family: 'Noto Sans KR', sans-serif;
     display: block;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     list-style: none;
   }

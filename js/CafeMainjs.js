@@ -2,7 +2,7 @@
 //Menu hover시 Drinks와 Food
 $('#menu2').hover(() => {
     $('#menu2').html
-        ('<a>Menu</a><span><p><a id="dfm1" href="./menu_DRINKS_main.html">Drinks</a></p> <p> <a id="dfm" href="./menu_FOOD_main.html"><span> Food </span></a></p>');
+        ('<a style="color:silver;">Menu</a><span><p><a id="dfm1" href="./menu_DRINKS_main.html">Drinks</a></p> <p> <a id="dfm" href="./menu_FOOD_main.html"><span> Food </span></a></p>');
 
 }, () => { // 다시 메뉴로 변화
     $('#menu2').html('Menu');
@@ -19,7 +19,9 @@ $('#mypage').click(() => {
 $("#btn").click(function () {
     $('html').animate({ scrollTop: 0.01 }, 600);
 });
-$('#sign').hover(() => { //sign hover시 색 변화
+
+//sign hover시 색 변화
+$('#sign').hover(() => { 
     $('#sign').prop('style', 'color:silver')
 }, () => {
     $('#sign').prop('style', 'color:black')
@@ -41,6 +43,7 @@ $(window).scroll( function(){
     }); 
 });
 });
+
 
 
 // 배너 자동 넘기기

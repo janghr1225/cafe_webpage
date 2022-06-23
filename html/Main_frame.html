@@ -25,7 +25,7 @@
                 <span id="name2">MAHALO</span>
             </a>
             <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg"
-                style="width: 20px;height: 20px; margin-top: 10px;">
+                style="width: 25px;height: 25px; margin-top: 10px;">
             <ul id="menu">
                 <li> <a id="mypage" href="./login.html"> My Page </a></li>
                 <li> <a href="#"> MAHALO News </a></li>
@@ -50,11 +50,19 @@
 <script>
     $('#menu2').hover(() => { //Menu hover시 Drinks로 변화
         $('#menu2').html
-            ('<a>Menu</a><span><p><a id="dfm1" href="./menu_DRINKS_main.html">Drinks</a></p> <p> <a id="dfm" href="./menu_FOOD_main.html"><span> Food </span></a></p>');
+            ('<a style="color:silver;">Menu</a><span><p><a id="dfm1" href="./menu_DRINKS_main.html">Drinks</a></p> <p> <a id="dfm" href="./menu_FOOD_main.html"><span> Food </span></a></p>');
 
     }, () => {
         $('#menu2').html('Menu');
     });
+
+    // sign hover시 색 변화
+    $('#sign').hover(() => { 
+    $('#sign').prop('style', 'color:silver')
+}, () => {
+    $('#sign').prop('style', 'color:black')
+})
+
 
     // 로그인 전 마이페이지 클릭 시
     $('#mypage').click(() => { 
