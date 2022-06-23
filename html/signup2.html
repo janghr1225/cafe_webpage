@@ -22,7 +22,7 @@
         <p id="login_title">멤버십 가입</p>
         <p id="welcome"> JOIN MAHALO </p>
 
-        <input type="hidden" name="custNm" value="">
+        <!-- <input type="hidden" name="custNm" value="">
         <input type="hidden" name="diStr" value="MC0GCCqGSIb3DQIJAyEAnQS2dmYBkhi1V7KONezbRBV4urIk3OvsTmyblK3Jm/c=">
         <input type="hidden" name="mobile" id="mobile" value="">
         <input type="hidden" name="birthDt" id="birthDt" value="19980123">
@@ -32,15 +32,13 @@
         <input type="hidden" name="zipCd" id="zipCd">
         <input type="hidden" name="cashBillDiv" value="4">
         <input type="hidden" name="authGubun" id="">
-        <input type="hidden" id="birthDayYn" value="N">
+        <input type="hidden" id="birthDayYn" value="N"> -->
 
         <p class="sub_copy02">회원가입에 필요한 고객님의 정보를 아래의 입력란에 정확히 입력해주세요. </p>
 
-        <fieldset>
-            <legend>회원정보 입력</legend>
+        <!-- <fieldset> -->
             <div class="tableType01">
-                <table summary="" class="form">
-                    <caption></caption>
+                <table class="form">
                     <colgroup>
                         <col width="20%">
                         <col>
@@ -88,7 +86,7 @@
                                 <div class="ipt">
                                     <input type="hidden" id="mobileYn" value="N">
                                     <input type="text" id="mobile1" class="searchIn02" title="휴대폰 첫자리"
-                                        style="width:53px" value="" maxlength="4">- 
+                                        style="width:53px" value="" maxlength="4"> - 
                                     <input type="text" id="mobile2" class="searchIn02" title="휴대폰 중간자리"
                                         style="width:53px" value="" maxlength="4"> -
                                     <input type="text" id="mobile3" class="searchIn02" title="휴대폰 끝자리"
@@ -186,14 +184,15 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </fieldset>
+        <!-- </fieldset> -->
 
         <!-- button -->
         <div class="btn_wr04">
             <button type="button" href="#" class="btnType04" onclick="javascript:onProc();">가입하기</button>
             <button type="button" class="btnType04" onclick="javascript:history_back();">돌아가기</button>
         </div>
+        
+    </div>
 
 </body>
 <script>
@@ -330,7 +329,7 @@
     }
 </script>
 
-
+<!-- 주소 검색 -->
 <script>
     // document.getElementById("address_kakao").addEventListener("click", function(){ 
     function daumPostcode() {
