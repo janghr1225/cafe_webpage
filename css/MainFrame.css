@@ -10,11 +10,13 @@ li{  /*초기화*/
 
 #menu li {
     float: right;
+    display: block;
     position: relative;
-    margin: 15px 12px;
     padding: 0;
     list-style: none;
-    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 50px;
 }
 #logo {
     height: 90px;
@@ -51,11 +53,8 @@ li{  /*초기화*/
 #signimg {
     float: right;
 }
-#menu ul li a {
-    display: none;
-}
-
 hr {
+    display: block;
     background-color: #e15c2d;
     height: 5px;
     border: none;
@@ -89,38 +88,3 @@ hr {
     margin-top: 70px;
     margin-left: 10px;
 }
-
-/*  footer 부분 */
-  #logo2 { /*footer 로고*/
-    width: 35px;
-    height: 44px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
-
-  }
-  #logo2 img { 
-    width: 35px;
-    height: 47px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  #wrapper{ /* footer화면 내림*/
-    height : 200%;
-    display: block;
-  }
-  #ft li{
-  margin-bottom: 5px;
-  }
-  footer {
-    position : relative;
-    transform : translateY(-100%);
-    text-align: center;
-    margin-top: 0;
-    background-color: silver;
-    font-family: 'Noto Sans KR', sans-serif;
-    display: block;
-    font-weight: bold;
-    font-size: 12px;
-    list-style: none;
-  }
