@@ -6,69 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Cafe MAHALO </title>
-    <link rel="stylesheet" type="text/css" href="../css/CafeMainCss.css">
+    <link rel="stylesheet" type="text/css" href="../css/CafeMain.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style type="text/css">
         /* banner */
-        .banner {
-            position: relative;
-            width: 1870px;
-            height: 450px;
-            top: 0px;
-            margin: 0 auto;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .banner ul {
-            position: absolute;
-            margin: 0px;
-            padding: 0;
-            list-style: none;
-        }
-
-        .banner ul li {
-            float: left;
-            width: 1870px;
-            height: 450px;
-            margin: 0;
-            padding: 0;
-        }
+        
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script language="JavaScript">
-        $(document).ready(function () {
-            var $banner = $(".banner").find("ul");
-
-            var $bannerWidth = $banner.children().outerWidth();//이미지의 폭
-            var $bannerHeight = $banner.children().outerHeight(); // 높이
-            var $length = $banner.children().length;//이미지의 갯수
-            var rollingId;
-
-            //정해진 초마다 함수 실행
-            rollingId = setInterval(function () { rollingStart(); }, 6000);//다음 이미지로 롤링 애니메이션 할 시간차
-
-            function rollingStart() {
-                $banner.css("width", $bannerWidth * $length + "px");
-                $banner.css("height", $bannerHeight + "px");
-                //alert(bannerHeight);
-                //배너의 좌측 위치를 옮겨 준다.
-                $banner.animate({ left: - $bannerWidth + "px" }, 1500, function () { //숫자는 롤링 진행되는 시간이다.
-                    //첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
-                    $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
-                    //뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
-                    $(this).find("li:first").remove();
-                    //다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
-                    $(this).css("left", 0);
-                    //이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
-                });
-            }
-        });
-
-    </script>
 </head>
 <body>
     <header>
@@ -77,17 +24,12 @@
                 <img id="logo" src="../img/logo4.png" alt="로고">
                 <span id="name2">MAHALO</span>
             </a>
-            <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg"
-                style="width: 20px;height: 20px; margin-top: 10px;">
+            <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg" style="width: 30px;height: 30px; margin-top: 10px;">
             <ul id="menu">
                 <li> <a id="mypage" href="./login.html"> My Page </a></li>
                 <li> <a href="#"> MAHALO News </a></li>
                 <li> <a href="#"> Store </a></li>
                 <li> <a id="menu2"> Menu </a>
-                    <ul>
-                        <p class="m2"> <a href="./menu_DRINKS_main.html"> Drinks </a> </p>
-                        <p class="m2"> <a href="./menu_FOOD_main.html"> Food </a> </p>
-                    </ul>
                 </li>
 
             </ul>
@@ -96,14 +38,14 @@
     </header>
     <div class="banner">
         <ul>
-            <li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner1.jpg" width="1870"
-                        height="450px"></a></li>
-            <li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner2.jpg" width="1870"
-                        height="450px"></a></li>
-            <li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner3.jpg" width="1870"
-                        height="450px"></a></li>
-            <li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner4.jpg" width="1870"
-                        height="450px"></a></li>
+            <li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner1.jpg" width="2000"
+                        height="500px"></a></li>
+            <li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner2.jpg" width="2000"
+                        height="500px"></a></li>
+            <li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner3.jpg" width="2000"
+                        height="500px"></a></li>
+            <li><a class="banner" href="./menu_DRINKS_main.html"><img src="../img/mainBanner4.jpg" width="2000"
+                        height="500px"></a></li>
         </ul>
     </div>
     <div class="Store">
@@ -134,7 +76,7 @@
         <span id="cafeintroduce" class="left">
             <a id="ex4">
                 <h2 >편안한 분위기</h2>
-                <b>트렌디한무드를 담은MAHALO</b><br>
+                <b>트렌디한느낌을 담은MAHALO</b><br>
                 <br>
                 노출콘크리트 기법으로 천장은<br>
                 물론 입구부터 건물의 골조를&nbsp;<br>
@@ -151,21 +93,32 @@
             <img src="../img/cafe2.png" id="cafe2" class="right">
             <img src="../img/cafe3.png" id="cafe3" class="right">
         </span>
-        <!-- <div id="video">
+        <span id="video">
             <video muted autoplay loop>
                 <source src="../img/mp4/coffee1.mp4" type="video/mp4">
                 <strong>Your browser does not support the video tag.</strong>
-            </video> 
-        </div> -->
+            </video>
+            <a id="ex5">
+                <h2 > MAHALO !</h2>
+                <br>
+                MAHALO는 존경, 존중, 칭찬의 뜻을<br>
+                담고 있습니다.<br>
+                <br>
+                하와이에 가면 ALOHA 다음으로 가장<br>
+                많이 들을 수 있는 말로 고맙습니다!<br>
+                감사합니다! 라는 의미를 가지고 있<br>
+                습니다.<br>
+                <br>
+                무더운 여름  가끔 화도 나겠지만,<br>
+                사랑하는 연인, 가족들에게 먼저 <br>
+                말해보세요.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+                 <b> MAHALO!</b>  
+            </a>
+        </span>
 
-
-
-
-
-
-
-        <!-- 화면 내림 -->
+        <!-- footer 내림 -->
 <div id='wrapper'> </div>
+
 </body>
 <footer>
     <hr id="fhr">
@@ -176,34 +129,17 @@
             </a>
         </span>
     </div>
-    <ul id="ft">
-        <li><B>CAFE MAHALO</B></li>
-        <li>개인정보처리방침</li>
-        <li>사업자등록증 123-45-12345</li>
-        <li>Tel : 02-123-4567</li>
-    </ul>
+        <ul id="ft">
+            <li><B>CAFE MAHALO</B></li>
+            <li>개인정보처리방침</li>
+            <li>사업자등록증 123-45-12345</li>
+            <li>Tel : 02-123-4567</li>
+        </ul>
     <address>주소: 서울특별시 강남구 언주로</address>
+    <!-- 밑에 띄우기 -->
+    <li>&nbsp;</li>
+    <li>&nbsp;</li>
 </footer>
 
 </html>
-<script>
-    $('#menu2').hover(() => { //Menu hover시 Drinks로 변화
-        $('#menu2').html
-            ('<span><a href="./menu_DRINKS_main.html">Drinks&nbsp&nbsp&nbsp;</a> <a href="./menu_FOOD_main.html"><span> Food </span></a></span>');
-
-    }, () => {
-        $('#menu2').html('Menu');
-    });
-    $('#mypage').click(() => { // 로그인 전 마이페이지 클릭 시
-        alert("로그인 후 이용가능합니다."); //메세지 출력 후 로그인 페이지 이동
-    })
-    //로고 클릭 시 맨 위로
-    $("#btn").click(function () {
-        $('html').animate({ scrollTop: 0.01 }, 600);
-    });
-    $('#sign').hover(() => { //sign hover시 색 변화
-        $('#sign').prop('style', 'color:silver')
-    }, () => {
-        $('#sign').prop('style', 'color:black')
-    })
-</script>
+<script src="../js/CafeMainjs.js"></script>

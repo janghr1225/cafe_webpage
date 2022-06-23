@@ -10,11 +10,13 @@ li{  /*초기화*/
 
 #menu li {
     float: right;
+    display: block;
     position: relative;
-    margin: 15px 12px;
     padding: 0;
     list-style: none;
-    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 50px;
 }
 #logo {
     height: 90px;
@@ -31,7 +33,7 @@ li{  /*초기화*/
     display: inline-block;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     margin: 0;
     color: black;
     text-decoration: none;
@@ -39,7 +41,7 @@ li{  /*초기화*/
 #sign { /*sign in, sign out */
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
     color: black;
     text-decoration: none;
     float: right;
@@ -88,6 +90,31 @@ hr {
     color: black;
     margin-top: 70px;
     margin-left: 10px;
+}
+/* 배너 넘기기 */
+.banner {
+    position: relative;
+    width: 2000px;
+    height: 500px;
+    top: 0px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.banner ul {
+    position: absolute;
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+}
+
+.banner ul li {
+    float: left;
+    width: 2000px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
 }
 /* hover 시 화면 커짐 */
 #search{
@@ -138,7 +165,7 @@ hr {
 }
 /* hover 시 화면 커짐 end */
 .Store{
-    background-color: #A88665;
+    background-color: #CFB7A3;
     margin-bottom: 50px;
     height: 417px;
 }
@@ -156,19 +183,17 @@ hr {
     width: 25%;
     margin-top: 50px;
     margin-left: 120px;
-    border-top: 140px;
-    border-left: 150px;
-    border-color: #A88665;
+
     
 }
 #ex2 { /*원두 설명*/
     display:inline-block;
-    margin-left: 16%;
+    margin-left: 18%;
     color: rgb(39, 39, 39);
     margin-top: 16px;
     width: 19%;
 }
-#block{
+#block{/* 블럭 */
     position: relative;
     display: none;
     width: 280px;
@@ -177,37 +202,73 @@ hr {
     margin-top: 0px;
     /* float: right; */
 }
+/*카페 소개*/
 #cafeintroduce {
     position: relative;
     
 }
-#ex4 {
+/* 카페 소개 글 */
+#ex4 { 
     position: relative;
     display: inline-block;
-    margin-top: 200px;
-    margin-left: 190px;
+    margin-top: 170px;
+    margin-left: 170px;
+    font-size: larger;
+/* 이미지 */
 }
 #cafe1{ 
     position: relative;
     display: inline-block;
     width: 15%;
-    margin-top: 220px;
+    margin-top: 250px;
 }
 #cafe2{ 
     position: relative;
     display: inline-block;
     width: 15%;
-    margin-top: 80px;
-    padding: 5px;
+    margin-top: 100px;
+    padding: 10px;
 }
 #cafe3{
     position: relative;
     display: inline-block;
     width: 15%;
-    margin-top: 180px;
+    margin-top: 230px;
 }
 .right{
     float: right;
+}
+/* 스크롤 반응 fade in */
+.right
+{
+    opacity:0;
+}
+
+
+
+/* 비디오 시작 */
+#video{
+    background-color: #A88665;
+
+}
+/*  MAHALO  */
+#video a { 
+    border: 100%;
+    float: right;
+    margin-top: 150px;
+    margin-right: 400px;
+}
+video{
+    position: relative;
+    display: inline;
+    width: 50%;
+    float: left;
+    margin-top: 165px;
+    margin-left: 150px;
+}
+/* 비디오 끝 */
+#ex5{
+    font-size: larger;
 }
 
 /*  footer 부분 */
@@ -226,21 +287,18 @@ hr {
     margin-bottom: 10px;
   }
   #wrapper{ /* footer화면 내림*/
-    height : 200%;
+    height : 270%;
     display: block;
-  }
-  #ft li{
-  margin-bottom: 5px;
   }
   footer {
     position : relative;
     transform : translateY(-100%);
     text-align: center;
     margin-top: 0;
-    background-color: silver;
+    background-color: #CFB7A3;
     font-family: 'Noto Sans KR', sans-serif;
     display: block;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     list-style: none;
   }
