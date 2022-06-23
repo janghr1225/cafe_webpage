@@ -1,0 +1,97 @@
+/* 로그인,회원가입 페이지 */
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 약관동의 */
+label { 
+    display: block;
+}
+
+#login_title{
+    margin-top: 30px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#welcome{
+    color: rgb(225, 92, 45);
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+#subinfo{
+    font-size: small;
+
+}
+#btnLogin{
+    border-radius: 5px;
+    margin-left: 100px;
+    border: none;
+    background-color: rgb(168, 134, 101);
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+#btnSignup{
+    border-radius: 5px;
+    border: none;
+    margin-left: 107px;
+    background-color: rgb(168, 134, 101);
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+
+input[type=text] {
+    border-radius: 5px;
+    border-width: 1px;
+    width: 215px;
+    height: 25px;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.btn_next{
+    margin-left: 370px;
+    margin-top: 80px;
+}
+#btnNext{
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(168, 134, 101);
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#nomember{
+    font-size: smaller;
+    margin-left: 80px;
+
+}
+
+#login1{
+    margin-top: 80px;
+}
+
+/* textarea */
+.wr_agreement{  
+    font-family: 'Noto Sans KR', sans-serif;
+    resize: none;
+
+}
+
+/* dt태그 */
+.ft16B{
+    margin-left: 40px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+/* 전체동의 */
+.agree_all{
+    margin-left: 300px;
+}
