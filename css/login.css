@@ -96,3 +96,15 @@ input[type=text] {
 .agree_all{
     margin-left: 300px;
 }
+
+.btnType04 {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(168, 134, 101);
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    width: 100px;
+    height: 35px;
+}
+
