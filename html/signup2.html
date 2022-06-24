@@ -6,33 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/login.css"><!-- 스타일만 따로 파일 만들어서 html과 연결-->
+    <link rel="stylesheet" type="text/css" href="../css/MainFrame.css"><!-- 스타일만 따로 파일 만들어서 html과 연결-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><!-- 제이쿼리 연결  -->
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <!--카카오 주소 검색 API-->
-
     <title>회원가입</title>
-
 </head>
 
 <body>
+    <!-- 헤더 -->
     <div>
+        <header>
+            <nav>
+                <a id="name" href="./CafeMain.html">
+                    <img id="logo" src="../img/logo4.png" alt="로고">
+                    <span id="name2">MAHALO</span>
+                </a>
+                <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg"
+                    style="width: 20px;height: 20px; margin-top: 10px;">
+                <div>
+                    <ul id="menu">
+                        <li> <a id="mypage" href="./login.html"> My Page </a></li>
+                        <li> <a href="./CAFEnews.html"> MAHALO News </a></li>
+                        <li> <a href="./searchStore.html"> Store </a></li>
+                        <li> <a id="menu2"> Menu </a>
+                            <ul>
+                                <p class="m2"> <a href="./menu_DRINKS_main.html"> Drinks </a> </p>
+                                <p class="m2"> <a href="./menu_FOOD_main.html"> Food </a> </p>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+        </header>
+    </div>
+
+
+
+    <div id="loginbody">
         <p id="login_title">멤버십 가입</p>
         <p id="welcome"> JOIN MAHALO </p>
-
-        <!-- <input type="hidden" name="custNm" value="">
-        <input type="hidden" name="diStr" value="MC0GCCqGSIb3DQIJAyEAnQS2dmYBkhi1V7KONezbRBV4urIk3OvsTmyblK3Jm/c=">
-        <input type="hidden" name="mobile" id="mobile" value="">
-        <input type="hidden" name="birthDt" id="birthDt" value="19980123">
-        <input type="hidden" name="smsRcvYn" id="smsRcvYn">
-        <input type="hidden" name="email" id="email" value="">
-        <input type="hidden" name="emailRcvYn" id="emailRcvYn">
-        <input type="hidden" name="zipCd" id="zipCd">
-        <input type="hidden" name="cashBillDiv" value="4">
-        <input type="hidden" name="authGubun" id="">
-        <input type="hidden" id="birthDayYn" value="N"> -->
 
         <p class="sub_copy02">회원가입에 필요한 고객님의 정보를 아래의 입력란에 정확히 입력해주세요. </p>
 
@@ -70,8 +87,8 @@
                             <th scope="row"><label for="">비밀번호(필수)</label></th>
                             <td>
                                 <div class="ipt" style="position:relative;">
-                                    <input type="password" class="searchIn02" style="width:182px" id="custPw"
-                                        name="custPw" maxlength="20">
+                                    <input type="password" class="searchIn02" style="width:182px;" id="custPw"
+                                        name="custPw" maxlength="20"> <span>비밀번호는 영문,숫자,특수문자(~!@#$%^&*+)의 8~12글자</span>
                                 </div>
                             </td>
                         </tr>
@@ -105,7 +122,7 @@
                                 <select title="검색조건" class="formSelect" style="width:120px;" id="domain" name="domain"
                                     onchange="change_email()">
                                     <option value="">선택하세요</option>
-                                    <option value="self">직접 입력</option>
+                                    <option value="">직접 입력</option>
                                     <option value="gmail.com">gmail.com</option>
                                     <option value="naver.com">naver.com</option>
                                     <option value="daum.net">daum.net</option>
@@ -191,6 +208,31 @@
             <button type="button" href="#" class="btnType04" onclick="javascript:onProc();">가입하기</button>
             <button type="button" class="btnType04" onclick="javascript:history_back();">돌아가기</button>
         </div>
+
+
+            <!-- 풋터 -->
+        <div id='wrapper'> </div>
+        <footer style="transform : translateY(50%);">
+            <hr id="fhr">
+            <div id="logo2">
+                <span id="btn">
+                    <a href="#">
+                        <img src="../img/logo3.png">
+                    </a>
+                </span>
+            </div>
+            <ul id="ft">
+                <li><B>CAFE MAHALO</B></li>
+                <li>개인정보처리방침</li>
+                <li>사업자등록증 123-45-12345</li>
+                <li>Tel : 02-123-4567</li>
+            </ul>
+            <address>주소: 서울특별시 강남구 언주로</address>
+
+            <!-- <!-- footer 띄우기  -->
+            <li class="none"> &nbsp; </li>
+        </footer> 
+    
         
     </div>
 
@@ -219,7 +261,7 @@
         // console.log(domain.options.selectedIndex); // select option태그에서 선택한 index 번호를 출력함
         // console.log(domain.options[2].value);
         //자바스크립트 변수는 var set let 
-        var eos = email_3.options.selectedIndex;
+        var eos = domain.options.selectedIndex;
         console.log(eos);
         console.log(domain.options[eos].value);
         //email2 id안에다가 email_3.options[ eos  ].value를 넣어주면 된다.
@@ -253,7 +295,6 @@
         var birth3 = document.getElementById("birthDt3");   //일
 
         //필수인 것들을 공백으로 입력되면 안된게 검사함
-        if (true) {
             if (name.value == '') {
                 alert("이름을 입력하세요");
                 name.focus();
@@ -294,19 +335,7 @@
                 tel.focus();
                 return false;
             }
-            if (birth2.value == '') {
-                alert("생년월일을 모두 입력하세요");
-                tel.focus();
-                return false;
-            }
-            if (birth3.value == '') {
-                alert("생년월일을 모두 입력하세요");
-                tel.focus();
-                return false;
-            }
-        } else {
-            alert("가입되었습니다. 환영합니다.");
-        }
+            
 
         //비밀번호는 영문자 숫자 특수문자 8~12자 사이만 가능 - 1단계 - 정규표현식 /  /
         var pwRdq = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[~!@#$%^&*+])[A-Za-z\d[~!@#$%^&*+]{8,12}$/
@@ -325,6 +354,8 @@
             return false;
         }
 
+        alert("가입되었습니다. 환영합니다 :)");
+        location.href="./CafeMain_signout.html";
 
     }
 </script>
