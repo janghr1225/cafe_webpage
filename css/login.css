@@ -24,6 +24,7 @@ label {
     font-size: xx-large;
     font-weight: bolder;
     /* position: absolute; */
+    /* position: relative; */
 }
 
 #welcome{
@@ -120,11 +121,12 @@ input[type=text] {
 
 /* 테이블 css */
 table {
-    width: 100%;
     border-top: 1px solid #c5c5c5;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+    width: 1000px;
+	table-layout: fixed;
 }
 th, td {
     border-bottom: 1px solid #c5c5c5;
@@ -142,4 +144,8 @@ th:first-child, td:first-child {
 
 .loginbody{
     text-align: center;
+}
+
+span{
+    font-size: small;
 }
