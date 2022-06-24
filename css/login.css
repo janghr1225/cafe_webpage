@@ -10,10 +10,20 @@ label {
     display: block;
 }
 
+#loginbody{
+    top: 0px;
+    margin: 0 auto;
+    margin-top: 300px;
+    padding: 0;
+    position: absolute; /*relative;*/
+    width: 100%;
+}
+
 #login_title{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     font-size: xx-large;
     font-weight: bolder;
+    /* position: absolute; */
 }
 
 #welcome{
@@ -128,4 +138,8 @@ th:first-child, td:first-child {
 
 .btn_wr04{
     margin-top: 100px;
+}
+
+.loginbody{
+    text-align: center;
 }
