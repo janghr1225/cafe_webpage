@@ -108,3 +108,97 @@ a:hover {
 #showDrinkList {
   margin-bottom: 3em;
 }
+/*모달창 띄워주기*/
+#leaveModal {
+  border: none;
+  float: right;
+  margin: 2em 1em 0 0;
+}
+.modal2.show {
+  display: block;
+  z-index: 100;
+  height: 100%;
+}
+.modal2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#relative_body2 {
+  position: relative;
+  margin-top: 15%;
+  height: 70vh;
+}
+.modal_body {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 50em;
+  max-width: 60em;
+  max-height: 40em;
+  height: 30em;
+  padding: 25px;
+  /* text-align: center; */
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgb(34 36 38 / 15%);
+  transform: translateX(-50%) translateY(-100%);
+  overflow: hidden;
+}
+#menuMainWrap2 {
+  width: 80%;
+  height: 80%;
+}
+#DetailsWrap {
+  display: inline-flex;
+  margin: 0 auto;
+}
+#drinkImg {
+  display: inline-block;
+  width: 20em;
+}
+#drinkImg:hover {
+  display: inline-block;
+  width: 20em;
+  transform: scale(1.2);
+}
+table,
+th,
+td {
+  border: 1px solid #e15c2d;
+  width: 27em;
+  text-align: center;
+  font-size: 13px;
+}
+#subtype {
+  font-size: 3em;
+  color: #e15c2d;
+  text-align: left;
+  display: inline-block;
+  margin: 0.3em;
+}
+#InfoWrap {
+  display: inline-block;
+  width: 22em;
+  position: absolute;
+  /* margin: 2em; */
+}
+#Kname {
+  height: 2em;
+  font-size: 1.5em;
+}
+#engName {
+  height: 2em;
+}
+#detailDes {
+  height: 4em;
+}
+#allergy {
+  margin-top: 1em;
+  height: 2em;
+}
