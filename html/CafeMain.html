@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav>
             <a id="name" href="./CafeMain.html">
                 <img id="logo" src="../img/logo4.png" alt="로고">
@@ -69,8 +69,8 @@
                     <img id="coffee" src="../img/coffee.png" alt="커피"></a>
             </td>
         </tr>
-        <img src="../img/cafe1.png" id="block">
-        <!--block-->
+    </div>
+    <div class="introduce">
         <span id="cafeintroduce" class="left">
             <a id="ex4">
                 <h2 >편안한 분위기</h2>
@@ -91,7 +91,8 @@
             <img src="../img/cafe2.png" id="cafe2" class="right">
             <img src="../img/cafe3.png" id="cafe3" class="right">
         </span>
-        <span id="video">
+    </div>
+    <div class="introduce2">       
             <video muted autoplay loop>
                 <source src="../img/mp4/coffee1.mp4" type="video/mp4">
                 <strong>Your browser does not support the video tag.</strong>
@@ -112,32 +113,28 @@
                 말해보세요.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
                  <b> MAHALO!</b>  
             </a>
-        </span>
-
+        
+    </div>
         <!-- footer 내림 -->
 <div id='wrapper'> </div>
 
-</body>
 <footer>
-    <hr id="fhr">
-    <div id="logo2">
-        <span id="btn">
-            <a href="#">
-                <img src="../img/logo3.png">
-            </a>
-        </span>
-    </div>
-        <ul id="ft">
-            <li><B>CAFE MAHALO</B></li>
-            <li>개인정보처리방침</li>
-            <li>사업자등록증 123-45-12345</li>
-            <li>Tel : 02-123-4567</li>
-        </ul>
+    <div class="footer">
+    <hr> 
+        <a href="#" id="btn">
+            <img src="../img/logo3.png">
+        </a>
+    <ul id="ft">
+        <li><B>CAFE MAHALO</B></li>
+        <li>개인정보처리방침</li>
+        <li>사업자.등록증 123-45-12345</li>
+        <li>Tel : 02-123-4567</li>
+    </ul>
     <address>주소: 서울특별시 강남구 언주로</address>
-    <!-- 밑에 띄우기 -->
     <li>&nbsp;</li>
-    <li>&nbsp;</li>
+    </div>
 </footer>
 
+</body>
 </html>
 <script src="../js/CafeMainjs.js"></script>
