@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/searchStore.css"><!-- 스타일만 따로 파일 만들어서 html과 연결-->
+    <link rel="stylesheet" type="text/css" href="../css/MainFrame.css"><!-- 스타일만 따로 파일 만들어서 html과 연결-->
+    <link rel="stylesheet" type="text/css" href="../css/login.css"><!-- 스타일만 따로 파일 만들어서 html과 연결-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><!-- 제이쿼리 연결  -->
+    <!-- <script type="text/javascript" src="/js/bootstrap.js"></script> -->
+    <!-- 부트스트랩 css 사용 -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <title>MAHALO | 매장찾기</title>
+</head>
+
+<body>
+
+    <!-- 헤더 -->
+    <div>
+        <header>
+            <nav>
+                <a id="name" href="./CafeMain.html">
+                    <img id="logo" src="../img/logo4.png" alt="로고">
+                    <span id="name2">MAHALO</span>
+                </a>
+                <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg"
+                    style="width: 20px;height: 20px; margin-top: 10px;">
+                <div>
+                    <ul id="menu">
+                        <li> <a id="mypage" href="./login.html"> My Page </a></li>
+                        <li> <a href="./CAFEnews.html"> MAHALO News </a></li>
+                        <li> <a href="./searchStore.html"> Store </a></li>
+                        <li> <a id="menu2"> Menu </a>
+                            <ul>
+                                <p class="m2"> <a href="./menu_DRINKS_main.html"> Drinks </a> </p>
+                                <p class="m2"> <a href="./menu_FOOD_main.html"> Food </a> </p>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+        </header>
+    </div>
+
+    <!-- 바디 -->
+    <div id="loginbody">
+        <p id="search_title">매장 찾기</p>
+        <!-- 검색 창 -->
+        <div class="search_wrap">
+            <div id="searchlocal">
+                <label class="local">
+                    <span class="label">지역검색</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- 시/도 -->
+                    <select name="" id="depth1" class="area_sel">
+                        <option value="">전체</option>
+                        <option value="18">서울특별시</option>
+                        <option value="19">경기도</option>
+                        <option value="32">인천광역시</option>
+                        <option value="20">대전광역시</option>
+                        <option value="21">충청북도</option>
+                        <option value="26">충청남도</option>
+                        <option value="22">강원도</option>
+                        <option value="23">경상북도</option>
+                        <option value="24">경상남도</option>
+                        <option value="25">제주도</option>
+                        <option value="27">울산광역시</option>
+                        <option value="28">부산광역시</option>
+                        <option value="29">광주광역시</option>
+                        <option value="31">전라북도</option>
+                        <option value="30">전라남도</option>
+                        <option value="33">대구광역시</option>
+                        <option value="34">세종특별자치시</option>
+                    </select>&nbsp;&nbsp;
+                    <!-- 시/구/군 -->
+                    <select name="" id="depth2" class="area_sel">
+                        <option value="">전체</option>
+                        <option value="37">강남구</option>
+                        <option value="38">강동구</option>
+                        <option value="39">강북구</option>
+                        <option value="40">강서구</option>
+                        <option value="41">관악구</option>
+                        <option value="42">광진구</option>
+                        <option value="43">구로구</option>
+                        <option value="44">금천구</option>
+                        <option value="45">노원구</option>
+                        <option value="46">도봉구</option>
+                        <option value="47">동대문구</option>
+                        <option value="48">동작구</option>
+                        <option value="49">마포구</option>
+                        <option value="50">서대문구</option>
+                        <option value="51">서초구</option>
+                        <option value="52">성동구</option>
+                        <option value="53">성북구</option>
+                        <option value="54">송파구</option>
+                        <option value="55">양천구</option>
+                        <option value="56">영등포구</option>
+                        <option value="57">용산구</option>
+                        <option value="58">은평구</option>
+                        <option value="59">종로구</option>
+                        <option value="60">중구</option>
+                        <option value="61">중랑구</option>
+                        <option value="62">고양시</option>
+                        <option value="63">부천시</option>
+                        <option value="64">성남시</option>
+                        <option value="65">수원시</option>
+                        <option value="66">안산시</option>
+                        <option value="67">용인시</option>
+                        <option value="68">안양시</option>
+                        <option value="69">의왕시</option>
+                        <option value="70">의정부시</option>
+                        <option value="71">이천시</option>
+                        <option value="72">파주시</option>
+                        <option value="73">평택시</option>
+                        <option value="74">포천시</option>
+                        <option value="75">하남시</option>
+                        <option value="76">화성시</option>
+                        <option value="77">과천시</option>
+                        <option value="78">광명시</option>
+                        <option value="79">광주시</option>
+                        <option value="80">구리시</option>
+                        <option value="81">군포시</option>
+                        <option value="82">김포시</option>
+                        <option value="83">남양주시</option>
+                        <option value="84">동두천시</option>
+                        <option value="85">시흥시</option>
+                        <option value="86">안성시</option>
+                        <option value="88">오산시</option>
+                        <option value="89">여주시</option>
+                        <option value="90">양주시</option>
+                        <option value="91">가평군</option>
+                        <option value="92">양평군</option>
+                        <option value="93">연천군</option>
+                        <option value="94">계양구</option>
+                        <option value="95">남구</option>
+                        <option value="96">남동구</option>
+                        <option value="97">동구</option>
+                        <option value="98">부평구</option>
+                        <option value="99">서구</option>
+                        <option value="100">연수구</option>
+                        <option value="101">중구</option>
+                        <option value="102">옹진군</option>
+                        <option value="103">강화군</option>
+                        <option value="104">대덕구</option>
+                        <option value="105">동구</option>
+                        <option value="106">서구</option>
+                        <option value="107">유성구</option>
+                        <option value="108">중구</option>
+                        <option value="109">제천시</option>
+                        <option value="110">청주시</option>
+                        <option value="111">충주시</option>
+                        <option value="112">괴산군</option>
+                        <option value="113">음성군</option>
+                        <option value="114">단양군</option>
+                        <option value="115">옥천군</option>
+                        <option value="116">영동군</option>
+                        <option value="117">증평군</option>
+                        <option value="118">진천군</option>
+                        <option value="119">보은군</option>
+                        <option value="120">천안시</option>
+                        <option value="121">공주시</option>
+                        <option value="122">논산시</option>
+                        <option value="123">계룡시</option>
+                        <option value="124">보령시</option>
+                        <option value="125">아산시</option>
+                        <option value="126">서산시</option>
+                        <option value="127">당진시</option>
+                        <option value="128">청양군</option>
+                        <option value="129">홍성군</option>
+                        <option value="130">예산군</option>
+                        <option value="131">태안군</option>
+                        <option value="132">금산군</option>
+                        <option value="133">부여군</option>
+                        <option value="134">서천군</option>
+                        <option value="135">원주시</option>
+                        <option value="136">강릉시</option>
+                        <option value="137">태백시</option>
+                        <option value="138">속초시</option>
+                        <option value="139">삼척시</option>
+                        <option value="140">춘천시</option>
+                        <option value="141">동해시</option>
+                        <option value="142">횡성군</option>
+                        <option value="143">영월군</option>
+                        <option value="144">평창군</option>
+                        <option value="145">정선군</option>
+                        <option value="146">철원군</option>
+                        <option value="147">화천군</option>
+                        <option value="148">양구군</option>
+                        <option value="149">인제군</option>
+                        <option value="150">고성군</option>
+                        <option value="151">홍천군</option>
+                        <option value="152">양양군</option>
+                        <option value="153">안동시</option>
+                        <option value="154">구미시</option>
+                        <option value="155">포항시</option>
+                        <option value="156">영천시</option>
+                        <option value="157">영주시</option>
+                        <option value="158">경주시</option>
+                        <option value="159">김천시</option>
+                        <option value="160">경산시</option>
+                        <option value="161">상주시</option>
+                        <option value="162">문경시</option>
+                        <option value="163">청도군</option>
+                        <option value="164">고령군</option>
+                        <option value="165">성주군</option>
+                        <option value="166">칠곡군</option>
+                        <option value="167">군위군</option>
+                        <option value="168">예천군</option>
+                        <option value="169">의성군</option>
+                        <option value="170">봉화군</option>
+                        <option value="171">울진군</option>
+                        <option value="172">울릉군</option>
+                        <option value="173">영덕군</option>
+                        <option value="174">청송군</option>
+                        <option value="175">영양군</option>
+                        <option value="176">진주시</option>
+                        <option value="177">통영시</option>
+                        <option value="178">사천시</option>
+                        <option value="179">김해시</option>
+                        <option value="180">밀양시</option>
+                        <option value="181">거제시</option>
+                        <option value="182">창원시</option>
+                        <option value="183">양산시</option>
+                        <option value="184">함안군</option>
+                        <option value="185">창녕군</option>
+                        <option value="186">고성군</option>
+                        <option value="187">산청군</option>
+                        <option value="188">남해군</option>
+                        <option value="189">하동군</option>
+                        <option value="190">의령군</option>
+                        <option value="191">합천군</option>
+                        <option value="192">함양군</option>
+                        <option value="193">거창군</option>
+                        <option value="194">제주시</option>
+                        <option value="195">서귀포시</option>
+                        <option value="196">남구</option>
+                        <option value="197">동구</option>
+                        <option value="198">북구</option>
+                        <option value="199">중구</option>
+                        <option value="200">울주군</option>
+                        <option value="201">강서구</option>
+                        <option value="202">금정구</option>
+                        <option value="203">남구</option>
+                        <option value="204">남동구</option>
+                        <option value="205">동구</option>
+                        <option value="206">동래구</option>
+                        <option value="207">부산진구</option>
+                        <option value="208">북구</option>
+                        <option value="209">사상구</option>
+                        <option value="210">사하구</option>
+                        <option value="211">서구</option>
+                        <option value="212">수영구</option>
+                        <option value="213">연제구</option>
+                        <option value="214">영도구</option>
+                        <option value="215">중구</option>
+                        <option value="216">해운대구</option>
+                        <option value="217">기장군</option>
+                        <option value="218">광산구</option>
+                        <option value="219">남구</option>
+                        <option value="220">동구</option>
+                        <option value="221">북구</option>
+                        <option value="222">서구</option>
+                        <option value="223">정읍시</option>
+                        <option value="224">남원시</option>
+                        <option value="225">김제시</option>
+                        <option value="226">전주시</option>
+                        <option value="227">익산시</option>
+                        <option value="228">군산시</option>
+                        <option value="229">순창군</option>
+                        <option value="230">고창군</option>
+                        <option value="231">완주군</option>
+                        <option value="232">부안군</option>
+                        <option value="233">진안군</option>
+                        <option value="234">장수군</option>
+                        <option value="235">임실군</option>
+                        <option value="236">무주군</option>
+                        <option value="237">목포시</option>
+                        <option value="238">여수시</option>
+                        <option value="239">광양시</option>
+                        <option value="240">순천시</option>
+                        <option value="241">나주시</option>
+                        <option value="242">장성군</option>
+                        <option value="243">장흥군</option>
+                        <option value="244">완도군</option>
+                        <option value="245">강진군</option>
+                        <option value="246">담양군</option>
+                        <option value="247">진도군</option>
+                        <option value="248">곡성군</option>
+                        <option value="249">해남군</option>
+                        <option value="250">신안군</option>
+                        <option value="251">영암군</option>
+                        <option value="252">구례군</option>
+                        <option value="253">고흥군</option>
+                        <option value="254">무안군</option>
+                        <option value="255">보성군</option>
+                        <option value="256">함평군</option>
+                        <option value="257">화순군</option>
+                        <option value="258">영광군</option>
+                        <option value="259">남구</option>
+                        <option value="260">달서구</option>
+                        <option value="261">동구</option>
+                        <option value="262">북구</option>
+                        <option value="263">서구</option>
+                        <option value="264">수성구</option>
+                        <option value="265">중구</option>
+                        <option value="266">달성군</option>
+                        <option value="299">영주시</option>
+                        <option value="300">청원군</option>
+                        <option value="301">마산시</option>
+                        <option value="318">미추홀구</option>
+                    </select>
+
+                    <button type="button" id="btnSearch" onclick="getJSON()"> 검색 </button>
+                </label>
+            </div>
+        </div>
+
+        <!-- 매장 리스트 테이블 -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>지역</th>
+                    <th>매장명</th>
+                    <th>주소</th>
+                    <th>전화번호</th>
+                </tr>
+            </thead>
+            <!-- <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+            </tbody> -->
+            <tbody id="table_body">
+
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 풋터 -->
+    <div id='wrapper'> </div>
+    <footer>
+        <hr id="fhr">
+        <div id="logo2">
+            <span id="btn">
+                <a href="#">
+                    <img src="../img/logo3.png">
+                </a>
+            </span>
+        </div>
+        <ul id="ft">
+            <li><B>CAFE MAHALO</B></li>
+            <li>개인정보처리방침</li>
+            <li>사업자등록증 123-45-12345</li>
+            <li>Tel : 02-123-4567</li>
+        </ul>
+        <address>주소: 서울특별시 강남구 언주로</address>
+    
+        <!-- <!-- footer 띄우기  -->
+        <li class="none"> &nbsp; </li>
+    </footer> 
+
+</body>
+
+</html>
+<script src="../js/store.js"></script>
+<script>
+    
+    //json 데이터 가져오기
+    function getJSON(){
+        $.ajax({
+            type:"get", //get방식으로 가져오기
+            url:"store.js",    //가져올 경로
+            dataType:"json",
+            success: function(data){
+                console.log("통신성공");
+                console.log(data);
+                str = '<TR>'; 
+                    $.each(data , function(i){
+                        str += '<TD>' + data[i].local + '</TD><TD>' + data[i].store + '</TD><TD>' + data[i].addr + '</TD><TD>' + data[i].tel + '</TD>';
+                        str += '</TR>';
+                    });
+                $('.table_body').append(str);
+            },
+            error:function(){
+                console.log("통신에러");
+            }
+        })
+    }
+
+
+</script>
