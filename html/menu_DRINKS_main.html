@@ -5,38 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MAHALO DRINK MENU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/menu_DRINKS_main.css" />
-    <!-- <link rel="stylesheet" href="../css/CafeMainCss.css" /> -->
   </head>
   <body>
-    <!--header 나중에 추가하기-->
-    <!-- <header>
-      <nav>
-        <a id="name" href="./CafeMain.html">
-          <img id="logo" src="../img/logo4.png" alt="로고" />
-          <span>MAHALO</span>
-        </a>
-        <a href="#" id="sign"> Sign in </a>
-        <img
-          src="../img/sign.png"
-          id="signimg"
-          style="width: 20px; height: 20px; margin-top: 10px"
-        />
-        <ul id="menu">
-          <li><a href="#"> My Page </a></li>
-          <li><a href="#"> M News </a></li>
-          <li><a href="#"> Store </a></li>
-          <li>
-            <a id="menu2"> Menu </a>
-            <ul>
-              <p class="m2"><a href="#"> Drinks </a></p>
-              <p class="m2"><a href="#"> Food </a></p>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <hr />
-    </header> -->
+    <div class="modal2">
+      <div id="relative_body2">
+        <div class="modal_body">
+          <h1 id="subtype"></h1>
+          <button type="button" id="leaveModal">
+            <img
+              id="leaveBtn"
+              src="../img/menu_Drinks/delete_icon.png"
+              style="width: 2em"
+            />
+          </button>
+          <div id="menuMainWrap2">
+            <img id="drinkImg" />
+            <div id="InfoWrap">
+              <div id="Kname"></div>
+              <div id="engName"></div>
+              <div id="detailDes"></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>1회 제공량 (kcal)</th>
+                    <th>당류 (g)</th>
+                    <th>단백질</th>
+                    <th>포화지방</th>
+                    <th>나트륨</th>
+                    <th>카페인</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                  <tr>
+                    <td id="cal"></td>
+                    <td id="sug"></td>
+                    <td id="pro"></td>
+                    <td id="fat"></td>
+                    <td id="sod"></td>
+                    <td id="caf"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div id="allergy"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="menuMainWrap">
       <div id="categoryWrap">
@@ -57,7 +79,7 @@
     </div>
     <!--footer 나중에 추가하기-->
   </body>
-  <!-- <script src="../js/menu_DRINKS_main.js"></script> 원본-->
   <script src="../js/menu_DRINKS_json.js"></script>
   <script src="../js/menu_DRINKS_main.js"></script>
+  <!-- <script src="../js/menu_DRINKS_details.js"></script> -->
 </html>
