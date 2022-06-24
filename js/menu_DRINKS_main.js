@@ -1,357 +1,688 @@
-//json으로 음료 분류
-let drinkMenu = {
-  data: [
-    {
-      //1
-      name: "프리미엄 블랜드 아메리카노", //이름
-      subtype: "커피", //분류
-      engname: "Premium Blend Americano", //영문이름
-      calories: 13, //칼로리
-      sugar: 0, //당류
-      protein: 1, //단백질
-      transfat: 0.1, //포화지방
-      sodium: 4, //나트륨
-      caffeine: 233, //카페인
-      //설명
-      description:
-        "화사한 산미와 과일과 같은 달콤함, 깔끔한 후미를 즐길수 있는 커피",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/1_premiumBlendAmericano.png">',
-    },
-    {
-      //2
-      name: "카페라떼",
-      subtype: "커피",
-      engname: "Caffe Latte",
-      calories: 180,
-      sugar: 13,
-      protein: 8,
-      transfat: 6,
-      sodium: 130,
-      caffeine: 127,
-      description:
-        "진한 에스프레소에 우유를 넣어 풍부한 커피향을 부드럽게 즐길 수 있는 커피",
-      img: '<img src="./img/menu_Drinks/2_cafeLatte.png">',
-      allergen: "알레르기 유발요인 : 우유",
-    },
-    {
-      //3
-      name: "콜드브루 라떼", //이름
-      subtype: "커피", //분류
-      engname: "Cold Brew Latte", //영문이름
-      calories: 125, //칼로리
-      sugar: 9, //당류
-      protein: 5, //단백질
-      transfat: 3.9, //포화지방
-      sodium: 85, //나트륨
-      caffeine: 148, //카페인
-      //설명
-      description: "콜드브루 커피의 풍부한 풍미와 우유의 고소함이 더해진 라떼",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/3_coldBrewLatte.png">',
-      allergen: "알레르기 유발요인 : 우유",
-    },
-    {
-      //4
-      name: "디카페인 바닐라 딜라이트", //이름
-      subtype: "커피", //분류
-      engname: "Vanilla Delight (Decaf blend)", //영문이름
-      calories: 202, //칼로리
-      sugar: 24, //당류
-      protein: 6, //단백질
-      transfat: 6.1, //포화지방
-      sodium: 161, //나트륨
-      caffeine: 20, //카페인
-      //설명
-      description: "콜드브루 커피의 풍부한 풍미와 우유의 고소함이 더해진 라떼",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/4_decafvanilladelight.png">',
-      allergen: "알레르기 유발요인 : 우유, 대두",
-    },
-    {
-      //5
-      name: "카페모카", //이름
-      subtype: "커피", //분류
-      engname: "Caffe Mocha", //영문이름
-      calories: 251, //칼로리
-      sugar: 28, //당류
-      protein: 8, //단백질
-      transfat: 5.9, //포화지방
-      sodium: 148, //나트륨
-      caffeine: 132, //카페인
-      //설명
-      description:
-        "진한 에스프레소와 우유, 달콤 쌉싸름한 초콜릿이 어우러진 커피",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/5_cafeMocha.png">',
-      allergen: "알레르기 유발요인 : 우유, 대두",
-    },
-    {
-      //6
-      name: "카푸치노", //이름
-      subtype: "커피", //분류
-      engname: "Cappuccino", //영문이름
-      calories: 165, //칼로리
-      sugar: 12, //당류
-      protein: 8, //단백질
-      transfat: 5.5, //포화지방
-      sodium: 119, //나트륨
-      caffeine: 127, //카페인
-      //설명
-      description:
-        "에스프레소에 실키하고 폭신폭신한 우유 거품이 풍부하게 더해진 커피",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/6_cappucino.png">',
-      allergen: "알레르기 유발요인 : 우유",
-    },
-    {
-      name: "카라멜 마키아또", //이름
-      subtype: "커피", //분류
-      engname: "Caramel Macchiato", //영문이름
-      calories: 239, //칼로리
-      sugar: 24, //당류
-      protein: 8, //단백질
-      transfat: 6.1, //포화지방
-      sodium: 135, //나트륨
-      caffeine: 127, //카페인
-      //설명
-      description:
-        "진한 에스프레소에 바닐라 시럽과 카라멜소스가 더해진 카라멜 커피음료의 대표",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/7_caramelmacchiato.png">',
-      allergen: "알레르기 유발요인 : 우유",
-    },
-    {
-      //8
-      name: "에스프레소", //이름
-      subtype: "커피", //분류
-      engname: "Espresso", //영문이름
-      calories: 5, //칼로리
-      sugar: 0, //당류
-      protein: 0, //단백질
-      transfat: 0, //포화지방
-      sodium: 0, //나트륨
-      caffeine: 61, //카페인
-      //설명
-      description:
-        "강렬한 첫 맛, 풍부한 바디감, 깔끔한 뒷 맛이 특징인 커피의 심장",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/8_espresso.png">',
-    },
-    ////////////////////////////////////////////////라떼 티 subtype
-    {
-      //9
-      name: "제주 청귤 그린티", //이름
-      subtype: "라떼•티", //분류
-      engname: "Jeju Green Tangerine Green Tea", //영문이름
-      calories: 153, //칼로리
-      sugar: 24, //당류
-      protein: 0, //단백질
-      transfat: 0, //포화지방
-      sodium: 9, //나트륨
-      caffeine: 0, //카페인
-      //설명
-      description:
-        "제주산 청귤과 녹차를 블렌딩한 그린티에 한라봉 과육과 젤리를 듬뿍 넣은 티베리에이션 음료",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/9_jejuTea.png">',
-    },
-    {
-      //10
-      name: "홍자몽차", //이름
-      subtype: "라떼•티", //분류
-      engname: "Red Grapefruit Tea", //영문이름
-      calories: 138, //칼로리
-      sugar: 32, //당류
-      protein: 1, //단백질
-      transfat: 0, //포화지방
-      sodium: 8, //나트륨
-      caffeine: 0, //카페인
-      //설명
-      description: "자몽과일 특유의 달콤 쌉싸름한 맛을 즐길 수 있는 과일차",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/9_redGrapeFruitTea.png">',
-    },
-    {
-      //11
-      name: "그린티라떼", //이름
-      subtype: "라떼•티", //분류
-      engname: "Green Tea Latte", //영문이름
-      calories: 258, //칼로리
-      sugar: 31, //당류
-      protein: 9, //단백질
-      transfat: 6.4, //포화지방
-      sodium: 139, //나트륨
-      caffeine: 50, //카페인
-      //설명
-      description:
-        "강렬한 첫 맛, 풍부한 바디감, 깔끔한 뒷 맛이 특징인 커피의 심장",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/11_greenTeaLatte.png">',
-      allergen: "알레르기 유발요인 : 우유",
-    },
-    {
-      //12
-      name: "복숭아 얼그레이", //이름
-      subtype: "라떼•티", //분류
-      engname: "Peach Earl Grey", //영문이름
-      calories: 109, //칼로리
-      sugar: 26, //당류
-      protein: 0, //단백질
-      transfat: 0, //포화지방
-      sodium: 4, //나트륨
-      caffeine: 33, //카페인
-      //설명
-      description:
-        "달콤한 복숭아와 얼그레이의 베르가못 향의 조화, 깔끔하면서도 달콤한 티베리에이션 음료",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/12_peachEarlgrey.png">',
-      allergen: "알레르기 유발요인 : 복숭아",
-    },
-    ////////////////////////////////////////////////멀티치노 빙수 subtype
-    {
-      //13
-      name: "복숭아 멀티치노", //이름
-      subtype: "멀티치노•빙수", //분류
-      engname: "Peach Multiccino", //영문이름
-      calories: 354, //칼로리
-      sugar: 76, //당류
-      protein: 2, //단백질
-      transfat: 0, //포화지방
-      sodium: 26, //나트륨
-      caffeine: 0, //카페인
-      //설명
-      description:
-        "복숭아 과육과 탱글한 젤리를 가득 넣은 복숭아 스무디에 발그레한 복숭아 아이스크림을 얹은 스무디",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/13_peachSmoothie.png">',
-      allergen: "알레르기 유발요인 : 복숭아",
-    },
-    {
-      //14
-      name: "수박 멀티치노", //이름
-      subtype: "멀티치노•빙수", //분류
-      engname: "Watermelon Multiccino", //영문이름
-      calories: 246, //칼로리
-      sugar: 58, //당류
-      protein: 1, //단백질
-      transfat: 0.1, //포화지방
-      sodium: 8, //나트륨
-      caffeine: 0, //카페인
-      //설명
-      description:
-        "달콤하고 시원한 수박 스무디에 수박 아이스크림을 얹은 스무디",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/14_waterMelonSmoothie.png">',
-      allergen: "알레르기 유발요인 : 우유, 대두",
-    },
-    {
-      //15
-      name: "다크초코칩 멀티치노", //이름
-      subtype: "멀티치노•빙수", //분류
-      engname: "Dark Chocochip Multiccino", //영문이름
-      calories: 544, //칼로리
-      sugar: 47, //당류
-      protein: 7, //단백질
-      transfat: 20, //포화지방
-      sodium: 29, //나트륨
-      caffeine: 59, //카페인
-      //설명
-      description:
-        "벨기에산 리얼 다크초콜릿이 씹히는 시원하고 진한 초콜릿 음료",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/15_darkChocMulticcino.png">',
-      allergen: "알레르기 유발요인 : 우유, 대두",
-    },
-    {
-      //16
-      name: "민트초코칩 멀티치노", //이름
-      subtype: "멀티치노•빙수", //분류
-      engname: "Mint Chocochip Multiccino", //영문이름
-      calories: 377, //칼로리
-      sugar: 57, //당류
-      protein: 6, //단백질
-      transfat: 8.1, //포화지방
-      sodium: 170, //나트륨
-      caffeine: 1, //카페인
-      //설명
-      description:
-        "초코칩이 콕콕 박힌 상쾌하면서 청량한 민트 맛의 블렌디드 음료",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/16_mintChocMulticcino.png">',
-      allergen: "알레르기 유발요인 : 우유, 대두",
-    },
-    {
-      //17
-      name: "피치 딸기 멀티치노", //이름
-      subtype: "멀티치노•빙수", //분류
-      engname: "Peach Strawberry Multiccino", //영문이름
-      calories: 193, //칼로리
-      sugar: 47, //당류
-      protein: 0, //단백질
-      transfat: 0, //포화지방
-      sodium: 9, //나트륨
-      caffeine: 0, //카페인
-      //설명
-      description:
-        "과즙 가득한 복숭아 슬러쉬 안에 톡톡 씹히는 딸기 과육이 더해진 음료",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/17_peachStraberryMulticcino.png">',
-      allergen: "알레르기 유발요인 : 복숭아",
-    },
-    {
-      //18
-      name: "2인) 눈꽃 팥빙수", //이름
-      subtype: "멀티치노•빙수", //분류
-      engname: "Red Bean Ice Flake", //영문이름
-      calories: 441, //칼로리
-      sugar: 54, //당류
-      protein: 10, //단백질
-      transfat: 4.3, //포화지방
-      sodium: 173, //나트륨
-      caffeine: 0, //카페인
-      //설명
-      description:
-        "부드러운 우유얼음에 국내산 팥, 달콤 바삭한 그래놀라와 고소한 인절미가 어우러진 팥빙수",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/18_redBean.png">',
-      allergen: "알레르기 유발요인 : 우유,대두,호두",
-    },
-    {
-      //19
-      name: "2인) 애플망고 치즈 케이크 빙수", //이름
-      subtype: "멀티치노•빙수", //분류
-      engname: "Applemango Cheesecake Ice Flake", //영문이름
-      calories: 326, //칼로리
-      sugar: 45, //당류
-      protein: 5, //단백질
-      transfat: 7.7, //포화지방
-      sodium: 139, //나트륨
-      caffeine: 0, //카페인
-      //설명
-      description:
-        "상큼달콤한 애플망고 베이스에 망고를 한가득 올리고, 진한 치즈 케이크와 바삭한 코코넛칩을 더한 망고 빙수",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/19_appleMangoSnow.png">',
-      allergen: "알레르기 유발요인 : 밀,우유,대두,계란,아황산류",
-    },
-    {
-      //20
-      name: "그린티 멀티치노", //이름
-      subtype: "멀티치노•빙수", //분류
-      engname: "Green Tea Multiccino", //영문이름
-      calories: 279, //칼로리
-      sugar: 56, //당류
-      protein: 6, //단백질
-      transfat: 1.2, //포화지방
-      sodium: 128, //나트륨
-      caffeine: 99, //카페인
-      //설명
-      description:
-        "쌉싸름하면서 고소한 국내산 녹차 100%로 만든 진하고 깊은 슬러쉬 음료",
-      //이미지 태그
-      img: '<img src="./img/menu_Drinks/20_greenteaMulticcino.png">',
-      allergen: "알레르기 유발요인 : 우유,대두",
-    },
-  ],
+//checkbox를 클릭하면 해당 음료를 테이블에 삽입
+const showDrinkType = document.getElementById("#showDrinkType");
+const showDrinkList = document.getElementById("showDrinkList");
+const chkbx = document.getElementsByClassName("chkbx");
+const imgDrinks = document.querySelectorAll("img");
+const drinkName = document.getElementsByClassName("drinkName");
+// const drinkName1 = document.getElementsByClassName("drinkName1");
+const drinkName2 = document.getElementsByClassName("drinkName2");
+//전체보이기 함수
+//displayNone 함수
+
+// const list1 = document.getElementsByClassName("coffLink");
+// const list2 = document.getElementsByClassName("tLink");
+
+// if (drinkName.innerHTML == "") {
+//   list1.add("displayNone");
+//   list2.add("displayNone");
+// }
+
+const allImgs = function () {
+  // if (chkbx[0].checked == true) {
+  chkbx[0].checked = true;
+  chkbx[1].checked = false;
+  chkbx[2].checked = false;
+  chkbx[3].checked = false;
+  showDrinkList.innerHTML = ""; //초기화
+  //json이미지 전체를 배열로 뽑아서
+  const arrImg = [];
+  drinkMenu.data.forEach((obj) => {
+    let imgStr = JSON.stringify(obj.img);
+    let imgStrR = imgStr.replace(/"/g, "");
+    arrImg.push(imgStrR); //배열에 담아주기
+  });
+
+  //json에서 이름 뽑아서
+  const arrNames = [];
+  drinkMenu.data.forEach((obj) => {
+    let nameStr = JSON.stringify(obj.name);
+    let nameStrR = nameStr.replace(/"/g, "");
+    arrNames.push(nameStrR); //배열에 담아주기
+  });
+
+  //분류 (전체) 뽑아오기
+  showDrinkList.innerHTML += "<div id='drinkKind'></div>";
+  const drinkKind = document.getElementById("drinkKind");
+  drinkKind.innerHTML = "전체 상품보기";
+
+  //<img class="imgDrinks"/>로 속성 추가하고
+  for (i = 0; i < arrImg.length; i++) {
+    showDrinkList.innerHTML +=
+      "<a><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+    const drinksHref = document.querySelectorAll("a");
+    const imgDrinks = document.querySelectorAll("img");
+    const drinkName = document.getElementsByClassName("drinkName");
+    drinksHref[i].setAttribute("href", "./menu_DETAILS.main.html"); //클래스명 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    drinksHref[i].setAttribute("class", "allItemsLink"); //클래스명 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    imgDrinks[i].setAttribute("src", arrImg[i]); //이미지 삽입하기
+    // console.log(drinksHref);
+    drinkName[i].innerHTML = arrNames[i]; //이름 삽입
+  }
+  // }
 };
+window.onload = allImgs(); //처음 로드하면 기본설정=전체상품보기, 전체상품보기 체크
+
+// 조건
+
+//커피 상품 보이기 함수
+const allCoffee = function () {
+  chkbx[0].checked = false;
+  chkbx[1].checked = true;
+  showDrinkList.innerHTML = "";
+  //json이미지 전체를 배열로 뽑아서
+  const arrImgCoff = [];
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"커피"') {
+      let imgStr = JSON.stringify(obj.img);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrImgCoff.push(imgStrR); //배열에 담아주기
+    }
+  });
+  // console.log(arrImgCoff); //8개
+
+  //json 커피 이름 뽑아오기
+  const arrNames = [];
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"커피"') {
+      let imgStr = JSON.stringify(obj.name);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrNames.push(imgStrR); //배열에 담아주기
+    }
+  });
+
+  //분류 (커피) 뽑아오기
+  showDrinkList.innerHTML += "<div id='drinkKind'></div>";
+  const drinkKind = document.getElementById("drinkKind");
+  drinkMenu.data.forEach((obj) => {
+    let subtypeStr = JSON.stringify(obj.subtype);
+    if (subtypeStr == '"커피"') {
+      // console.log(subtypeStr);
+      let imgStrR = subtypeStr.replace(/"/g, "");
+      drinkKind.innerHTML = imgStrR;
+    }
+  });
+
+  for (i = 0; i < arrImgCoff.length; i++) {
+    if (chkbx[1].checked == true) {
+      // console.log(chkbx[1].checked);
+      showDrinkList.innerHTML +=
+        "<a><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+      const drinksHref = document.querySelectorAll("a");
+      const imgDrinks = document.querySelectorAll("img");
+      const drinkName = document.getElementsByClassName("drinkName");
+      drinksHref[i].setAttribute("href", "#"); //링크 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+      drinksHref[i].setAttribute("class", "cofLink"); //클래스명 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+      imgDrinks[i].setAttribute("src", arrImgCoff[i]); //이미지 삽입하기
+      // console.log(drinksHref);
+      drinkName[i].innerHTML = arrNames[i]; //이름 삽입
+    }
+  }
+};
+////////////////////////////////////////////////////////
+//라떼 티 보이기
+const allTea = function () {
+  chkbx[0].checked = false;
+  chkbx[2].checked = true;
+  showDrinkList.innerHTML = "";
+  //json이미지 전체를 배열로 뽑아서
+  const arrImgTea = [];
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"라떼•티"') {
+      let imgStr = JSON.stringify(obj.img);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrImgTea.push(imgStrR); //배열에 담아주기
+    }
+  });
+  // console.log(arrImgTea); //8개
+
+  //json 커피 이름 뽑아오기
+  const arrNames = [];
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"라떼•티"') {
+      let imgStr = JSON.stringify(obj.name);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrNames.push(imgStrR); //배열에 담아주기
+    }
+  });
+
+  //분류 (커피) 뽑아오기
+  showDrinkList.innerHTML += "<div id='drinkKind'></div>";
+  const drinkKind = document.getElementById("drinkKind");
+  drinkMenu.data.forEach((obj) => {
+    let subtypeStr = JSON.stringify(obj.subtype);
+    if (subtypeStr == '"라떼•티"') {
+      // console.log(subtypeStr);
+      let imgStrR = subtypeStr.replace(/"/g, "");
+      drinkKind.innerHTML = imgStrR;
+    }
+  });
+  //화면에 보이기
+  for (i = 0; i < arrImgTea.length; i++) {
+    if (chkbx[2].checked == true) {
+      // console.log(chkbx[2].checked);
+      showDrinkList.innerHTML +=
+        "<a><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+      const drinksHref = document.querySelectorAll("a");
+      const imgDrinks = document.querySelectorAll("img");
+      const drinkName = document.getElementsByClassName("drinkName");
+      drinksHref[i].setAttribute("href", "#"); //클래스명 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+      imgDrinks[i].setAttribute("src", arrImgTea[i]); //이미지 삽입하기
+      // console.log(drinksHref);
+      drinkName[i].innerHTML = arrNames[i]; //이름 삽입
+    }
+  }
+};
+/////////////////////////////////////////
+//마할로치노 빙수 보이기
+const allFrozen = function () {
+  chkbx[0].checked = false;
+  chkbx[3].checked = true;
+  showDrinkList.innerHTML = "";
+  //json이미지 전체를 배열로 뽑아서
+  const arrImgFro = [];
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"마할로치노•빙수"') {
+      let imgStr = JSON.stringify(obj.img);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrImgFro.push(imgStrR); //배열에 담아주기
+    }
+  });
+  // console.log(arrImgFro); //8개
+
+  //json 커피 이름 뽑아오기
+  const arrNames = [];
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"마할로치노•빙수"') {
+      let imgStr = JSON.stringify(obj.name);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrNames.push(imgStrR); //배열에 담아주기
+    }
+  });
+
+  //분류 (마할로치노 빙수) 뽑아오기
+  showDrinkList.innerHTML += "<div id='drinkKind'></div>";
+  const drinkKind = document.getElementById("drinkKind");
+  drinkMenu.data.forEach((obj) => {
+    let subtypeStr = JSON.stringify(obj.subtype);
+    if (subtypeStr == '"마할로치노•빙수"') {
+      // console.log(subtypeStr);
+      let imgStrR = subtypeStr.replace(/"/g, "");
+      drinkKind.innerHTML = imgStrR;
+    }
+  });
+  //화면에 보이기
+  for (i = 0; i < arrImgFro.length; i++) {
+    showDrinkList.innerHTML +=
+      "<a><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+    const drinksHref = document.querySelectorAll("a");
+    const imgDrinks = document.querySelectorAll("img");
+    const drinkName = document.getElementsByClassName("drinkName");
+    drinksHref[i].setAttribute("href", "#"); //클래스명 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    imgDrinks[i].setAttribute("src", arrImgFro[i]); //이미지 삽입하기
+    // console.log(drinksHref);
+    drinkName[i].innerHTML = arrNames[i]; //이름 삽입
+  }
+};
+
+/////////////////////////////////////////
+//두개씩 보이는 함수 (커피 & 라떼티)
+const allCof_Tea = function () {
+  chkbx[0].checked = false;
+  chkbx[1].checked = true;
+  chkbx[2].checked = true;
+  // chkbx[3].checked = false;
+  showDrinkList.innerHTML = "";
+  const arrCNames = []; //////////////////////////////////////커피이름 배열 arrCNames
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"커피"') {
+      let imgStr = JSON.stringify(obj.name);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrCNames.push(imgStrR); //배열에 담아주기
+    }
+  });
+
+  const arrTNames = []; //////////////////////////////////////라떼티이름 배열 arrTNames
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"라떼•티"') {
+      let imgStr = JSON.stringify(obj.name);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrTNames.push(imgStrR); //배열에 담아주기
+    }
+  });
+  const arrTCimgs = []; ///////////////////////////////////////////커피 + 라떼•티 이미지배열 arrT
+  drinkMenu.data.forEach((obj) => {
+    if (
+      JSON.stringify(obj.subtype) == '"커피"' ||
+      JSON.stringify(obj.subtype) == '"라떼•티"'
+    ) {
+      let imgStr = JSON.stringify(obj.img);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrTCimgs.push(imgStrR); //배열에 담아주기
+    }
+  });
+  console.log(arrTCimgs); //8(커피)+4(티)
+  //json 라떼티 이름 뽑아오기
+
+  //분류 (커피) 뽑아오기- 헤더
+  showDrinkList.innerHTML += "<div id='drinkKind'></div>";
+  const drinkKind = document.getElementById("drinkKind");
+  drinkMenu.data.forEach((obj) => {
+    let subtypeStr = JSON.stringify(obj.subtype);
+    if (subtypeStr == '"커피"') {
+      // console.log(subtypeStr);
+      let imgStrR = subtypeStr.replace(/"/g, "");
+      drinkKind.innerHTML = imgStrR;
+    }
+  });
+  // 커피 이름,이미지 넣어주기
+  for (i = 0; i < arrCNames.length; i++) {
+    // console.log(arrCNames);
+    showDrinkList.innerHTML +=
+      "<a class='cofLink'><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+    const cofLink = document.getElementsByClassName("cofLink");
+    const imgDrinks = document.getElementsByClassName("imgDrinks");
+    const drinkName = document.getElementsByClassName("drinkName");
+    cofLink[i].setAttribute("href", "#"); //링크//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    // imgDrinks[i].setAttribute("class", "cofLink"); //클래스명 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    imgDrinks[i].setAttribute("src", arrTCimgs[i]); //이미지 삽입하기
+    console.log(arrTCimgs[i]);
+    drinkName[i].innerHTML = arrCNames[i]; //이름 삽입
+  }
+
+  //분류 (라떼) 뽑아오기
+  showDrinkList.innerHTML += "<div id='drinkKind2'></div>";
+  // const drinkKind2 = document.getElementById("drinkKind2");
+  drinkMenu.data.forEach((obj) => {
+    let subtypeStr = JSON.stringify(obj.subtype);
+    if (subtypeStr == '"라떼•티"') {
+      // console.log(subtypeStr);
+      let imgStrR = subtypeStr.replace(/"/g, "");
+      drinkKind2.innerHTML = imgStrR;
+    }
+  });
+
+  //라떼 티 이름 넣어주기
+  for (j = 0; j < arrTNames.length; j++) {
+    // console.log(arrTNames.length);
+    showDrinkList.innerHTML +=
+      "<a class='tlink'><img class='imgDrinks2'/><div class='drinkName2'></div></a>"; //링크태그
+    const tlink = document.getElementsByClassName("tlink");
+    const imgDrinks2 = document.getElementsByClassName("imgDrinks2");
+    const drinkName2 = document.getElementsByClassName("drinkName2");
+    tlink[j].setAttribute("href", "#"); //클래스명 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    imgDrinks2[j].setAttribute("src", arrTCimgs[j + 8]); //이미지 삽입하기
+    drinkName2[j].innerHTML = arrTNames[j]; //이름 삽입
+  }
+};
+
+/////////////////////////////////////////
+//두개씩 보이는 함수 (커피 & 마할로치노)
+const allCof_Fro = function () {
+  chkbx[0].checked = false;
+  chkbx[1].checked = true;
+  chkbx[3].checked = true;
+  showDrinkList.innerHTML = "";
+  const arrCNames = []; //////////////////////////////////////커피이름 배열 arrCNames
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"커피"') {
+      let imgStr = JSON.stringify(obj.name);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrCNames.push(imgStrR); //배열에 담아주기
+    }
+  });
+
+  const arrFNames = []; //////////////////////////////////////마할로치노이름 배열 arrFNames
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"마할로치노•빙수"') {
+      let imgStr = JSON.stringify(obj.name);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrFNames.push(imgStrR); //배열에 담아주기
+    }
+  });
+  console.log(arrFNames);
+  const arrCFimgs = []; ///////////////////////////////////////////커피 + 마할로치노 이미지배열 arrT
+  drinkMenu.data.forEach((obj) => {
+    if (
+      JSON.stringify(obj.subtype) == '"커피"' ||
+      JSON.stringify(obj.subtype) == '"마할로치노•빙수"'
+    ) {
+      let imgStr = JSON.stringify(obj.img);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrCFimgs.push(imgStrR); //배열에 담아주기
+    }
+  });
+  console.log(arrCFimgs); //8(커피)+4(티)
+  //json 라떼티 이름 뽑아오기
+
+  //분류 (커피) 뽑아오기- 헤더
+  showDrinkList.innerHTML += "<div id='drinkKind'></div>";
+  const drinkKind = document.getElementById("drinkKind");
+  drinkMenu.data.forEach((obj) => {
+    let subtypeStr = JSON.stringify(obj.subtype);
+    if (subtypeStr == '"커피"') {
+      // console.log(subtypeStr);
+      let imgStrR = subtypeStr.replace(/"/g, "");
+      drinkKind.innerHTML = imgStrR;
+    }
+  });
+  // 커피 이름,이미지 넣어주기
+  for (i = 0; i < arrCNames.length; i++) {
+    // console.log(arrCNames);
+    showDrinkList.innerHTML +=
+      "<a class='cofLink'><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+    const cofLink = document.getElementsByClassName("cofLink");
+    const imgDrinks = document.getElementsByClassName("imgDrinks");
+    const drinkName = document.getElementsByClassName("drinkName");
+    cofLink[i].setAttribute("href", "#"); //링크//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    // drinksHref[i].setAttribute("class", "cofLink"); //클래스명 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    imgDrinks[i].setAttribute("src", arrCFimgs[i]); //이미지 삽입하기
+    // console.log(arrCFimgs[i]);
+    drinkName[i].innerHTML = arrCNames[i]; //이름 삽입
+    console.log(arrCNames);
+  }
+
+  //분류 (라떼) 뽑아오기
+  showDrinkList.innerHTML += "<div id='drinkKind2'></div>";
+  // const drinkKind2 = document.getElementById("drinkKind2");
+  drinkMenu.data.forEach((obj) => {
+    let subtypeStr = JSON.stringify(obj.subtype);
+    if (subtypeStr == '"마할로치노•빙수"') {
+      // console.log(subtypeStr);
+      let imgStrR = subtypeStr.replace(/"/g, "");
+      drinkKind2.innerHTML = imgStrR;
+    }
+  });
+
+  //라떼 티 이름 넣어주기
+  for (j = 0; j < arrFNames.length; j++) {
+    // console.log(arrFNames.length);
+    showDrinkList.innerHTML +=
+      "<a class='flink'><img class='imgDrinks3'/><div class='drinkName3'></div></a>"; //링크태그
+    const flink = document.getElementsByClassName("flink");
+    const imgDrinks3 = document.getElementsByClassName("imgDrinks3");
+    const drinkName3 = document.getElementsByClassName("drinkName3");
+    flink[j].setAttribute("href", "#"); //f링크 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    imgDrinks3[j].setAttribute("src", arrCFimgs[j + 8]); //이미지 삽입하기
+    drinkName3[j].innerHTML = arrFNames[j]; //이름 삽입
+  }
+};
+
+/////////////////////////////////////////
+//두개씩 보이는 함수 (커피 & 마할로치노)
+const allTea_Fro = function () {
+  chkbx[0].checked = false;
+  chkbx[2].checked = true;
+  chkbx[3].checked = true;
+  showDrinkList.innerHTML = "";
+  const arrTNames = []; //////////////////////////////////////커피이름 배열 arrCNames
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"라떼•티"') {
+      let imgStr = JSON.stringify(obj.name);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrTNames.push(imgStrR); //배열에 담아주기
+    }
+  });
+
+  const arrFNames = []; //////////////////////////////////////마할로치노이름 배열 arrFNames
+  drinkMenu.data.forEach((obj) => {
+    if (JSON.stringify(obj.subtype) == '"마할로치노•빙수"') {
+      let imgStr = JSON.stringify(obj.name);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrFNames.push(imgStrR); //배열에 담아주기
+    }
+  });
+  console.log(arrFNames);
+  const arrTFimgs = []; ///////////////////////////////////////////커피 + 마할로치노 이미지배열 arrT
+  drinkMenu.data.forEach((obj) => {
+    if (
+      JSON.stringify(obj.subtype) == '"라떼•티"' ||
+      JSON.stringify(obj.subtype) == '"마할로치노•빙수"'
+    ) {
+      let imgStr = JSON.stringify(obj.img);
+      let imgStrR = imgStr.replace(/"/g, "");
+      arrTFimgs.push(imgStrR); //배열에 담아주기
+    }
+  });
+  console.log(arrTFimgs); //8(커피)+4(티)
+  //json 라떼티 이름 뽑아오기
+
+  //분류 (커피) 뽑아오기- 헤더
+  showDrinkList.innerHTML += "<div id='drinkKind'></div>";
+  const drinkKind2 = document.getElementById("drinkKind");
+  drinkMenu.data.forEach((obj) => {
+    let subtypeStr = JSON.stringify(obj.subtype);
+    if (subtypeStr == '"라떼•티"') {
+      // console.log(subtypeStr);
+      let imgStrR = subtypeStr.replace(/"/g, "");
+      drinkKind.innerHTML = imgStrR;
+    }
+  });
+  // 커피 이름,이미지 넣어주기
+  //라떼 티 이름 넣어주기
+  for (j = 0; j < arrTNames.length; j++) {
+    // console.log(arrTNames.length);
+    showDrinkList.innerHTML +=
+      "<a class='tlink'><img class='imgDrinks2'/><div class='drinkName2'></div></a>"; //링크태그
+    const tlink = document.getElementsByClassName("tlink");
+    const imgDrinks2 = document.getElementsByClassName("imgDrinks2");
+    const drinkName2 = document.getElementsByClassName("drinkName2");
+    tlink[j].setAttribute("href", "#"); //클래스명 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    imgDrinks2[j].setAttribute("src", arrTFimgs[j]); //이미지 삽입하기
+    drinkName2[j].innerHTML = arrTNames[j]; //이름 삽입
+  }
+
+  //분류 (라떼) 뽑아오기
+  showDrinkList.innerHTML += "<div id='drinkKind3'></div>";
+  // const drinkKind2 = document.getElementById("drinkKind2");
+  drinkMenu.data.forEach((obj) => {
+    let subtypeStr = JSON.stringify(obj.subtype);
+    if (subtypeStr == '"마할로치노•빙수"') {
+      // console.log(subtypeStr);
+      let imgStrR = subtypeStr.replace(/"/g, "");
+      drinkKind3.innerHTML = imgStrR;
+    }
+  });
+
+  //라떼 티 이름 넣어주기
+  for (j = 0; j < arrFNames.length; j++) {
+    // console.log(arrFNames.length);
+    showDrinkList.innerHTML +=
+      "<a class='flink'><img class='imgDrinks3'/><div class='drinkName3'></div></a>"; //링크태그
+    const flink = document.getElementsByClassName("flink");
+    const imgDrinks3 = document.getElementsByClassName("imgDrinks3");
+    const drinkName3 = document.getElementsByClassName("drinkName3");
+    flink[j].setAttribute("href", "#"); //f링크 붙여주기//////////////////////////////////////////////////////////////////////////상세정보 페이지로
+    imgDrinks3[j].setAttribute("src", arrTFimgs[j + 4]); //이미지 삽입하기
+    drinkName3[j].innerHTML = arrFNames[j]; //이름 삽입
+  }
+};
+
+/////////////////////////////////////////
+//조건
+//다른 세부 조건들은 같이 클릭 가능 단, 전부 다 클릭하면 모두 체크 제거하고 전체보이기
+
+//만약 다 체크가 되어버린다면 전체로 바꾸기
+
+//체크박스클릭 이벤트
+//[전체 상품보기 선택]
+chkbx[0].addEventListener("click", () => {
+  if (chkbx[0].checked == true) {
+    chkbx[1].checked = false;
+    chkbx[2].checked = false;
+    chkbx[3].checked = false;
+    allImgs();
+    drinkListWrap.style.display = "contents";
+  } else if (chkbx[0].checked == false) {
+    // console.log(chkbx[0].checked);
+    if (
+      chkbx[1].checked == false &&
+      chkbx[2].checked == false &&
+      chkbx[3].checked == false
+    ) {
+      allImgs();
+    }
+  }
+});
+
+//[커피 선택]
+chkbx[1].addEventListener("click", () => {
+  // console.log(chkbx[1].checked + "!@@@");
+  if (
+    //커피만 보기
+    chkbx[1].checked == true &&
+    chkbx[2].checked == false &&
+    chkbx[3].checked == false
+  ) {
+    chkbx[0].checked == false;
+    // drinkListWrap.style.display = "contents";
+    allCoffee();
+  } else if (
+    //커피, 티 checked >티 보기
+    chkbx[1].checked == true &&
+    chkbx[2].checked == true &&
+    chkbx[3].checked == false
+  ) {
+    allCof_Tea();
+  } else if (
+    //빙수,커피 checked> 떄커피 빙수 보기
+    chkbx[1].checked == true &&
+    chkbx[2].checked == false &&
+    chkbx[3].checked == true
+  ) {
+    allCof_Fro();
+    console.log("cof_fro");
+  } else if (
+    // 커피,티 checked> 커피 uncheck > 티만 보이기
+    chkbx[1].checked == true &&
+    chkbx[2].checked == true &&
+    chkbx[3].checked == false
+  ) {
+    allTea();
+  } else if (
+    //커피,빙수 checked> 커피 uncheck > 빙수만 보이기
+    chkbx[1].checked == false &&
+    chkbx[2].checked == false &&
+    chkbx[3].checked == true
+  ) {
+    allFrozen();
+    console.log("커피 취소했을 때 빙수만 보이기!@@@");
+  } else if (
+    //커피,티 checked > 커피 취소했을 때 티
+    chkbx[1].checked == false &&
+    chkbx[2].checked == true &&
+    chkbx[3].checked == false
+  ) {
+    allTea();
+  } else if (
+    //다 체크 되면 전체보기
+    chkbx[1].checked == true &&
+    chkbx[3].checked == true
+    // &&chkbx[3].checked == false
+  ) {
+    allImgs();
+    // console.log("!@@@");
+  } else if (
+    //다 체크 안되면 전체보기
+    chkbx[1].checked == false &&
+    chkbx[2].checked == false &&
+    chkbx[3].checked == false
+  ) {
+    allImgs();
+    // console.log("!@@@");
+  }
+});
+//[라떼 티 선택]
+chkbx[2].addEventListener("click", () => {
+  if (
+    //티만 보기
+    chkbx[2].checked == true &&
+    chkbx[1].checked == false &&
+    chkbx[3].checked == false
+  ) {
+    chkbx[0].checked == false;
+    drinkListWrap.style.display = "contents";
+    allTea();
+  } else if (
+    //커피 + 티 보기
+    chkbx[2].checked == true &&
+    chkbx[1].checked == true &&
+    chkbx[3].checked == false
+  ) {
+    allCof_Tea();
+  } else if (
+    //티 + 빙수 보기
+    chkbx[2].checked == true &&
+    chkbx[1].checked == false &&
+    chkbx[3].checked == true
+  ) {
+    allTea_Fro();
+  } else if (
+    //티 취소했을 때 빙수만 보이기
+    chkbx[2].checked == false &&
+    chkbx[1].checked == false &&
+    chkbx[3].checked == true
+  ) {
+    allFrozen();
+    // console.log("!@@@");
+  } else if (
+    //티 취소했을 때 커피만 보이기
+    chkbx[2].checked == false &&
+    chkbx[1].checked == true &&
+    chkbx[3].checked == false
+  ) {
+    allCoffee();
+    console.log("!@@@");
+  } else if (
+    //다 체크 안되거나ㅏ 다 체크되면 전체보기
+    // chkbx[2].checked == false &&
+    (chkbx[1].checked == true && chkbx[3].checked == true) ||
+    (chkbx[1].checked == false && chkbx[3].checked == false)
+  ) {
+    allImgs();
+  }
+});
+/////////////////////////////////////////////////////////
+// 마할로치노 빙수 선택 시
+chkbx[3].addEventListener("click", () => {
+  if (chkbx[0].checked == true) {
+    //전체 선택 체크 > 빙수 클릭
+    allFrozen();
+  } else if (
+    // 체크박스 다 선택 혹은 하나도 선택 X>전체보기
+    (chkbx[1].checked == true && chkbx[2].checked == true) ||
+    (chkbx[3].checked == false &&
+      chkbx[1].checked == false &&
+      chkbx[2].checked == false)
+  ) {
+    chkbx[0].checked == true;
+    allImgs();
+  } else if (
+    // 커피 checked > 커피 + 빙수 보이기
+    chkbx[1].checked == true &&
+    chkbx[2].checked == false &&
+    chkbx[3].checked == true
+  ) {
+    allCof_Fro();
+  } else if (
+    // 커피, 빙수 checked > 빙수 보이기
+    chkbx[1].checked == true &&
+    chkbx[2].checked == false &&
+    chkbx[3].checked == false
+  ) {
+    allCoffee();
+  } else if (
+    // 티 checked > 티 + 빙수 보이기
+    chkbx[1].checked == false &&
+    chkbx[2].checked == true &&
+    chkbx[3].checked == true
+  ) {
+    allTea_Fro();
+  } else if (
+    // 티, 빙수 checked > 티 보이기
+    chkbx[1].checked == false &&
+    chkbx[2].checked == true &&
+    chkbx[3].checked == false
+  ) {
+    allTea();
+  }
+});

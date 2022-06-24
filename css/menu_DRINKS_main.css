@@ -5,14 +5,18 @@
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
 }
+header {
+  margin-bottom: 3em;
+  height: 3em;
+}
 #menuMainWrap {
   /* width: 100vw; */
-  height: 100vh;
+  height: 100%;
   margin: 0 10%;
 }
 #categoryWrap {
-  width: 90%;
-  margin: 3em;
+  width: 100%;
+  margin: 3em 0;
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -21,7 +25,7 @@
 h2 {
   color: #a88665;
 }
-hr {
+#menuHr {
   margin: 0.5em 0;
   width: 100%;
   background-color: #a88665;
@@ -32,4 +36,75 @@ hr {
   width: 42em;
   display: flex;
   justify-content: space-between;
+}
+#drinkImgTbl {
+  width: 100%;
+}
+img {
+  width: 16em;
+}
+img:hover {
+  transform: scale(1.2);
+}
+.drinkName {
+  display: inline-block;
+  font-size: 12px;
+}
+.drinkName2 {
+  display: inline-block;
+  font-size: 12px;
+}
+.drinkName3 {
+  display: inline-block;
+  font-size: 12px;
+}
+a {
+  display: inline-block;
+  margin: 1em;
+  width: 16em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #e15c2d;
+}
+.drinkName {
+  display: inline;
+}
+.drinkName2 {
+  display: inline;
+}
+.drinkName3 {
+  display: inline;
+}
+#drinkKind {
+  width: 90%;
+  font-size: 24px;
+  padding: 0.5em;
+  margin: 0 auto;
+  background-color: #e15c2d;
+  padding: 3px 30px;
+  color: #fff;
+}
+#drinkKind2 {
+  width: 90%;
+  font-size: 24px;
+  padding: 0.5em;
+  margin: 0 auto;
+  background-color: #e15c2d;
+  padding: 3px 30px;
+  color: #fff;
+}
+#drinkKind3 {
+  width: 90%;
+  font-size: 24px;
+  padding: 0.5em;
+  margin: 0 auto;
+  background-color: #e15c2d;
+  padding: 3px 30px;
+  color: #fff;
+}
+#showDrinkList {
+  margin-bottom: 3em;
 }
