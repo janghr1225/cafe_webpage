@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" type="text/css" href="../css/login.css"><!-- 스타일만 따로 파일 만들어서 html과 연결-->
-    <link rel ="stylesheet" type="text/css" href="../css/MainFrame.css"><!-- 스타일만 따로 파일 만들어서 html과 연결-->
+    <link rel="stylesheet" type="text/css" href="../css/login.css"><!-- 스타일만 따로 파일 만들어서 html과 연결-->
+    <link rel="stylesheet" type="text/css" href="../css/MainFrame.css"><!-- 스타일만 따로 파일 만들어서 html과 연결-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><!-- 제이쿼리 연결  -->
     <style type="text/css">
     </style>
@@ -17,53 +19,70 @@
 
     <title>로그인</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a id="name" href="./CafeMain.html">
-                <img id="logo" src="../img/logo4.png" alt="로고">
-                <span id="name2">MAHALO</span>
-            </a>
-            <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg"
-                style="width: 20px;height: 20px; margin-top: 10px;">
-            <ul id="menu">
-                <li> <a id="mypage" href="./login.html"> My Page </a></li>
-                <li> <a href="#"> MAHALO News </a></li>
-                <li> <a href="#"> Store </a></li>
-                <li> <a id="menu2"> Menu </a>
-                    <ul>
-                        <p class="m2"> <a href="./menu_DRINKS_main.html"> Drinks </a> </p>
-                        <p class="m2"> <a href="./menu_FOOD_main.html"> Food </a> </p>
+    <div>
+        <header>
+            <nav>
+                <a id="name" href="./CafeMain.html">
+                    <img id="logo" src="../img/logo4.png" alt="로고">
+                    <span id="name2">MAHALO</span>
+                </a>
+                <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg"
+                    style="width: 20px;height: 20px; margin-top: 10px;">
+                <div>
+                    <ul id="menu">
+                        <li> <a id="mypage" href="./login.html"> My Page </a></li>
+                        <li> <a href="#"> MAHALO News </a></li>
+                        <li> <a href="#"> Store </a></li>
+                        <li> <a id="menu2"> Menu </a>
+                            <ul>
+                                <p class="m2"> <a href="./menu_DRINKS_main.html"> Drinks </a> </p>
+                                <p class="m2"> <a href="./menu_FOOD_main.html"> Food </a> </p>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
+                </div>
+            </nav>
+            <hr>
 
-            </ul>
-        </nav>
-        <hr>
-    </header>
+        </header>
+    </div>
 
-    <body>
+
+
+
+    <div id="loginbody">
         <p id="login_title">멤버십 로그인</p>
         <p id="welcome"> WELCOME MAHALO </p>
-        
+
         <div id="login1">
-            <label id="id">아 이 디 &nbsp;&nbsp;&nbsp;<input type="text" name="id" class="inputCss" id="idInput" placeholder="내용을 입력하세요"></label>
+            <label id="id">아 이 디 &nbsp;&nbsp;&nbsp;<input type="text" name="id" class="inputCss" id="idInput"
+                    placeholder="내용을 입력하세요"></label>
             <br>
-            <label id="pwd">비밀번호&nbsp;&nbsp;&nbsp;<input type="text" name="pwd" class="inputCss" id="pwdInput" placeholder="내용을 입력하세요"></label>
+            <label id="pwd">비밀번호&nbsp;&nbsp;&nbsp;<input type="text" name="pwd" class="inputCss" id="pwdInput"
+                    placeholder="내용을 입력하세요"></label>
         </div>
         <br>
-        <button type="button" id="btnLogin" onclick="input_chk()" style="width: 100px; height: 35px; "> 로그인 </button>
-        <p>
-        </p>
-        
+        <button type="button" id="btnLogin" onclick="input_chk()" style="width: 100px; height: 35px; "> 로그인
+        </button>
+ 
+
         <div id="signupDiv">
             <p id="nomember">아직 회원이 아니신가요?</p>
-            <button type="button" id="btnSignup" onclick="location.href='signup1.html'" style="width: 80px; height: 35px;"> 회원가입 </button>
+            <button type="button" id="btnSignup" onclick="location.href='signup1.html'"
+                style="width: 80px; height: 35px;"> 회원가입 </button>
         </div>
-    </body>
+    </div>
 
     <div id='wrapper'> </div>
-<!-- 
+
+    <!-- 화면 내림 -->
+    <div class='wrapper'></div>
+    <div class='wrapper'></div>
+    <div class='wrapper'></div>
+    <div class='wrapper'></div>
+
     <footer>
         <hr id="fhr">
         <div id="logo2">
@@ -81,22 +100,18 @@
         </ul>
         <address>주소: 서울특별시 강남구 언주로</address>
     
-        <!-- footer 띄우기 -->
-        <!-- 
+        <!-- <!-- footer 띄우기  -->
         <li class="none"> &nbsp; </li>
     </footer> 
--->
-        <!-- 화면 내림 -->
-    <div class='wrapper'></div>
-    <div class='wrapper'></div>
-    <div class='wrapper'></div>
-    <div class='wrapper'></div>
 
 </body>
+
+
+
 </html>
 <script>
 
-$('#menu2').hover(() => { //Menu hover시 Drinks로 변화
+    $('#menu2').hover(() => { //Menu hover시 Drinks로 변화
         $('#menu2').html
             ('<span><a href="./menu_DRINKS_main.html">Drinks&nbsp&nbsp&nbsp;</a> <a href="./menu_FOOD_main.html"><span> Food </span></a></span>');
     }, () => {
@@ -116,36 +131,36 @@ $('#menu2').hover(() => { //Menu hover시 Drinks로 변화
     })
 
 
-    function input_chk(){
-            //가입하기 버튼을 누를 때 유효성 검사를 모두 통과되면 submit 로 만들어 보내기 
-            //if 조건문 공백이면 다시 입력해 주세요 
-            //유효성 검사 예를 들면 비밀번호 영문자 특수문자 숫자 8~24자 사이인것 확인하기
-            
-            var id = document.getElementById("idInput");//필수
-            var password = document.getElementById("pwdInput"); //필수
-            //필수인 것들을 공백으로 입력되면 안되게 검사함
-            if(id.value == ''){
-                alert("아이디를 입력해주세요");
-                id.focus();
-                return false;
-            }
-            if(password.value == ''){
-                alert("비밀번호를 입력해주세요");
-                password.focus();
-                return false;
-            }
-            if (id.value == 'cafe0123') {
-                if (password.value == 'cafe0123!@') {
-                    alert('로그인 되었습니다!')
-                    location.href="./CafeMain.html";
-                }
-                else {
-                    alert('아이디와 비밀번호를 다시 한 번 확인해주세요!')
-                }
+    function input_chk() {
+        //가입하기 버튼을 누를 때 유효성 검사를 모두 통과되면 submit 로 만들어 보내기 
+        //if 조건문 공백이면 다시 입력해 주세요 
+        //유효성 검사 예를 들면 비밀번호 영문자 특수문자 숫자 8~24자 사이인것 확인하기
+
+        var id = document.getElementById("idInput");//필수
+        var password = document.getElementById("pwdInput"); //필수
+        //필수인 것들을 공백으로 입력되면 안되게 검사함
+        if (id.value == '') {
+            alert("아이디를 입력해주세요");
+            id.focus();
+            return false;
+        }
+        if (password.value == '') {
+            alert("비밀번호를 입력해주세요");
+            password.focus();
+            return false;
+        }
+        if (id.value == 'cafe0123') {
+            if (password.value == 'cafe0123!@') {
+                alert('로그인 되었습니다!')
+                location.href = "./CafeMain.html";
             }
             else {
-                alert('존재하지 않는 계정입니다.')
+                alert('아이디와 비밀번호를 다시 한 번 확인해주세요!')
             }
+        }
+        else {
+            alert('존재하지 않는 계정입니다.')
+        }
     }
 
 
