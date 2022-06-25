@@ -92,8 +92,9 @@ hr {
     position: relative;
     display: inline-block;
     color: black;
-    margin-top: 70px;
-    margin-left: 10px;
+    margin-top: 120px;
+    text-align: center;
+    margin-left: 15px;
 }
 /* 배너 넘기기 */
 .banner {
@@ -174,11 +175,13 @@ hr {
     margin-bottom: 50px;
     height: 417px;
 }
+.right2{
+    float: right;
+}
 #coffee { /*뉴크롭 원두*/
     display: inline;
     float: right;
     width: 494px;
-    
     margin-top: 0px;
     margin-right: 0px;
 
@@ -186,27 +189,19 @@ hr {
 #search { /*매장 찾기*/
     display: inline-block;
     width: 25%;
-    margin-top: 50px;
+    margin-top: 5%;
     margin-left: 120px;
 
     
 }
 #ex2 { /*원두 설명*/
     display:inline-block;
-    margin-left: 18%;
     color: rgb(39, 39, 39);
     margin-top: 16px;
     width: 19%;
+    text-align: left;
 }
-#block{/* 블럭 */
-    position: relative;
-    display: none;
-    width: 280px;
-    height: 95px;
-    margin-left: 0px;
-    margin-top: 0px;
-    /* float: right; */
-}
+
 .introduce{
     display: block;
 }
@@ -225,9 +220,10 @@ hr {
     display: inline-block;
     height: 100%;
     margin-top: 50px;
-    margin-left: 170px;
+    margin-left: 15%;
     margin-bottom: 50px;
     font-size: larger;
+    text-align: left;
 /* 이미지 */
 }
 #cafe1{ 
@@ -286,6 +282,7 @@ video{
     margin-top: 120px;
     margin-right: 150px;
     font-size: larger;
+    text-align: left;
 }
 
 /* 비디오 끝 */

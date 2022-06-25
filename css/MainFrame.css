@@ -6,9 +6,11 @@ li{  /*초기화*/
 	border: 0;
 	/* font: inherit; */
 	/* vertical-align: baseline; */
-    height: 100%;
 }
-
+#header{
+    overflow: hidden;
+    display: block;
+}
 #menu li {
     float: right;
     display: block;
@@ -42,7 +44,7 @@ li{  /*초기화*/
 #sign { /*sign in, sign out */
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     color: black;
     text-decoration: none;
     float: right;
@@ -54,26 +56,25 @@ li{  /*초기화*/
 #signimg {
     float: right;
 }
+#menu ul li a {
+    display: none;
+}
+
+/* 밑줄 */
 hr {
-    display: block;
     background-color: #e15c2d;
     height: 5px;
     border: none;
     width: 100%;
     margin: 0px;
-    float: right;
+
+    display: block;
 }
 /* 메뉴 hover시 글씨 색 변화 */
 #menu li:hover > a { 
     color: silver;
 }
 
-
-#ex1 article h1 {
-    display: inline-block;
-    text-align: center;
-    
-}
 #name {
     font-family:'Noto Sans KR', sans-serif;
     font-weight: bold;
@@ -86,44 +87,27 @@ hr {
     position: relative;
     display: inline-block;
     color: black;
-    margin-top: 70px;
-    margin-left: 10px;
-}
-/*  footer 부분 */
-#logo2 { /*footer 로고*/
-    width: 35px;
-    height: 44px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
-
-  }
-  #logo2 img { 
-    width: 35px;
-    height: 47px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  #wrapper{ /* footer화면 내림*/
-    height : auto;
-    min-height: 100%;
-    display: block;
-  }
-
-  #ft li{
-  margin-bottom: 5px;
-  }
-
-  footer {
-    position : relative;
-    /* transform : translateY(400%); */
+    margin-top: 120px;
     text-align: center;
-    margin-top: 0;
-    background-color: silver;
-    font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 15px;
+}
+/* 배너 넘기기 */
+
+/*  footer 부분 */
+
+#wrapper {
+    height: 100%;
+}
+.footer{
+    overflow: hidden;
     display: block;
-    font-weight: bold;
-    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
     list-style: none;
-    bottom: 0;
-  }
+    background-color: #CFB7A3;
+}
+#btn img {
+    width: 3%;
+    height: 3%;
+    margin-top: 30px;
+}
