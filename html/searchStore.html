@@ -42,7 +42,7 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </nav> 
             <hr>
         </header>
     </div>
@@ -65,41 +65,23 @@
                     <select name="" id="depth2" class="area_sel">
                         <option value="">전체</option>
                         <option value="37">강남구</option>
-                        <option value="38">강동구</option>
-                        <option value="39">강북구</option>
-                        <option value="40">강서구</option>
-                        <option value="41">관악구</option>
-                        <option value="42">광진구</option>
                         <option value="43">구로구</option>
                         <option value="44">금천구</option>
-                        <option value="45">노원구</option>
-                        <option value="46">도봉구</option>
-                        <option value="47">동대문구</option>
-                        <option value="48">동작구</option>
                         <option value="49">마포구</option>
-                        <option value="50">서대문구</option>
-                        <option value="51">서초구</option>
-                        <option value="52">성동구</option>
-                        <option value="53">성북구</option>
-                        <option value="54">송파구</option>
-                        <option value="55">양천구</option>
                         <option value="56">영등포구</option>
-                        <option value="57">용산구</option>
-                        <option value="58">은평구</option>
-                        <option value="59">종로구</option>
-                        <option value="60">중구</option>
-                        <option value="61">중랑구</option>
                         <option value="62">고양시</option>
                         <option value="63">부천시</option>
-                        <option value="64">성남시</option>
-                        <option value="65">수원시</option>
+                        <option value="64">파주시</option>
                         <option value="66">안산시</option>
                     </select>
 
                     <button type="button" id="btnSearch" onclick="getJSON()"> 검색 </button>
                 </label>
             </div>
+
         </div>
+
+
 
         <!-- 매장 리스트 테이블 -->
         <table class="table">
@@ -108,22 +90,21 @@
                     <th>지역</th>
                     <th>도시</th>
                     <th>매장명</th>
-                    <th>주소</th>
+                    <th width="250">주소</th>
                     <th>전화번호</th>
                 </tr>
             </thead>
             <tbody id="target">
-
-
+                <!-- json데이터 들어오는 곳 -->
             </tbody>
-
         </table>
         
     </div>
 
     <!-- 풋터 -->
     <div id='wrapper'> </div>
-    <footer>
+    <footer style="background-color: #CFB7A3;
+         transform : translateY(320%);">
         <hr id="fhr">
         <div id="logo2">
             <span id="btn">
@@ -147,118 +128,6 @@
 </body>
 
 </html>
-<!-- <script>
-    //json 데이터 가져오기
-    // function getJSON(){
-    //     $.ajax({
-    //         type:"get", //get방식으로 가져오기
-    //         url:"store.js",    //가져올 경로
-    //         dataType:"json",
-    //         success: function(data){
-    //             console.log("통신성공");
-    //             console.log(data);
-    //             str = '<TR>'; 
-    //                 $.each(data , function(i){
-    //                     str += '<TD>' + data[i].local + '</TD><TD>' + data[i].store + '</TD><TD>' + data[i].addr + '</TD><TD>' + data[i].tel + '</TD>';
-    //                     str += '</TR>';
-    //                 });
-    //             $('.table_body').append(str);
-    //         },
-    //         error:function(){
-    //             console.log("통신에러");
-    //         }
-    //     })
-    // }
-
-    $(function(){
-	var target = $('#target');
-	$.getJSON('store.js', function(members){
-		$.each(members, function(i, member){
-			var add_data = '';
-			add_data += '<tr>';
-
-			add_data += '<td>';
-			add_data += member.local;
-			add_data += '</td>';
-
-			add_data += '<td>';
-			add_data += member.store;
-			add_data += '</td>';
-
-			add_data += '<td>';
-			add_data += member.addr;
-			add_data += '</td>';
-
-            add_data += '<td>';
-			add_data += member.tel;
-			add_data += '</td>';
-
-			add_data += '</tr>';
-			target.append(add_data);
-		});
-	});
-});
-</script> -->
-
-
 
 <script src="../js/store.js"></script>
 <script src="../js/searchStore.js"></script>
-
-
-<!-- get -->
-<!-- <script type="text/javascript">
-
-    let xhttp = new XMLHttpRequest();
-    
-    xhttp.onreadystatechange = function () {
-    
-        if(xhttp.readyState == 4 && xhttp.status == 200){
-            jsonfunc(this.responseText); 
-        }
-    }
-    xhttp.open("GET","store.js", true);
-    xhttp.send();
-    
-    function jsonfunc( jsonText ) {
-        let arrLocal = new Array();
-        let arrStore = new Array();
-        let arrAddr = new Array();
-        let arrTel = new Array();
-
-        let json = JSON.parse(jsonText);
-    
-        for(i=0; i<json.length; i++){ // 값 전체 가져오는법
-            arrLocal[i] = json[i].local;
-            arrStore[i] = json[i].store;
-            arrAddr[i] = json[i].addr;
-            arrTel[i] = json[i].tel;
-        }
-        let table = document.getElementById('target');
-    
-        for(i=0; i<arrTitle.length; i++){
-            let tr = document.createElement("tr");
-            
-            let td1 = document.createElement("td");			  
-            td1.appendChild(document.createTextNode(arrLocal[i] + ""));
-            
-            let td2 = document.createElement("td");			 
-            td2.appendChild(document.createTextNode(arrStore[i] + ""));
-            
-            let td3 = document.createElement("td");			 
-            td3.appendChild(document.createTextNode(arrAddr[i]+ ""));
-
-            let td4 = document.createElement("td");			 
-            td3.appendChild(document.createTextNode(arrTel[i]+ ""));
-
-            
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
-            tr.appendChild(td4);
-
-            table.appendChild(tr);
-        }
-    }
-    </script> -->
-
