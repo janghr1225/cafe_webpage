@@ -8,9 +8,45 @@ const leaveBtn = document.getElementById("leaveBtn");
 const drinkName = document.getElementsByClassName("drinkName");
 // const drinkName1 = document.getElementsByClassName("drinkName1");
 const drinkName2 = document.getElementsByClassName("drinkName2");
-
+/////////////////////////////////////////////////////////////////////헤더푸터이벤트
+const menu2 = document.getElementById("menu2");
 leaveBtn.setAttribute("src", "../menu_Drinks/delete_icon.png");
+displayMenu.classList.toggle("hiddenMenu");
 
+//헤더 메뉴풀다운
+// menu2.addEventListener("mouseover", () => {
+//   displayMenu.classList.toggle("hiddenMenu");
+//   menu2.classList.toggle("silverClr");
+//   if (displayMenu.classList.contains("hiddenMenu")) {
+//     displayMenu.classList.toggle("hiddenMenu");
+//     menu2.classList.toggle("silverClr");
+//   }
+// });
+// menu2.addEventListener("mouseleave", () => {
+//   // menu2.classList.toggle("silverClr");
+//   displayMenu.classList.toggle("hiddenMenu");
+//   menu2.classList.toggle("silverClr");
+// });
+menu2.addEventListener("mouseover", () => {
+  displayMenu.classList.toggle("hiddenMenu");
+  menu2.classList.toggle("silverClr");
+  if (displayMenu.classList.contains("hiddenMenu")) {
+    displayMenu.classList.toggle("hiddenMenu");
+    menu2.classList.toggle("silverClr");
+  }
+});
+menu2.addEventListener("mouseleave", () => {
+  // menu2.classList.toggle("silverClr");
+  displayMenu.classList.toggle("hiddenMenu");
+  menu2.classList.toggle("silverClr");
+});
+//scroll-to-top function
+const btn = document.getElementById("btn");
+function pageScroll() {
+  document.documentElement.style.scrollBehavior = "smooth";
+}
+
+/////////////////////////////////////////////////////////////////////헤더푸터이벤트
 const allImgs = function () {
   // if (chkbx[0].checked == true) {
   chkbx[0].checked = true;
@@ -158,7 +194,7 @@ const allTea = function () {
     if (chkbx[2].checked == true) {
       // console.log(chkbx[2].checked);
       showDrinkList.innerHTML +=
-        "<a><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+        "<a class='allItemsLink'><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
       // const drinksHref = document.querySelectorAll("a");
       const imgDrinks = document.getElementsByClassName("imgDrinks");
       const drinkName = document.getElementsByClassName("drinkName");
@@ -211,7 +247,7 @@ const allFrozen = function () {
   //화면에 보이기
   for (i = 0; i < arrImgFro.length; i++) {
     showDrinkList.innerHTML +=
-      "<a><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+      "<a class='allItemsLink'><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
     // const drinksHref = document.querySelectorAll("a");
     const imgDrinks = document.getElementsByClassName("imgDrinks");
     const drinkName = document.getElementsByClassName("drinkName");
@@ -698,12 +734,10 @@ const body = document.querySelector("body");
 const modal2 = document.querySelector(".modal2");
 const allItemsLink = document.getElementsByClassName("allItemsLink");
 
-modal2.addEventListener("click", (event) => {
-  if (event.target === modal2) {
+modal2.addEventListener("click", () => {
+  if (modal2.classList.contains("show")) {
+    body.style.overflow = "auto";
     modal2.classList.toggle("show");
-    if (!modal2.classList.contains("show")) {
-      body.style.overflow = "auto";
-    }
   }
 });
 
@@ -712,7 +746,9 @@ modal2.addEventListener("click", (event) => {
 //버튼 mouseover하면 색 바꾸기, mouseleave하면 색 다시 돌려놓기
 leaveModal.addEventListener("click", () => {
   modal2.classList.toggle("show");
+  // body.style.overflow = "hidden";
   if (!modal2.classList.contains("show")) {
+    // body.style.overflow = "hidden";
     body.style.overflow = "auto";
   }
 });
@@ -844,6 +880,7 @@ let arrays = drinkData.forEach((obj) => {
 // }
 function addInfo0() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   console.log("됐나?");
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
@@ -931,6 +968,11 @@ function addInfo0() {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
     });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
+    });
     Kname.innerHTML = nameArr[0]; //메뉴명넣기
     engName.innerHTML = engnameArr[0]; //메뉴명넣기
     detailDes.innerHTML = descArr[0]; //메뉴명넣기
@@ -940,7 +982,7 @@ function addInfo0() {
     cal.innerHTML = calArr[0]; //칼로리 넣기
     sug.innerHTML = sugArr[0]; // 당분 넣기
     pro.innerHTML = proteinArr[0]; //단백질넣기
-    fat.innerHTML = sodiumArr[0]; //설명넣기
+    fat.innerHTML = fatArr[0]; //설명넣기
     sod.innerHTML = sodiumArr[0]; //설명넣기
     caf.innerHTML = caffeiArr[0]; //설명넣기
   });
@@ -948,6 +990,7 @@ function addInfo0() {
 ////////////////////////////////////////////////////////////
 function addInfo1() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1034,6 +1077,11 @@ function addInfo1() {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
     });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
+    });
     Kname.innerHTML = nameArr[1]; //메뉴명넣기
     engName.innerHTML = engnameArr[1]; //메뉴명넣기
     detailDes.innerHTML = descArr[1]; //메뉴명넣기
@@ -1043,7 +1091,7 @@ function addInfo1() {
     cal.innerHTML = calArr[1]; //칼로리 넣기
     sug.innerHTML = sugArr[1]; // 당분 넣기
     pro.innerHTML = proteinArr[1]; //단백질넣기
-    fat.innerHTML = sodiumArr[1]; //설명넣기
+    fat.innerHTML = fatArr[1]; //설명넣기
     sod.innerHTML = sodiumArr[1]; //설명넣기
     caf.innerHTML = caffeiArr[1]; //설명넣기
   });
@@ -1051,6 +1099,7 @@ function addInfo1() {
 ////////////////////////////////////////////////////////////////////////////
 function addInfo2() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1137,6 +1186,11 @@ function addInfo2() {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
     });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
+    });
     Kname.innerHTML = nameArr[2]; //메뉴명넣기
     engName.innerHTML = engnameArr[2]; //메뉴명넣기
     detailDes.innerHTML = descArr[2]; //메뉴명넣기
@@ -1146,7 +1200,7 @@ function addInfo2() {
     cal.innerHTML = calArr[2]; //칼로리 넣기
     sug.innerHTML = sugArr[2]; // 당분 넣기
     pro.innerHTML = proteinArr[2]; //단백질넣기
-    fat.innerHTML = sodiumArr[2]; //설명넣기
+    fat.innerHTML = fatArr[2]; //설명넣기
     sod.innerHTML = sodiumArr[2]; //설명넣기
     caf.innerHTML = caffeiArr[2]; //설명넣기
   });
@@ -1154,6 +1208,7 @@ function addInfo2() {
 ///////////////////////////////////////////////////////////////////
 function addInfo3() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1240,6 +1295,11 @@ function addInfo3() {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
     });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
+    });
     Kname.innerHTML = nameArr[3]; //메뉴명넣기
     engName.innerHTML = engnameArr[3]; //메뉴명넣기
     detailDes.innerHTML = descArr[3]; //메뉴명넣기
@@ -1249,7 +1309,7 @@ function addInfo3() {
     cal.innerHTML = calArr[3]; //칼로리 넣기
     sug.innerHTML = sugArr[3]; // 당분 넣기
     pro.innerHTML = proteinArr[3]; //단백질넣기
-    fat.innerHTML = sodiumArr[3]; //설명넣기
+    fat.innerHTML = fatArr[3]; //설명넣기
     sod.innerHTML = sodiumArr[3]; //설명넣기
     caf.innerHTML = caffeiArr[3]; //설명넣기
   });
@@ -1257,6 +1317,7 @@ function addInfo3() {
 ///////////////////////////////////////////////////////////////////
 function addInfo4() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1341,6 +1402,11 @@ function addInfo4() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[3]; //메뉴명넣기
     engName.innerHTML = engnameArr[3]; //메뉴명넣기
@@ -1352,7 +1418,7 @@ function addInfo4() {
     cal.innerHTML = calArr[3]; //칼로리 넣기
     sug.innerHTML = sugArr[3]; // 당분 넣기
     pro.innerHTML = proteinArr[3]; //단백질넣기
-    fat.innerHTML = sodiumArr[3]; //설명넣기
+    fat.innerHTML = fatArr[3]; //설명넣기
     sod.innerHTML = sodiumArr[3]; //설명넣기
     caf.innerHTML = caffeiArr[3]; //설명넣기
   });
@@ -1360,6 +1426,7 @@ function addInfo4() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo5() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1444,6 +1511,11 @@ function addInfo5() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[5]; //메뉴명넣기
     engName.innerHTML = engnameArr[5]; //메뉴명넣기
@@ -1455,7 +1527,7 @@ function addInfo5() {
     cal.innerHTML = calArr[5]; //칼로리 넣기
     sug.innerHTML = sugArr[5]; // 당분 넣기
     pro.innerHTML = proteinArr[5]; //단백질넣기
-    fat.innerHTML = sodiumArr[5]; //설명넣기
+    fat.innerHTML = fatArr[5]; //설명넣기
     sod.innerHTML = sodiumArr[5]; //설명넣기
     caf.innerHTML = caffeiArr[5]; //설명넣기
   });
@@ -1463,6 +1535,7 @@ function addInfo5() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo6() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1547,6 +1620,11 @@ function addInfo6() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[6]; //메뉴명넣기
     engName.innerHTML = engnameArr[6]; //메뉴명넣기
@@ -1558,7 +1636,7 @@ function addInfo6() {
     cal.innerHTML = calArr[6]; //칼로리 넣기
     sug.innerHTML = sugArr[6]; // 당분 넣기
     pro.innerHTML = proteinArr[6]; //단백질넣기
-    fat.innerHTML = sodiumArr[6]; //설명넣기
+    fat.innerHTML = fatArr[6]; //설명넣기
     sod.innerHTML = sodiumArr[6]; //설명넣기
     caf.innerHTML = caffeiArr[6]; //설명넣기
   });
@@ -1566,6 +1644,7 @@ function addInfo6() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo7() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1650,6 +1729,11 @@ function addInfo7() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[7]; //메뉴명넣기
     engName.innerHTML = engnameArr[7]; //메뉴명넣기
@@ -1661,7 +1745,7 @@ function addInfo7() {
     cal.innerHTML = calArr[7]; //칼로리 넣기
     sug.innerHTML = sugArr[7]; // 당분 넣기
     pro.innerHTML = proteinArr[7]; //단백질넣기
-    fat.innerHTML = sodiumArr[7]; //설명넣기
+    fat.innerHTML = fatArr[7]; //설명넣기
     sod.innerHTML = sodiumArr[7]; //설명넣기
     caf.innerHTML = caffeiArr[7]; //설명넣기
   });
@@ -1669,6 +1753,7 @@ function addInfo7() {
 /////////////////////////////////////////////////////////////////////////////////////////라뗴*티
 function addInfo8() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1753,6 +1838,11 @@ function addInfo8() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[8]; //메뉴명넣기
     engName.innerHTML = engnameArr[8]; //메뉴명넣기
@@ -1764,7 +1854,7 @@ function addInfo8() {
     cal.innerHTML = calArr[8]; //칼로리 넣기
     sug.innerHTML = sugArr[8]; // 당분 넣기
     pro.innerHTML = proteinArr[8]; //단백질넣기
-    fat.innerHTML = sodiumArr[8]; //설명넣기
+    fat.innerHTML = fatArr[8]; //설명넣기
     sod.innerHTML = sodiumArr[8]; //설명넣기
     caf.innerHTML = caffeiArr[8]; //설명넣기
   });
@@ -1772,6 +1862,7 @@ function addInfo8() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo9() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1856,6 +1947,11 @@ function addInfo9() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[9]; //메뉴명넣기
     engName.innerHTML = engnameArr[9]; //메뉴명넣기
@@ -1867,7 +1963,7 @@ function addInfo9() {
     cal.innerHTML = calArr[9]; //칼로리 넣기
     sug.innerHTML = sugArr[9]; // 당분 넣기
     pro.innerHTML = proteinArr[9]; //단백질넣기
-    fat.innerHTML = sodiumArr[9]; //설명넣기
+    fat.innerHTML = fatArr[9]; //설명넣기
     sod.innerHTML = sodiumArr[9]; //설명넣기
     caf.innerHTML = caffeiArr[9]; //설명넣기
   });
@@ -1875,6 +1971,7 @@ function addInfo9() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo10() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1959,6 +2056,11 @@ function addInfo10() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[10]; //메뉴명넣기
     engName.innerHTML = engnameArr[10]; //메뉴명넣기
@@ -1970,7 +2072,7 @@ function addInfo10() {
     cal.innerHTML = calArr[10]; //칼로리 넣기
     sug.innerHTML = sugArr[10]; // 당분 넣기
     pro.innerHTML = proteinArr[10]; //단백질넣기
-    fat.innerHTML = sodiumArr[10]; //설명넣기
+    fat.innerHTML = fatArr[10]; //설명넣기
     sod.innerHTML = sodiumArr[10]; //설명넣기
     caf.innerHTML = caffeiArr[10]; //설명넣기
   });
@@ -1978,6 +2080,7 @@ function addInfo10() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo11() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2062,6 +2165,11 @@ function addInfo11() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[11]; //메뉴명넣기
     engName.innerHTML = engnameArr[11]; //메뉴명넣기
@@ -2073,7 +2181,7 @@ function addInfo11() {
     cal.innerHTML = calArr[11]; //칼로리 넣기
     sug.innerHTML = sugArr[11]; // 당분 넣기
     pro.innerHTML = proteinArr[11]; //단백질넣기
-    fat.innerHTML = sodiumArr[11]; //설명넣기
+    fat.innerHTML = fatArr[11]; //설명넣기
     sod.innerHTML = sodiumArr[11]; //설명넣기
     caf.innerHTML = caffeiArr[11]; //설명넣기
   });
@@ -2081,6 +2189,7 @@ function addInfo11() {
 //////////////////////////////////////////////////////////////////////////빙수 종류
 function addInfo12() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2166,6 +2275,11 @@ function addInfo12() {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
     });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
+    });
     Kname.innerHTML = nameArr[12]; //메뉴명넣기
     engName.innerHTML = engnameArr[12]; //메뉴명넣기
     detailDes.innerHTML = descArr[12]; //메뉴명넣기
@@ -2176,7 +2290,7 @@ function addInfo12() {
     cal.innerHTML = calArr[12]; //칼로리 넣기
     sug.innerHTML = sugArr[12]; // 당분 넣기
     pro.innerHTML = proteinArr[12]; //단백질넣기
-    fat.innerHTML = sodiumArr[12]; //설명넣기
+    fat.innerHTML = fatArr[12]; //설명넣기
     sod.innerHTML = sodiumArr[12]; //설명넣기
     caf.innerHTML = caffeiArr[12]; //설명넣기
   });
@@ -2184,6 +2298,7 @@ function addInfo12() {
 //////////////////////////////////////////////////////////////////////////빙수 종류
 function addInfo13() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2287,6 +2402,7 @@ function addInfo13() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo14() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2371,6 +2487,11 @@ function addInfo14() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[14]; //메뉴명넣기
     engName.innerHTML = engnameArr[14]; //메뉴명넣기
@@ -2382,7 +2503,7 @@ function addInfo14() {
     cal.innerHTML = calArr[14]; //칼로리 넣기
     sug.innerHTML = sugArr[14]; // 당분 넣기
     pro.innerHTML = proteinArr[14]; //단백질넣기
-    fat.innerHTML = sodiumArr[14]; //설명넣기
+    fat.innerHTML = fatArr[14]; //설명넣기
     sod.innerHTML = sodiumArr[14]; //설명넣기
     caf.innerHTML = caffeiArr[14]; //설명넣기
   });
@@ -2390,6 +2511,7 @@ function addInfo14() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo15() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2474,6 +2596,11 @@ function addInfo15() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[15]; //메뉴명넣기
     engName.innerHTML = engnameArr[15]; //메뉴명넣기
@@ -2485,7 +2612,7 @@ function addInfo15() {
     cal.innerHTML = calArr[15]; //칼로리 넣기
     sug.innerHTML = sugArr[15]; // 당분 넣기
     pro.innerHTML = proteinArr[15]; //단백질넣기
-    fat.innerHTML = sodiumArr[15]; //설명넣기
+    fat.innerHTML = fatArr[15]; //설명넣기
     sod.innerHTML = sodiumArr[15]; //설명넣기
     caf.innerHTML = caffeiArr[15]; //설명넣기
   });
@@ -2493,6 +2620,7 @@ function addInfo15() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo16() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2577,6 +2705,11 @@ function addInfo16() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[16]; //메뉴명넣기
     engName.innerHTML = engnameArr[16]; //메뉴명넣기
@@ -2588,7 +2721,7 @@ function addInfo16() {
     cal.innerHTML = calArr[16]; //칼로리 넣기
     sug.innerHTML = sugArr[16]; // 당분 넣기
     pro.innerHTML = proteinArr[16]; //단백질넣기
-    fat.innerHTML = sodiumArr[16]; //설명넣기
+    fat.innerHTML = fatArr[16]; //설명넣기
     sod.innerHTML = sodiumArr[16]; //설명넣기
     caf.innerHTML = caffeiArr[16]; //설명넣기
   });
@@ -2596,6 +2729,7 @@ function addInfo16() {
 ///////////////////////////////////////////////////////////////////////////
 function addInfo17() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2680,6 +2814,11 @@ function addInfo17() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[17]; //메뉴명넣기
     engName.innerHTML = engnameArr[17]; //메뉴명넣기
@@ -2691,7 +2830,7 @@ function addInfo17() {
     cal.innerHTML = calArr[17]; //칼로리 넣기
     sug.innerHTML = sugArr[17]; // 당분 넣기
     pro.innerHTML = proteinArr[17]; //단백질넣기
-    fat.innerHTML = sodiumArr[17]; //설명넣기
+    fat.innerHTML = fatArr[17]; //설명넣기
     sod.innerHTML = sodiumArr[17]; //설명넣기
     caf.innerHTML = caffeiArr[17]; //설명넣기
   });
@@ -2699,6 +2838,7 @@ function addInfo17() {
 ///////////////////////////////////////////////////////////////////////////
 function addInfo18() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2783,6 +2923,11 @@ function addInfo18() {
     drinkMenu.data.forEach((obj) => {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
+    });
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
     });
     Kname.innerHTML = nameArr[18]; //메뉴명넣기
     engName.innerHTML = engnameArr[18]; //메뉴명넣기
@@ -2794,7 +2939,7 @@ function addInfo18() {
     cal.innerHTML = calArr[18]; //칼로리 넣기
     sug.innerHTML = sugArr[18]; // 당분 넣기
     pro.innerHTML = proteinArr[18]; //단백질넣기
-    fat.innerHTML = sodiumArr[18]; //설명넣기
+    fat.innerHTML = fatArr[18]; //설명넣기
     sod.innerHTML = sodiumArr[18]; //설명넣기
     caf.innerHTML = caffeiArr[18]; //설명넣기
   });
@@ -2802,6 +2947,7 @@ function addInfo18() {
 ///////////////////////////////////////////////////////////////////////////
 function addInfo19() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2887,17 +3033,22 @@ function addInfo19() {
       let cafStr = JSON.stringify(obj.caffeine);
       caffeiArr.push(cafStr); //배열에 담아주기
     });
-    Kname.innerHTML = nameArr[18]; //메뉴명넣기
-    engName.innerHTML = engnameArr[18]; //메뉴명넣기
-    detailDes.innerHTML = descArr[18]; //메뉴명넣기
-    allergy.innerHTML = allerArr[18]; //메뉴명넣기
-    subtype.innerHTML = subtArr[18]; //메뉴명넣기
-    drinkImg.setAttribute("src", arrImg[18]); //이미지넣기
+    const fatArr = [];
+    drinkMenu.data.forEach((obj) => {
+      let fatStr = JSON.stringify(obj.transfat);
+      fatArr.push(fatStr); //배열에 담아주기
+    });
+    Kname.innerHTML = nameArr[19]; //메뉴명넣기
+    engName.innerHTML = engnameArr[19]; //메뉴명넣기
+    detailDes.innerHTML = descArr[19]; //메뉴명넣기
+    allergy.innerHTML = allerArr[19]; //메뉴명넣기
+    subtype.innerHTML = subtArr[19]; //메뉴명넣기
+    drinkImg.setAttribute("src", arrImg[19]); //이미지넣기
 
     cal.innerHTML = calArr[19]; //칼로리 넣기
     sug.innerHTML = sugArr[19]; // 당분 넣기
     pro.innerHTML = proteinArr[19]; //단백질넣기
-    fat.innerHTML = sodiumArr[19]; //설명넣기
+    fat.innerHTML = fatArr[19]; //설명넣기
     sod.innerHTML = sodiumArr[19]; //설명넣기
     caf.innerHTML = caffeiArr[19]; //설명넣기
   });

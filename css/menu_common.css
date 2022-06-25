@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Noto Sans KR", sans-serif;
+}
+/*헤더 푸터용*/
+header {
+  margin-bottom: 3em;
+  height: 3em;
+  width: 100vw;
+  height: 40vh;
+  font-weight: bold;
+  font-size: 20px;
+}
+.silverClr {
+  color: silver;
+}
+.hiddenMenu {
+  display: none;
+}
+#signInSilv:hover {
+  display: inline;
+  color: silver;
+}
+#signIn_wrap {
+  height: 2em;
+  display: flex;
+}
+
+#signInSilv {
+  display: inline;
+  color: black;
+}
+#signInlink {
+  display: inline-block;
+}
+nav {
+  width: 100vw;
+  height: 37vh;
+}
+#sign {
+  float: right;
+  margin: 0.7em 5em 0 0;
+  width: 3.4em;
+  font-size: 16px;
+  display: inline;
+}
+#signimg {
+  display: inline;
+  width: 30px;
+  height: 30px;
+  margin-left: 68.5em;
+}
+#name {
+  margin-top: 0;
+  margin-left: 2.5em;
+  height: 100%;
+}
+#name2 {
+  width: 84.06px;
+  height: 28.2px;
+  float: right;
+  margin-right: 5.5em;
+  margin-top: 3.7em;
+  display: block;
+}
+#logoWrap {
+  height: 7em;
+}
+#logo {
+  width: 80px;
+  height: 90px;
+  margin-left: 1vw;
+}
+#menu {
+  display: inline-flex;
+  margin: 1em 0;
+  float: right;
+  width: 27.5em;
+  list-style: none;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align: center;
+}
+#mypage {
+  display: inline;
+  width: 1em;
+}
+a:hover {
+  color: silver;
+}
+/*헤더 푸터용 끝*/
+#menuMainWrap {
+  /* width: 100vw; */
+  height: 100%;
+  margin: 0 10%;
+}
+#categoryWrap {
+  width: 100%;
+  margin: 3em 0;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  border: 0.2em solid #a88665;
+}
+h2 {
+  color: #a88665;
+}
+#horiRu {
+  background-color: #e15c2d;
+  height: 5px;
+  border: none;
+  width: 100%;
+  margin-bottom: 3em;
+  float: right;
+  display: block;
+}
+#menuHr {
+  margin: 0.5em 0;
+  width: 100%;
+  background-color: #a88665;
+  height: 0.2em;
+}
+#drinksWrap {
+  margin: 2em 0;
+  width: 42em;
+  display: flex;
+  justify-content: space-between;
+}
+#drinkImgTbl {
+  width: 100%;
+}
+img {
+  width: 16em;
+}
+footer {
+  background-color: #cfb7a3;
+  height: 16em;
+}
+#btn {
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+  display: block;
+}
+/*헤더 푸터 끝*/
+#drinkImg:hover {
+  transform: scale(1.2);
+}
+.imgDrinks:hover {
+  transform: scale(1.2);
+}
+.imgDrinks2:hover {
+  transform: scale(1.2);
+}
+.drinkName {
+  display: inline-block;
+  font-size: 12px;
+}
+.drinkName2 {
+  display: inline-block;
+  font-size: 12px;
+}
+.drinkName3 {
+  display: inline-block;
+  font-size: 12px;
+}
+a {
+  display: inline-block;
+  margin: 1em;
+  width: 16em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.allItemsLink:hover {
+  color: #e15c2d;
+}
+.cofLink:hover {
+  color: #e15c2d;
+}
+.tlink:hover {
+  color: #e15c2d;
+}
+.flink:hover {
+  color: #e15c2d;
+}
+#drinkKind {
+  width: 90%;
+  font-size: 24px;
+  padding: 0.5em;
+  margin: 0 auto;
+  background-color: #e15c2d;
+  padding: 3px 30px;
+  color: #fff;
+}
+#drinkKind2 {
+  width: 90%;
+  font-size: 24px;
+  padding: 0.5em;
+  margin: 0 auto;
+  background-color: #e15c2d;
+  padding: 3px 30px;
+  color: #fff;
+}
+#drinkKind3 {
+  width: 90%;
+  font-size: 24px;
+  padding: 0.5em;
+  margin: 0 auto;
+  background-color: #e15c2d;
+  padding: 3px 30px;
+  color: #fff;
+}
+#showDrinkList {
+  margin-bottom: 3em;
+}
+/*모달창 띄워주기*/
+#leaveModal {
+  border: none;
+  float: right;
+  margin: 2em 1em 0 0;
+  background-color: white;
+}
+#leaveBtn {
+  font-weight: 900;
+  font-size: 2em;
+}
+.modal2.show {
+  display: block;
+  z-index: 100;
+  height: 100%;
+}
+
+.modal2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#relative_body2 {
+  position: relative;
+  /* margin-top: 15%; */
+  height: 100%;
+}
+.modal_body {
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  width: 50em;
+  max-width: 60em;
+  max-height: 40em;
+  height: 30em;
+  padding: 25px;
+  /* text-align: center; */
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgb(34 36 38 / 15%);
+  transform: translateX(-50%) translateY(-100%);
+  overflow: hidden;
+}
+#menuMainWrap2 {
+  width: 80%;
+  height: 80%;
+}
+#DetailsWrap {
+  display: inline-flex;
+  margin: 0 auto;
+}
+#drinkImg {
+  display: inline-block;
+  width: 20em;
+}
+#drinkImg:hover {
+  display: inline-block;
+  width: 20em;
+  transform: scale(1.2);
+}
+table {
+  border: 1px solid #e15c2d;
+  width: 25em;
+  text-align: center;
+  font-size: 15px;
+}
+#subtype {
+  font-size: 3em;
+  color: #e15c2d;
+  text-align: left;
+  display: inline-block;
+  margin: 0.3em;
+}
+#InfoWrap {
+  display: inline-block;
+  width: 22em;
+  position: absolute;
+  /* margin: 2em; */
+}
+#Kname {
+  height: 2em;
+  font-size: 1.5em;
+}
+#engName {
+  height: 2em;
+}
+#detailDes {
+  height: 4em;
+}
+#allergy {
+  margin-top: 1em;
+  height: 2em;
+}

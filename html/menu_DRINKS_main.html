@@ -11,19 +11,84 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/menu_DRINKS_main.css" />
+    <link rel="stylesheet" href="../css/menu_common.css" />
   </head>
   <body>
+    <header id="header">
+      <nav>
+        <a href="./login.html" id="sign"> Sign in </a>
+        <img
+          src="../img/sign.png"
+          id="signimg"
+          style="width: 30px; height: 30px; margin-top: 10px; flex: right"
+        />
+        <div id="logoWrap">
+          <a href="./CafeMain.html" id="name" style="height: 100%">
+            <img id="logo" src="../img/logo4.png" alt="로고" />
+            <span id="name2" style="color: black"> MAHALO </span>
+          </a>
+        </div>
+        <!-- </div> -->
+
+        <div id="links_wrap">
+          <ul id="menu">
+            <li>
+              <a href="./login.html" id="mypage"> My Page </a>
+            </li>
+            <li>
+              <a href="./CAFEnews.html" style="display: inline; width: 1em">
+                MAHALO News
+              </a>
+            </li>
+            <li>
+              <a href="./searchStore.html" style="display: inline; width: 1em">
+                Store
+              </a>
+            </li>
+            <li
+              id="menu2"
+              style="margin-right: 3em; display: inline; width: 1em"
+            >
+              <div style="width: 3em">Menu</div>
+
+              <div id="displayMenu" style="width: 2em">
+                <a
+                  href="./menu_DRINKS_main.html "
+                  id="dfm1"
+                  style="
+                    width: 2em;
+                    display: block;
+                    margin: 1em 0.2em;
+                    color: black;
+                  "
+                  >Drinks</a
+                >
+                <a
+                  href="./menu_FOOD_main.html"
+                  id="dfm"
+                  style="
+                    width: 2em;
+                    margin: 1em 0.2em;
+                    text-align: center;
+                    display: block;
+                    color: black;
+                  "
+                >
+                  Food</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <hr id="horiRu" />
+    </header>
     <div class="modal2">
       <div id="relative_body2">
         <div class="modal_body">
           <h1 id="subtype"></h1>
           <button type="button" id="leaveModal">
-            <img
-              id="leaveBtn"
-              src="../img/menu_Drinks/delete_icon.png"
-              style="width: 2em"
-            />
+            <div id="leaveBtn">X</div>
           </button>
           <div id="menuMainWrap2">
             <img id="drinkImg" />
@@ -78,8 +143,26 @@
       </div>
     </div>
     <!--footer 나중에 추가하기-->
+    <footer>
+      <div class="footer">
+        <hr id="horiRu" />
+        <a
+          href="#header"
+          onclick="pageScroll()"
+          id="btn"
+          style="margin: 0 auto; margin-bottom: 1em; display: block"
+        >
+          <img src="../img/logo3.png" style="width: 20%" />
+        </a>
+        <ul id="ft" style="text-align: center">
+          <li><b>CAFE MAHALO</b></li>
+          <li>개인정보처리방침</li>
+          <li>사업자등록증 123-45-12345</li>
+          <li style="margin-bottom: 1em">Tel : 02-123-4567</li>
+        </ul>
+      </div>
+    </footer>
   </body>
   <script src="../js/menu_DRINKS_json.js"></script>
   <script src="../js/menu_DRINKS_main.js"></script>
-  <!-- <script src="../js/menu_DRINKS_details.js"></script> -->
 </html>
