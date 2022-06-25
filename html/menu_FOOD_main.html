@@ -4,7 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MAHALO FOOD MENU</title>
+    <title>MAHALO DRINK MENU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/menu_FOOD_main.css" />
+    <!-- <link rel="stylesheet" href="../css/CafeMainCss.css" /> -->
   </head>
-  <body></body>
+  <body>
+    <div class="modal2">
+      <div id="relative_body2">
+        <div class="modal_body">
+          <h1 id="subtype"></h1>
+          <button type="button" id="leaveModal">
+            <img
+              id="leaveBtn"
+              src="../menu_Drinks/delete_icon.png"
+              style="width: 2em"
+            />
+          </button>
+          <div id="menuMainWrap2">
+            <img id="drinkImg" />
+            <div id="InfoWrap">
+              <div id="Kname"></div>
+              <div id="engName"></div>
+              <div id="detailDes"></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>1회 제공량 (kcal)</th>
+                    <th>당류 (g)</th>
+                    <th>단백질</th>
+                    <th>포화지방</th>
+                    <th>나트륨</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                  <tr>
+                    <td id="cal"></td>
+                    <td id="sug"></td>
+                    <td id="pro"></td>
+                    <td id="fat"></td>
+                    <td id="sod"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div id="allergy"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="menuMainWrap">
+      <div id="categoryWrap">
+        <h2>CATEGORIES</h2>
+        <hr id="menuHr" />
+        <div id="drinksWrap">
+          <div>
+            <input class="chkbx" type="checkbox" checked /> 전체상품보기
+          </div>
+          <div><input class="chkbx" type="checkbox" /> 샐러드 • 샌드위치</div>
+          <div><input class="chkbx" type="checkbox" /> 브레드</div>
+          <div><input class="chkbx" type="checkbox" /> 케이크</div>
+        </div>
+      </div>
+      <div id="drinkListWrap">
+        <div id="showDrinkList"></div>
+      </div>
+    </div>
+    <!--footer 나중에 추가하기-->
+  </body>
+  <script src="../js/menu_FOOD_json.js"></script>
+  <script src="../js/menu_FOOD_main.js"></script>
+  <!-- <script src="../js/menu_DRINKS_details.js"></script> -->
 </html>
