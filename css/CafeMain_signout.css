@@ -7,7 +7,10 @@ li{  /*초기화*/
 	/* font: inherit; */
 	/* vertical-align: baseline; */
 }
-
+#header{
+    overflow: hidden;
+    display: block;
+}
 #menu li {
     float: right;
     display: block;
@@ -89,8 +92,9 @@ hr {
     position: relative;
     display: inline-block;
     color: black;
-    margin-top: 70px;
-    margin-left: 10px;
+    margin-top: 120px;
+    text-align: center;
+    margin-left: 15px;
 }
 /* 배너 넘기기 */
 .banner {
@@ -166,15 +170,18 @@ hr {
 }
 /* hover 시 화면 커짐 end */
 .Store{
+    display: block;
     background-color: #CFB7A3;
     margin-bottom: 50px;
     height: 417px;
+}
+.right2{
+    float: right;
 }
 #coffee { /*뉴크롭 원두*/
     display: inline;
     float: right;
     width: 494px;
-    
     margin-top: 0px;
     margin-right: 0px;
 
@@ -182,26 +189,21 @@ hr {
 #search { /*매장 찾기*/
     display: inline-block;
     width: 25%;
-    margin-top: 50px;
+    margin-top: 5%;
     margin-left: 120px;
 
     
 }
 #ex2 { /*원두 설명*/
     display:inline-block;
-    margin-left: 18%;
     color: rgb(39, 39, 39);
     margin-top: 16px;
     width: 19%;
+    text-align: left;
 }
-#block{/* 블럭 */
-    position: relative;
-    display: none;
-    width: 280px;
-    height: 95px;
-    margin-left: 0px;
-    margin-top: 0px;
-    /* float: right; */
+
+.introduce{
+    display: block;
 }
 /*카페 소개*/
 #cafeintroduce {
@@ -209,32 +211,42 @@ hr {
     
 }
 /* 카페 소개 글 */
+.introduce{
+    overflow: hidden;
+    display: block;
+}
 #ex4 { 
     position: relative;
     display: inline-block;
-    margin-top: 170px;
-    margin-left: 170px;
+    height: 100%;
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-bottom: 50px;
     font-size: larger;
+    text-align: left;
 /* 이미지 */
 }
 #cafe1{ 
     position: relative;
     display: inline-block;
-    width: 15%;
-    margin-top: 250px;
+    width: 18%;
+    margin-top: 50px;
+    margin-right: 200px;
 }
 #cafe2{ 
     position: relative;
     display: inline-block;
-    width: 15%;
-    margin-top: 100px;
-    padding: 10px;
+    width: 18%;
+    margin-top: 150px;
+    padding: 30px;
+    margin-right: 20px;
 }
 #cafe3{
     position: relative;
     display: inline-block;
-    width: 15%;
-    margin-top: 230px;
+    width: 18%;
+    margin-top: 100px;
+    margin-right: 20px;
 }
 .right{
     float: right;
@@ -249,58 +261,48 @@ hr {
 
 
 /* 비디오 시작 */
-#video{
-    background-color: #A88665;
+.introduce2{
+    display: block;
+    overflow: hidden;
+    height: 100%;
 
-}
-/*  MAHALO  */
-#video a { 
-    border: 100%;
-    float: right;
-    margin-top: 150px;
-    margin-right: 400px;
 }
 video{
     position: relative;
     display: inline;
-    width: 50%;
+    width: 60%;
+    height: 60%;
     float: left;
-    margin-top: 165px;
-    margin-left: 150px;
+    margin-top: 65px;
+    margin-left: 70px;
+    margin-bottom: 100px;
 }
-/* 비디오 끝 */
 #ex5{
+    float: right;
+    margin-top: 120px;
+    margin-right: 150px;
     font-size: larger;
+    text-align: left;
 }
 
+/* 비디오 끝 */
 /*  footer 부분 */
-  #logo2 { /*footer 로고*/
-    width: 35px;
-    height: 44px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
 
-  }
-  #logo2 img { 
-    width: 35px;
-    height: 47px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  #wrapper{ /* footer화면 내림*/
-    height : 270%;
+#wrapper {
+    height: 100%;
+}
+.footer{
+    overflow: hidden;
     display: block;
-  }
-  footer {
-    position : relative;
-    transform : translateY(-100%);
     text-align: center;
-    margin-top: 0;
-    background-color: #CFB7A3;
-    font-family: 'Noto Sans KR', sans-serif;
-    display: block;
-    font-weight: bold;
-    font-size: 13px;
+    text-decoration: none;
     list-style: none;
-  }
+    background-color: #CFB7A3;
+}
+#btn img {
+    width: 3%;
+    height: 3%;
+    margin-top: 30px;
+}
+
+

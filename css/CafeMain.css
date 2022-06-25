@@ -184,22 +184,20 @@ hr {
     width: 494px;
     margin-top: 0px;
     margin-right: 0px;
-
 }
 #search { /*매장 찾기*/
     display: inline-block;
     width: 25%;
-    margin-top: 5%;
-    margin-left: 120px;
+    margin: 3% 10%;
 
-    
 }
 #ex2 { /*원두 설명*/
     display:inline-block;
     color: rgb(39, 39, 39);
-    margin-top: 16px;
+    margin-top: 1%;
     width: 19%;
-    text-align: left;
+    text-align: justify;
+    font-size: larger;
 }
 
 .introduce{
@@ -223,7 +221,7 @@ hr {
     margin-left: 15%;
     margin-bottom: 50px;
     font-size: larger;
-    text-align: left;
+    text-align: justify;
 /* 이미지 */
 }
 #cafe1{ 
@@ -282,7 +280,7 @@ video{
     margin-top: 120px;
     margin-right: 150px;
     font-size: larger;
-    text-align: left;
+    text-align: justify;
 }
 
 /* 비디오 끝 */
