@@ -279,7 +279,7 @@ select{
 /* footer  */
 #footerhr{
     bottom: 0;
-    margin-top: 1000px;
+    margin-top: 2000px;
     display: block;
     overflow: hidden;
     position: inherit;

@@ -278,11 +278,11 @@ select{
 
 /* footer  */
 #footerhr{
-    bottom: 0;
-    margin-top: 1000px;
+    position: relative;
     display: block;
     overflow: hidden;
-    position: inherit;
+    margin-top: 1100px;
+    
 }
 #btn img {
     margin-left: 50%;
