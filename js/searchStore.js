@@ -1,6 +1,4 @@
 
-
-
 const arrLocal = [];
   seoulStore.data.forEach((obj) => {
     let nameStr = JSON.stringify(obj.local);
