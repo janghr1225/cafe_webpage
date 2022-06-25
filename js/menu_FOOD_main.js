@@ -33,7 +33,29 @@ const btn = document.getElementById("btn");
 function pageScroll() {
   document.documentElement.style.scrollBehavior = "smooth";
 }
-
+function changeLoginStatus() {
+  // if (sign.innerHTML == "Sign Out") {
+  //   let result = confirm("로그아웃하시겠습니까?");
+  //   if (result == true) {
+  //     alert("로그아웃되었습니다.");
+  //     window.location.href = "http://www.w3schools.com";
+  //   } else {
+  //   }
+  // }
+  // if (sign.innerHTML == "Sign in") {
+  // }
+  // sign.innerHTML = "";
+  // sign.innerHTML = "Sign Out";
+}
+function accesMyPage() {
+  if (sign.innerHTML == "Sign Out") {
+    window.location.href = "./newsMypage.html";
+  }
+  if (sign.innerHTML == "Sign In") {
+    alert("로그인 후 이용가능합니다.");
+    window.location.href = "./login.html";
+  }
+}
 /////////////////////////////////////////////////////////////////////헤더푸터이벤트
 
 const allImgs = function () {

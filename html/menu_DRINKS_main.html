@@ -16,7 +16,12 @@
   <body>
     <header id="header">
       <nav>
-        <a href="./login.html" id="sign"> Sign in </a>
+        <a
+          id="sign"
+          onclick="
+        changeLoginStatus()"
+          >Sign In</a
+        >
         <img
           src="../img/sign.png"
           id="signimg"
@@ -33,7 +38,13 @@
         <div id="links_wrap">
           <ul id="menu">
             <li>
-              <a href="./login.html" id="mypage"> My Page </a>
+              <a
+                onclick="
+              accesMyPage()"
+                id="mypage"
+              >
+                My Page
+              </a>
             </li>
             <li>
               <a href="./CAFEnews.html" style="display: inline; width: 1em">
