@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <!-- 헤더 -->
     <div>
         <header>
             <nav>
@@ -33,8 +34,8 @@
                 <div>
                     <ul id="menu">
                         <li> <a id="mypage" href="./login.html"> My Page </a></li>
-                        <li> <a href="#"> MAHALO News </a></li>
-                        <li> <a href="#"> Store </a></li>
+                        <li> <a href="./CAFEnews.html"> MAHALO News </a></li>
+                        <li> <a href="./searchStore.html"> Store </a></li>
                         <li> <a id="menu2"> Menu </a>
                             <ul>
                                 <p class="m2"> <a href="./menu_DRINKS_main.html"> Drinks </a> </p>
@@ -44,13 +45,9 @@
                     </ul>
                 </div>
             </nav>
-            <hr>
-
+            <hr class="hrhr">
         </header>
     </div>
-
-
-
 
     <div id="loginbody">
         <p id="login_title">멤버십 로그인</p>
@@ -64,8 +61,8 @@
                     placeholder="내용을 입력하세요"></label>
         </div>
         <br>
-        <button type="button" id="btnLogin" onclick="input_chk()" style="width: 100px; height: 35px; "> 로그인
-        </button>
+        <button type="button" id="btnLogin" onclick="input_chk()" 
+            style="width: 100px; height: 35px; "> 로그인 </button>
  
 
         <div id="signupDiv">
@@ -83,8 +80,9 @@
     <div class='wrapper'></div>
     <div class='wrapper'></div>
 
-    <footer>
-        <hr id="fhr">
+    <!-- 풋터 -->
+    <footer style="background-color: #CFB7A3;">
+        <hr id="fhr" class="hrhr">
         <div id="logo2">
             <span id="btn">
                 <a href="#">
