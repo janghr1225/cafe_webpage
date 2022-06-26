@@ -17,21 +17,27 @@
     </script>
 </head>
 <style>
-    table, th, td {
-      border: none;
-      margin: auto;
-    }
-    table {
-      width: 80%;
-      height: 500px;
-      margin: auto;
-    }
+*{padding: 0;
+margin: 0;
+box-sizing: border-box;}
+tbody{
+    width: 30vw;
+}
+table {
+    width: 65%;
+    height: 500px;
+    margin: auto;
+}
 #title{
     font-size: 28px;
 }
 #heart{
-    border-right : 1px solid black;
+    height:30em;
+    width: 50%;
+    border-right: 1px solid black;
     background-color: rgb(224, 224,224);
+    /* display: inline-flex; */
+    /* flex-direction: column; */
 }
 #point{
     background-color: rgb(224, 224,224);
@@ -50,6 +56,13 @@
     width: 3%;
     height: 3%;
     margin-top: 30px;
+}
+ul#menu {
+    width: 100%;
+    height: 7em;
+}
+footer{
+    margin-top: 3em;
 }
 </style>
 <body>
@@ -75,30 +88,47 @@
 
             </ul>
         </nav>
-        <hr><!-- 메뉴 밑줄 -->
+        <hr style="  background-color: #e15c2d;
+        height: 5px;
+        border: none;
+        width: 100%;
+        margin-bottom: 3em;
+        float: right;
+        display: block;">
         
-    <table>
+        <div style="width: 80%; margin:0 auto;clear: both;"><h3 style="margin-bottom:3em;">MY Page</h3></div>
+        
+        <hr style="  background-color: #e15c2d;
+        height: 5px;
+        border: none;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 3em;
+        ">
+        
+        
+        
+        <h3 style="margin: 1em auto;width: 36%;">My points</h3>
+        <table>
         <tr>
-            <th><h3>MY Page</h3></th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th colspan="4" ></th>
         </tr>
-        <tr>
-            <th colspan="4"><hr></th>
+        <tr >
+            <!-- <th ></th> -->
+            <!-- <th>My points</th> -->
+            <!-- <th></th> -->
+            <!-- <th></th> -->
         </tr>
-        <tr>
-            <th></th>
-            <th>My points</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr id=>
-            <th id="left part"></th>
-            <th id="heart" width= "45%"><img src="../img/하트.png" alt="point heart"></th>
-            <th width= "45%" id="point">Andy님은<br>
+        <tr style="margin:0 auto; width: 100%;">
+            <!-- <th id="left part"></th> -->
+            <th id="heart">
+                <!-- <div style=" margin:0 auto; height: 4em; width:100%;"> -->
+                <!-- </div> -->
+                    <img src="../img/heart.png" style="display: block; clear: left; width: 20em; margin: 0 auto;" alt="point heart">
+            </th>
+            <th style="height: 30em; width:50%" id="point">Andy님은<br>
                 현재 150 포인트입니다.</th>
-            <th id="right part">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <!-- <th id="right part">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th> -->
         </tr>
         <tr>
             <th></th>
@@ -155,7 +185,7 @@
             <th colspan="4"><hr></th>
         </tr>
         <tr>
-            <th>3</th>
+            <th>4</th>
             <th>250P</th>
             <th>2022-06-16</th>
             <th>역삼점</th>
@@ -164,7 +194,7 @@
             <th colspan="4"><hr></th>
         </tr>
         <tr>
-            <th>3</th>
+            <th>5</th>
             <th>250P</th>
             <th>2022-06-16</th>
             <th>역삼점</th>
@@ -173,7 +203,15 @@
     <br>
     <footer>
         <div class="footer">
-        <hr> 
+        <hr
+        style="  background-color: #e15c2d;
+        height: 5px;
+        border: none;
+        width: 100%;
+        /* margin: 3em 0; */
+        margin-bottom: 3em;
+        float: right;
+        display: block;"> 
             <a href="#" id="btn">
                 <img src="../img/logo3.png">
             </a>
