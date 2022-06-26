@@ -99,7 +99,7 @@ hr {
 /* 배너 넘기기 */
 .banner {
     position: relative;
-    width: 2000px;
+    width: 2100px;
     height: 500px;
     top: 0px;
     margin: 0 auto;
@@ -116,7 +116,7 @@ hr {
 
 .banner ul li {
     float: left;
-    width: 2000px;
+    width: 2100px;
     height: 500px;
     margin: 0;
     padding: 0;
@@ -160,13 +160,6 @@ hr {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transition: all 0.3s ease-in-out;
-}
-#coffee:hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
 }
 /* hover 시 화면 커짐 end */
 .Store{
