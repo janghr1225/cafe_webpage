@@ -46,16 +46,16 @@ footer{
     <div>
     <header>
         <nav>
-            <a id="name" href="./CafeMain.html">
+            <a id="name" href="./CafeMain_signout.html">
                 <img id="logo" src="../img/logo4.png" alt="로고">
                 <span id="name2">MAHALO</span>
             </a>
-            <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg"
+            <a href="#" id="sign"> Sign out </a> <img src="../img/sign.png" id="signimg"
                 style="width: 25px;height: 25px; margin-top: 10px;">
             <ul id="menu">
-                <li> <a id="mypage" href="./login.html"> My Page </a></li>
-                <li> <a href="#"> MAHALO News </a></li>
-                <li> <a href="#"> Store </a></li>
+                <li> <a id="mypage" href="#"> My Page </a></li>
+                <li> <a href="./CAFEnews.html"> MAHALO News </a></li>
+                <li> <a href="./searchStore.html"> Store </a></li>
                 <li> <a id="menu2"> Menu </a>
                     <ul>
                         <p class="m2"> <a href="./menu_DRINKS_main.html"> Drinks </a> </p>
@@ -159,7 +159,14 @@ footer{
 
 
     // 로그인 전 마이페이지 클릭 시
-    $('#mypage').click(() => { 
-        alert("로그인 후 이용가능합니다."); //메세지 출력 후 로그인 페이지 이동
-    })
+    $("#sign").click(function () {
+  var result = confirm("로그아웃 하시겠습니까?");
+  if (result) {
+    //yes
+    alert("로그아웃되었습니다.");
+    location.replace("../html/CafeMain.html");
+  } else {
+    //no
+  }
+});
 </script>
