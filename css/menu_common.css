@@ -43,7 +43,7 @@ header {
 }
 nav {
   width: 100vw;
-  height: 37vh;
+  height: 27vh;
 }
 #sign {
   float: right;
@@ -82,7 +82,7 @@ nav {
 }
 #menu {
   display: inline-flex;
-  margin: 1em 0;
+  margin: 2.4em 0 0 0;
   float: right;
   width: 27.5em;
   list-style: none;
