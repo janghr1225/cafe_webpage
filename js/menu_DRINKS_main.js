@@ -35,25 +35,39 @@ let sign = document.getElementById("sign");
 //마이페이지 이용전 alert
 
 ///////////////////////////////////////////////////////////////////////////
+// sign.innerHTML = "Sign Out"; //설정 테스트
+// window.on;
+sign.innerHTML = "Sign out";
+//로그인 성공했을 떄에 따라서 signin의 innerHTML값을 바꿔줘야한다
+//http://127.0.0.1:5504/html/login.html
+// let url1 = new URL("http://127.0.0.1:5504/html/login.html/search"); //로그인화면
+// console.log(url1);
+// url1.searchParams.set("username", "cafe0123");
+// url1.searchParams.set("password", "cafe0123123!@");
+// for (let [name, value] of url1.searchParams) {
+//   alert(`${name}=${value}`); // username=cafe0123, then password=cafe0123123!@
+// }
+// console.log(url1);
+// console.log(url1);
+
 function changeLoginStatus() {
-  // if (sign.innerHTML == "Sign Out") {
-  //   let result = confirm("로그아웃하시겠습니까?");
-  //   if (result == true) {
-  //     alert("로그아웃되었습니다.");
-  //     window.location.href = "http://www.w3schools.com";
-  //   } else {
-  //   }
-  // }
-  // if (sign.innerHTML == "Sign in") {
-  // }
-  // sign.innerHTML = "";
-  // sign.innerHTML = "Sign Out";
+  if (sign.innerHTML == "Sign out") {
+    let result = confirm("로그아웃하시겠습니까?");
+    if (result == true) {
+      alert("로그아웃되었습니다.");
+      sign.innerHTML = "Sign in";
+      location.assign("./CafeMain_signout.html");
+    } else if (sign.innerHTML == "Sign in") {
+      location.assign("./login.html");
+      location.assign("");
+    }
+  }
 }
 function accesMyPage() {
-  if (sign.innerHTML == "Sign Out") {
-    window.location.href = "./newsMypage.html";
+  if (sign.innerHTML == "Sign out") {
+    location.assign("./newsMypage.html");
   }
-  if (sign.innerHTML == "Sign In") {
+  if (sign.innerHTML == "Sign in") {
     alert("로그인 후 이용가능합니다.");
     window.location.href = "./login.html";
   }
