@@ -160,6 +160,9 @@ footer {
 .imgDrinks2:hover {
   transform: scale(1.2);
 }
+.imgDrinks3:hover {
+  transform: scale(1.2);
+}
 .drinkName {
   display: inline-block;
   font-size: 12px;
