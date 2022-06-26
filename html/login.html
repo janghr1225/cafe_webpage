@@ -32,7 +32,11 @@
                 <li> <a id="mypage" href="./login.html"> My Page </a></li>
                 <li> <a href="./CAFEnews.html"> MAHALO News </a></li>
                 <li> <a href="./searchStore.html"> Store </a></li>
+            
+            
                 <li> <a id="menu2"> Menu </a>
+            
+            
                 </li>
 
             </ul>
@@ -96,7 +100,7 @@
 
     $('#menu2').hover(() => { //Menu hover시 Drinks로 변화
         $('#menu2').html
-            ('<span><a href="./menu_DRINKS_main.html">Drinks&nbsp&nbsp&nbsp;</a> <a href="./menu_FOOD_main.html"><span> Food </span></a></span>');
+            ('<div><a id="menu2" style="color:silver"> Menu </a></div><div style="margin-top:1em" ><a href="./menu_DRINKS_main.html">Drinks</a></div><div style="margin-top:1em"><a href="./menu_FOOD_main.html">Food</a></div></div>');
     }, () => {
         $('#menu2').html('Menu');
     });
