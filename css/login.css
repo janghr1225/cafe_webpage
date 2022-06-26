@@ -9,10 +9,10 @@ body{
 label { 
     display: block;
 }
-#header{
+/* #header{
     overflow: hidden;
     display: block;
-}
+} */
 #menu li {
     float: right;
     display: block;
@@ -102,7 +102,6 @@ hr {
 #loginbody{
     overflow: hidden;
     display: block;
-    position: absolute;
     top: 0px;
     margin: 0 auto;
     margin-top: 300px;
@@ -117,12 +116,12 @@ hr {
     font-size: xx-large;
     font-weight: bolder;
     /* position: absolute; */
-    /* position: relative; */
+    position: relative;
 }
 
 #welcome{
     color: rgb(225, 92, 45);
-    margin-top: 50px;
+    /* margin-top: 50px; */
     margin-bottom: 10px;
     font-size: xx-large;
     font-weight: bolder;
@@ -299,3 +298,12 @@ select{
 #ftft{
     background-color: #CFB7A3;
 }
+/*헤더 푸터용*/
+header {
+    margin-bottom: 3em;
+    height: 3em;
+    width: 100vw;
+    height: 40vh;
+    font-weight: bold;
+    font-size: 20px;
+  }
