@@ -1,113 +1,120 @@
-html, body, header, nav, a, img, ul, 
-li{  /*초기화*/
-    font-family: 'Noto Sans KR', sans-serif;
-    margin: 0;
-	padding: 0;
-	border: 0;
-	/* font: inherit; */
-	/* vertical-align: baseline; */
+html,
+body,
+header,
+nav,
+a,
+img,
+ul,
+li {
+  /*초기화*/
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* font: inherit; */
+  /* vertical-align: baseline; */
 }
-#header{
-    overflow: hidden;
-    display: block;
+#header {
+  overflow: hidden;
+  display: block;
 }
 #menu li {
-    float: right;
-    display: block;
-    position: relative;
-    padding: 0;
-    list-style: none;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 50px;
+  float: right;
+  display: block;
+  position: relative;
+  padding: 0;
+  list-style: none;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 50px;
 }
 #logo {
-    height: 90px;
-    width: 80px;
-    float: left;
-    margin-top: 40px;
-    margin-left: 80px;
+  height: 90px;
+  width: 80px;
+  float: left;
+  margin-top: 40px;
+  margin-left: 80px;
 }
 .m2 {
-    display: none;
+  display: none;
 }
 
-#menu li a{
-    display: inline-block;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    margin: 0;
-    color: black;
-    text-decoration: none;
+#menu li a {
+  display: inline-block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+  color: black;
+  text-decoration: none;
 }
-#sign { /*sign in, sign out */
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    color: black;
-    text-decoration: none;
-    float: right;
-    margin-right: 50px;
-    margin-top: 10px;
-    display: inline;
-    
+#sign {
+  /*sign in, sign out */
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  float: right;
+  margin-right: 50px;
+  margin-top: 10px;
+  display: inline;
 }
 #signimg {
-    float: right;
+  float: right;
 }
 #menu ul li a {
-    display: none;
+  display: none;
 }
 
 /* 밑줄 */
 .hrhr {
-    background-color: #e15c2d;
-    height: 5px;
-    border: none;
-    width: 100%;
-    margin: 0px;
+  background-color: #e15c2d;
+  height: 5px;
+  border: none;
+  width: 100%;
+  margin: 0px;
 
-    display: block;
+  display: block;
 }
 /* 메뉴 hover시 글씨 색 변화 */
-#menu li:hover > a { 
-    color: silver;
+#menu li:hover > a {
+  color: silver;
 }
 
 #name {
-    font-family:'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
-    margin-top: 100px;   
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  margin-top: 100px;
 }
-#name2{
-    font-family:'Noto Sans KR', sans-serif;
-    position: relative;
-    display: inline-block;
-    color: black;
-    margin-top: 120px;
-    text-align: center;
-    margin-left: 15px;
+#name2 {
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  display: inline-block;
+  color: black;
+  margin-top: 120px;
+  text-align: center;
+  margin-left: 15px;
 }
 /* 배너 넘기기 */
 
 /*  footer 부분 */
 
 #wrapper {
-    height: 100%;
+  height: 100%;
 }
-.footer{
-    overflow: hidden;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    list-style: none;
-    background-color: #CFB7A3;
+.footer {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  background-color: #cfb7a3;
 }
 #btn img {
-    width: 3%;
-    height: 3%;
-    margin-top: 30px;
+  width: 3%;
+  height: 3%;
+  margin-top: 30px;
 }

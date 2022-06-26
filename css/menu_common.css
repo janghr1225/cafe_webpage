@@ -1,9 +1,14 @@
 * {
+  /*초기화*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  /*x축 스크롤 없애기*/
+  overflow-x: hidden;
 }
 /*헤더 푸터용*/
 header {
