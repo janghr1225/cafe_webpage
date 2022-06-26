@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Cafe MAHALO </title>
+    <link rel="stylesheet" type="text/css" href="../css/MainFrame.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style type="text/css">
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script language="JavaScript">
+    </script>
 </head>
 <style>
     table, th, td {
@@ -12,8 +22,8 @@
       margin: auto;
     }
     table {
-      width: 70%;
-      height: 400px;
+      width: 80%;
+      height: 500px;
       margin: auto;
     }
 #title{
@@ -36,12 +46,40 @@
     background-color: white;
     width: 7%;
 }
-
-  </style>
+#btn img {
+    width: 3%;
+    height: 3%;
+    margin-top: 30px;
+}
+</style>
 <body>
+    <div>
+    <header>
+        <nav>
+            <a id="name" href="./CafeMain_signout.html">
+                <img id="logo" src="../img/logo4.png" alt="로고">
+                <span id="name2">MAHALO</span>
+            </a>
+            <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg"
+                style="width: 25px;height: 25px; margin-top: 10px;">
+            <ul id="menu">
+                <li> <a id="mypage" href="./login.html"> My Page </a></li>
+                <li> <a href="#"> MAHALO News </a></li>
+                <li> <a href="#"> Store </a></li>
+                <li> <a id="menu2"> Menu </a>
+                    <ul>
+                        <p class="m2"> <a href="./menu_DRINKS_main.html"> Drinks </a> </p>
+                        <p class="m2"> <a href="./menu_FOOD_main.html"> Food </a> </p>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <hr><!-- 메뉴 밑줄 -->
+        
     <table>
         <tr>
-            <th><h1>MY Page</h1></th>
+            <th><h3>MY Page</h3></th>
             <th></th>
             <th></th>
             <th></th>
@@ -57,9 +95,9 @@
         </tr>
         <tr id=>
             <th id="left part"></th>
-            <th id="heart" width= "35%"><img src="../img/Mypageheart.png" alt="point heart"></th>
-            <th width= "35%" id="point">User님은<br>
-                현재 0 포인트입니다.</th>
+            <th id="heart" width= "45%"><img src="/Users/pakminjoo/Desktop/cafe_webpage-master 2/img/하트.png" alt="point heart"></th>
+            <th width= "45%" id="point">Andy님은<br>
+                현재 150 포인트입니다.</th>
             <th id="right part">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
         </tr>
         <tr>
@@ -104,8 +142,76 @@
             <th>2022-06-17</th>
             <th>마곡점</th>
         </tr>
+        <tr>
+            <th colspan="4"><hr></th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>250P</th>
+            <th>2022-06-16</th>
+            <th>역삼점</th>
+        </tr>
+        <tr>
+            <th colspan="4"><hr></th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>250P</th>
+            <th>2022-06-16</th>
+            <th>역삼점</th>
+        </tr>
+        <tr>
+            <th colspan="4"><hr></th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>250P</th>
+            <th>2022-06-16</th>
+            <th>역삼점</th>
+        </tr>
     </table>
+    <br>
+    <footer>
+        <div class="footer">
+        <hr> 
+            <a href="#" id="btn">
+                <img src="../img/logo3.png">
+            </a>
+        <ul id="ft">
+            <li><B>CAFE MAHALO</B></li>
+            <li>개인정보처리방침</li>
+            <li>사업자등록증 123-45-12345</li>
+            <li>Tel : 02-123-4567</li>
+        </ul>
+        <address>주소: 서울특별시 강남구 언주로</address>
+        <li>&nbsp;</li>
+        </div>
+    </footer>
+
+    </div>  
 </body>
 </html>
-<br>
-<br>
+
+
+<script>
+    $('#menu2').hover(() => { //Menu hover시 Drinks로 변화
+        $('#menu2').html
+            ('<a style="color:silver;">Menu</a><span><p><a id="dfm1" href="./menu_DRINKS_main.html">Drinks</a></p> <p> <a id="dfm" href="./menu_FOOD_main.html"><span> Food </span></a></p>');
+
+    }, () => {
+        $('#menu2').html('Menu');
+    });
+
+    // sign hover시 색 변화
+    $('#sign').hover(() => { 
+    $('#sign').prop('style', 'color:silver')
+}, () => {
+    $('#sign').prop('style', 'color:black')
+})
+
+
+    // 로그인 전 마이페이지 클릭 시
+    $('#mypage').click(() => { 
+        alert("로그인 후 이용가능합니다."); //메세지 출력 후 로그인 페이지 이동
+    })
+</script>
