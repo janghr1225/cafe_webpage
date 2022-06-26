@@ -59,9 +59,10 @@ nav {
   float: right;
 }
 #name {
-  margin-top: 0;
+  margin-top: 2.1em;
   margin-left: 2.5em;
   height: 100%;
+  clear: right;
 }
 #name2 {
   width: 84.06px;
