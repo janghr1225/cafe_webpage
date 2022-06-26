@@ -219,6 +219,11 @@ a {
   padding: 3px 30px;
   color: #fff;
 }
+#centerItems {
+  /* width: 95%; */
+  width: 95%;
+  margin: 0 auto;
+}
 #showDrinkList {
   margin-bottom: 3em;
 }
