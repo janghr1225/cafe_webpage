@@ -49,7 +49,7 @@
             (* 부가서비스 : 마할로몰, 마할로카드 구매, 멤버십 서비스 확인 등)<br>
             아래의 이용약관을 읽어보신 후, 동의하신 다음 필요한 정보를 입력하시면 됩니다.<br>
             각 회원의 신상정보에 대해서는 “신용정보의 이용 및 보호에 관한 법률”에 의거 완벽한 보안을 유지할 것입니다. </p>
-
+        <!-- 약관동의 부분 -->
         <div>
             <dl class="wr_agreement">
                 <dt class="ft16B"> | 이용약관(필수) | </dt>
@@ -401,17 +401,17 @@
                 </dd>
             </dl>
         </div>
-
         <!-- 전체동의 버튼 -->
         <div class="agree_all">
             <label for="agree_all"><input type="checkbox" id="agree_all" name="agree_all" /> 위의 모든 이용약관에 동의합니다.</label>
         </div>
-
         <!-- 다음 버튼 -->
         <div class="btn_next">
             <button type="button" id="btnNext" style="width: 100px; height: 35px;" onclick="javascript:onAgree(); return false;"> 다음 </button>
         </div>
     </div>
+
+
     <!-- 풋터 -->
     <div id="footerhr">
         <hr> 
@@ -436,6 +436,7 @@
 
 </html>
 <script>
+
 
     // 체크박스 전체 선택
     $(function () {
@@ -499,3 +500,4 @@
 
 
 </script>
+<script src="../js/CafeMainjs_signout.js"></script>

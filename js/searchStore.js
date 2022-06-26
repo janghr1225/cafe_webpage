@@ -51,6 +51,11 @@ const arrLocal = [];
     }
 
 
+    if(selLocal=='전체' && subSelLocal == '전체'){
+      alert("지역을 선택해주세요.");
+      return false;
+    }
+
     for(i=0; i<arrLocal.length; i++){
 
         if((arrLocal[i] == selLocal || selLocal=='전체') && (arrSubLocal[i] == subSelLocal || subSelLocal == '전체' )){

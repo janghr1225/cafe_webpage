@@ -27,12 +27,17 @@
                 <img id="logo" src="../img/logo4.png" alt="로고">
                 <span id="name2">MAHALO</span>
             </a>
-            <a href="./login.html" id="sign"> Sign in </a> <img src="../img/sign.png" id="signimg" style="width: 30px;height: 30px; margin-top: 10px;">
+            <a href="#" id="sign">Sign in</a> <img src="../img/sign.png" id="signimg" style="width: 30px;height: 30px; margin-top: 10px;">
             <ul id="menu">
-                <li> <a id="mypage" href="./login.html"> My Page </a></li>
+                <!-- <li> <a id="mypage" href="./login.html"> My Page </a></li> -->
+                <li> <a id="mypage" > My Page </a></li>
                 <li> <a href="./CAFEnews.html"> MAHALO News </a></li>
-                <li> <a href="#"> Store </a></li>
+                <li> <a href="./searchStore.html"> Store </a></li>
+            
+            
                 <li> <a id="menu2"> Menu </a>
+            
+            
                 </li>
 
             </ul>
@@ -47,8 +52,9 @@
             <label id="id">아 이 디 &nbsp;&nbsp;&nbsp;<input type="text" name="id" class="inputCss" id="idInput"
                     placeholder="내용을 입력하세요"></label>
             <br>
-            <label id="pwd">비밀번호&nbsp;&nbsp;&nbsp;<input type="text" name="pwd" class="inputCss" id="pwdInput"
-                    placeholder="내용을 입력하세요"></label>
+            <label id="pwd">비밀번호&nbsp;&nbsp;&nbsp;<input type="password" name="pwd" class="inputCss" id="pwdInput"
+                style="width:215px; height: 21px;"
+                    placeholder="내용을 입력하세요"></label>        
         </div>
         <br>
         <button type="button" id="btnLogin" onclick="input_chk()" 
@@ -96,13 +102,50 @@
 
     $('#menu2').hover(() => { //Menu hover시 Drinks로 변화
         $('#menu2').html
-            ('<span><a href="./menu_DRINKS_main.html">Drinks&nbsp&nbsp&nbsp;</a> <a href="./menu_FOOD_main.html"><span> Food </span></a></span>');
+            ('<div><a id="menu2" style="color:silver"> Menu </a></div><div style="margin-top:1em" ><a href="./menu_DRINKS_main.html">Drinks</a></div><div style="margin-top:1em"><a href="./menu_FOOD_main.html">Food</a></div></div>');
     }, () => {
         $('#menu2').html('Menu');
     });
-    $('#mypage').click(() => { // 로그인 전 마이페이지 클릭 시
-        alert("로그인 후 이용가능합니다."); //메세지 출력 후 로그인 페이지 이동
-    })
+    // $('#mypage').click(() => { // 로그인 전 마이페이지 클릭 시
+    //     alert("로그인 후 이용가능합니다."); //메세지 출력 후 로그인 페이지 이동
+    // })
+    // 로그인 전 마이페이지 클릭 시
+$("#mypage").click(() => {
+    // console.log($("#sign").text());
+  if ($("#sign").text() == "Sign in") {
+    alert("로그인 후 이용가능합니다."); //메세지 출력 후 로그인 페이지 이동
+    // $("window").load("../html/login.html");
+    window.location.replace("../html/login.html");  //이동 전의 정보 저장가능
+    // $("#sign").text() = " Sign out ";
+    // console.log("????");
+// } else if ($("#sign").text() == "Sign out") {
+} else {
+    // $("window").load("");
+    console.log("이동테스트..");
+
+    window.location.replace("../html/newsMypage.html");  //이동 전의 정보 저장가능
+
+    // $("#sign").text("Sign in");
+  }
+});
+$("#sign").click(() => {
+    console.log($("#sign").text());
+  if ($("#sign").text() == " Sign in ") {
+    alert("로그인 후 이용가능합니다."); //메세지 출력 후 로그인 페이지 이동
+    // $("window").load("../html/login.html");
+    window.location.replace("../html/login.html");  //이동 전의 정보 저장가능
+    // console.log("????");
+    // } else if ($("#sign").text() == "Sign out") {
+    } else {
+        // $("window").load("");
+        console.log("이동테스트..");
+        $("#sign").text() = " Sign out ";
+
+    // window.location.replace("../html/newsMypage.html");  //이동 전의 정보 저장가능
+
+    // $("#sign").text("Sign in");
+  }
+});
     //로고 클릭 시 맨 위로
     $("#btn").click(function () {
         $('html').animate({ scrollTop: 0.01 }, 600);
@@ -135,7 +178,13 @@
         if (id.value == 'cafe0123') {
             if (password.value == 'cafe0123!@') {
                 alert('로그인 되었습니다!')
-                location.href = "./CafeMain_signout.html";
+                // location.href = "./CafeMain_signout.html";
+                let sign = document.getElementById("sign");
+                console.log(sign.innerText+"+++++");
+                // sign.innerHTML = "Sign out";
+                // $("#sign").text() = " Sign out ";
+                // window.location.replace("../html/login.html");
+                location.replace("../html/CafeMain_signout.html");///////////////////////싸인아웃으로
             }
             else {
                 alert('아이디와 비밀번호를 다시 한 번 확인해주세요!')

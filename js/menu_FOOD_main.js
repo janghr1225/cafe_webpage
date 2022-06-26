@@ -8,8 +8,55 @@ const leaveBtn = document.getElementById("leaveBtn");
 const drinkName = document.getElementsByClassName("drinkName");
 // const drinkName1 = document.getElementsByClassName("drinkName1");
 const drinkName2 = document.getElementsByClassName("drinkName2");
-
+const displayMenu = document.getElementById("displayMenu");
+/////////////////////////////////////////////////////////////////////헤더푸터이벤트
+const menu2 = document.getElementById("menu2");
 leaveBtn.setAttribute("src", "../menu_Drinks/delete_icon.png");
+displayMenu.classList.toggle("hiddenMenu");
+
+//헤더 메뉴풀다운
+menu2.addEventListener("mouseover", () => {
+  displayMenu.classList.toggle("hiddenMenu");
+  menu2.classList.toggle("silverClr");
+  if (displayMenu.classList.contains("hiddenMenu")) {
+    displayMenu.classList.toggle("hiddenMenu");
+    menu2.classList.toggle("silverClr");
+  }
+});
+menu2.addEventListener("mouseleave", () => {
+  // menu2.classList.toggle("silverClr");
+  displayMenu.classList.toggle("hiddenMenu");
+  menu2.classList.toggle("silverClr");
+});
+//scroll-to-top function
+const btn = document.getElementById("btn");
+function pageScroll() {
+  document.documentElement.style.scrollBehavior = "smooth";
+}
+function changeLoginStatus() {
+  // if (sign.innerHTML == "Sign Out") {
+  //   let result = confirm("로그아웃하시겠습니까?");
+  //   if (result == true) {
+  //     alert("로그아웃되었습니다.");
+  //     window.location.href = "http://www.w3schools.com";
+  //   } else {
+  //   }
+  // }
+  // if (sign.innerHTML == "Sign in") {
+  // }
+  // sign.innerHTML = "";
+  // sign.innerHTML = "Sign Out";
+}
+function accesMyPage() {
+  if (sign.innerHTML == "Sign Out") {
+    window.location.href = "./newsMypage.html";
+  }
+  if (sign.innerHTML == "Sign In") {
+    alert("로그인 후 이용가능합니다.");
+    window.location.href = "./login.html";
+  }
+}
+/////////////////////////////////////////////////////////////////////헤더푸터이벤트
 
 const allImgs = function () {
   // if (chkbx[0].checked == true)
@@ -158,7 +205,7 @@ const allTea = function () {
     if (chkbx[2].checked == true) {
       // console.log(chkbx[2].checked);
       showDrinkList.innerHTML +=
-        "<a><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+        "<a class='allItemsLink'><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
       // const drinksHref = document.querySelectorAll("a");
       const imgDrinks = document.getElementsByClassName("imgDrinks");
       const drinkName = document.getElementsByClassName("drinkName");
@@ -211,7 +258,7 @@ const allFrozen = function () {
   //화면에 보이기
   for (i = 0; i < arrImgFro.length; i++) {
     showDrinkList.innerHTML +=
-      "<a><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
+      "<a class='allItemsLink'><img class='imgDrinks'/><div class='drinkName'></div></a>"; //링크태그
     // const drinksHref = document.querySelectorAll("a");
     const imgDrinks = document.getElementsByClassName("imgDrinks");
     const drinkName = document.getElementsByClassName("drinkName");
@@ -448,7 +495,7 @@ const allTea_Fro = function () {
 
   //분류 (샐러드•샌드위치 ) 뽑아오기- 헤더
   showDrinkList.innerHTML += "<div id='drinkKind'></div>";
-  const drinkKind2 = document.getElementById("drinkKind");
+  const drinkKind = document.getElementById("drinkKind");
   drinkMenu.data.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     if (subtypeStr == '"브레드"') {
@@ -694,18 +741,16 @@ chkbx[3].addEventListener("click", () => {
 //모달창
 const leaveIcon = document.getElementsByTagName("i")[0];
 const leaveModal = document.getElementById("leaveModal");
+const menuMainWrap = document.getElementById("menuMainWrap");
 const body = document.querySelector("body");
 const modal2 = document.querySelector(".modal2");
 const allItemsLink = document.getElementsByClassName("allItemsLink");
+const modal_body = document.getElementsByClassName("modal_body");
 
-modal2.addEventListener("click", (event) => {
-  if (event.target === modal2) {
+modal2.addEventListener("click", () => {
+  if (modal2.classList.contains("show")) {
+    body.style.overflow = "auto";
     modal2.classList.toggle("show");
-    body.style.overflow = "hidden";
-    if (!modal2.classList.contains("show")) {
-      body.style.overflow = "auto";
-      body.style.overflow = "hidden";
-    }
   }
 });
 
@@ -714,7 +759,7 @@ modal2.addEventListener("click", (event) => {
 //버튼 mouseover하면 색 바꾸기, mouseleave하면 색 다시 돌려놓기
 leaveModal.addEventListener("click", () => {
   modal2.classList.toggle("show");
-  body.style.overflow = "hidden";
+  // body.style.overflow = "hidden";
   if (!modal2.classList.contains("show")) {
     // body.style.overflow = "hidden";
     body.style.overflow = "auto";
@@ -841,6 +886,7 @@ let arrays = drinkData.forEach((obj) => {
 // }
 function addInfo0() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   console.log("됐나?");
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
@@ -946,6 +992,7 @@ function addInfo0() {
 ////////////////////////////////////////////////////////////
 function addInfo1() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1048,6 +1095,7 @@ function addInfo1() {
 ////////////////////////////////////////////////////////////////////////////
 function addInfo2() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1150,6 +1198,7 @@ function addInfo2() {
 ///////////////////////////////////////////////////////////////////
 function addInfo3() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1252,6 +1301,7 @@ function addInfo3() {
 ///////////////////////////////////////////////////////////////////
 function addInfo4() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1354,6 +1404,7 @@ function addInfo4() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo5() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1456,6 +1507,7 @@ function addInfo5() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo6() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1558,6 +1610,7 @@ function addInfo6() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo7() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1660,6 +1713,7 @@ function addInfo7() {
 /////////////////////////////////////////////////////////////////////////////////////////라뗴*티
 function addInfo8() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1762,6 +1816,7 @@ function addInfo8() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo9() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1864,6 +1919,8 @@ function addInfo9() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo10() {
   modal2.classList.toggle("show");
+
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -1966,6 +2023,7 @@ function addInfo10() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo11() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2068,6 +2126,7 @@ function addInfo11() {
 //////////////////////////////////////////////////////////////////////////빙수 종류
 function addInfo12() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2170,6 +2229,7 @@ function addInfo12() {
 //////////////////////////////////////////////////////////////////////////빙수 종류
 function addInfo13() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2272,6 +2332,7 @@ function addInfo13() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo14() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2374,6 +2435,7 @@ function addInfo14() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo15() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2476,6 +2538,7 @@ function addInfo15() {
 //////////////////////////////////////////////////////////////////////////
 function addInfo16() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2578,6 +2641,7 @@ function addInfo16() {
 ///////////////////////////////////////////////////////////////////////////
 function addInfo17() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2680,6 +2744,7 @@ function addInfo17() {
 ///////////////////////////////////////////////////////////////////////////
 function addInfo18() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);
@@ -2782,6 +2847,7 @@ function addInfo18() {
 ///////////////////////////////////////////////////////////////////////////
 function addInfo19() {
   modal2.classList.toggle("show");
+  body.style.overflow = "hidden";
   drinkData.forEach((obj) => {
     let subtypeStr = JSON.stringify(obj.subtype);
     let kNameStr = JSON.stringify(obj.name);

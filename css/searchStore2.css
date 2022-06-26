@@ -1,301 +1,304 @@
 /* 로그인,회원가입 페이지 */
 
-body{
-    /* text-align: center; */
-    font-family: 'Noto Sans KR', sans-serif;
+body {
+  /* text-align: center; */
+  font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  /*x축 스크롤 없애기*/
+  overflow-x: hidden;
 }
 
 /* 약관동의 */
-label { 
-    display: block;
+label {
+  display: block;
 }
-#header{
-    overflow: hidden;
-    display: block;
+#header {
+  overflow: hidden;
+  display: block;
 }
 #menu li {
-    float: right;
-    display: block;
-    position: relative;
-    padding: 0;
-    list-style: none;
-    margin-top: 0px;
-    margin-bottom: 40px;
-    margin-right: 50px;
+  float: right;
+  display: block;
+  position: relative;
+  padding: 0;
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  margin-right: 50px;
 }
 #logo {
-    height: 90px;
-    width: 80px;
-    float: left;
-    margin-top: 40px;
-    margin-left: 80px;
+  height: 90px;
+  width: 80px;
+  float: left;
+  margin-top: 40px;
+  margin-left: 80px;
 }
 .m2 {
-    display: none;
+  display: none;
 }
 
-#menu li a{
-    display: inline-block;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    margin: 0;
-    color: black;
-    text-decoration: none;
+#menu li a {
+  display: inline-block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+  color: black;
+  text-decoration: none;
 }
-#sign { /*sign in, sign out */
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    color: black;
-    text-decoration: none;
-    float: right;
-    margin-right: 50px;
-    margin-top: 10px;
-    display: inline;
-    
+#sign {
+  /*sign in, sign out */
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  float: right;
+  margin-right: 50px;
+  margin-top: 10px;
+  display: inline;
 }
 #signimg {
-    float: right;
+  float: right;
 }
 #menu ul li a {
-    display: none;
+  display: none;
 }
 
 hr {
-    background-color: #e15c2d;
-    height: 5px;
-    border: none;
-    width: 100%;
-    margin: 0px;
-    float: right;
-    display: block;
+  background-color: #e15c2d;
+  height: 5px;
+  border: none;
+  width: 100%;
+  margin: 0px;
+  float: right;
+  display: block;
 }
 /* 메뉴 hover시 글씨 색 변화 */
-#menu li:hover > a { 
-    color: silver;
+#menu li:hover > a {
+  color: silver;
 }
-
 
 #ex1 article h1 {
-    display: inline-block;
-    text-align: center;
-    
+  display: inline-block;
+  text-align: center;
 }
 #name {
-    font-family:'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
-    margin-top: 100px;   
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  margin-top: 100px;
 }
-#name2{
-    font-family:'Noto Sans KR', sans-serif;
-    position: relative;
-    display: inline-block;
-    color: black;
-    margin-top: 100px;
-    text-align: center;
-    margin-left: 15px;
-    font-size: larger;
+#name2 {
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  display: inline-block;
+  color: black;
+  margin-top: 100px;
+  text-align: center;
+  margin-left: 15px;
+  font-size: larger;
 }
-#loginbody{
-    overflow: hidden;
-    display: block;
-    position: absolute;
-    top: 0px;
-    margin: 0 auto;
-    margin-top: 300px;
-    padding: 0;
-    position: absolute; /*relative;*/
-    width: 100%;
-    text-align: center;
-}
-
-#login_title{
-    /* margin-top: 30px; */
-    font-size: xx-large;
-    font-weight: bolder;
-    /* position: absolute; */
-    /* position: relative; */
+#loginbody {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: 0px;
+  margin: 0 auto;
+  margin-top: 300px;
+  padding: 0;
+  position: absolute; /*relative;*/
+  width: 100%;
+  text-align: center;
 }
 
-#welcome{
-    color: rgb(225, 92, 45);
-    margin-top: 50px;
-    margin-bottom: 10px;
-    font-size: xx-large;
-    font-weight: bolder;
-    /* animation: fadein 7s; */
-}
-#subinfo{
-    font-size: small;
-    margin: 30px;
+#login_title {
+  /* margin-top: 30px; */
+  font-size: xx-large;
+  font-weight: bolder;
+  /* position: absolute; */
+  /* position: relative; */
 }
 
-.sub_copy02{
-    font-size: small;
-    margin-bottom: 80px;
+#welcome {
+  color: rgb(225, 92, 45);
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: xx-large;
+  font-weight: bolder;
+  /* animation: fadein 7s; */
+}
+#subinfo {
+  font-size: small;
+  margin: 30px;
 }
 
-#btnLogin{
-    border-radius: 5px;
-    margin-top: 25px;
-    border: none;
-    background-color: rgb(168, 134, 101);
-    color: white;
-    text-align: center;
-    font-weight: bolder;
-}
-#btnSignup{
-    border-radius: 5px;
-    border: none;
-    margin-top: 5px;
-    background-color: rgb(168, 134, 101);
-    color: white;
-    text-align: center;
-    font-weight: bolder;
+.sub_copy02 {
+  font-size: small;
+  margin-bottom: 80px;
 }
 
-input[type=text] {
-    border-radius: 5px;
-    border-width: 1px;
-    width: 215px;
-    height: 25px;
-    border: 1px solid rgb(187, 187, 187);
+#btnLogin {
+  border-radius: 5px;
+  margin-top: 25px;
+  border: none;
+  background-color: rgb(168, 134, 101);
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+}
+#btnSignup {
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  background-color: rgb(168, 134, 101);
+  color: white;
+  text-align: center;
+  font-weight: bolder;
 }
 
-.btn_next{
-    margin-top: 80px;
-}
-#btnNext{
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(168, 134, 101);
-    color: white;
-    text-align: center;
-    font-weight: bolder;
+input[type="text"] {
+  border-radius: 5px;
+  border-width: 1px;
+  width: 215px;
+  height: 25px;
+  border: 1px solid rgb(187, 187, 187);
 }
 
-#nomember{
-    font-size: smaller;
-    margin-top: 100px;
-
+.btn_next {
+  margin-top: 80px;
+}
+#btnNext {
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(168, 134, 101);
+  color: white;
+  text-align: center;
+  font-weight: bolder;
 }
 
-#login1{
-    margin-top: 80px;
-    overflow: hidden;
-    display: block;
+#nomember {
+  font-size: smaller;
+  margin-top: 100px;
+}
+
+#login1 {
+  margin-top: 80px;
+  overflow: hidden;
+  display: block;
 }
 
 /* textarea */
-.wr_agreement{  
-    font-family: 'Noto Sans KR', sans-serif;
-    resize: none;
-    margin-bottom: 70px;
-
+.wr_agreement {
+  font-family: "Noto Sans KR", sans-serif;
+  resize: none;
+  margin-bottom: 70px;
 }
 
 /* dt태그 */
-.ft16B{
-    /* margin-left: 40px; */
-    margin-bottom: 15px;
-    margin-top: 40px;
-    font-weight: bold;
+.ft16B {
+  /* margin-left: 40px; */
+  margin-bottom: 15px;
+  margin-top: 40px;
+  font-weight: bold;
 }
 
 /* 전체동의 */
-.agree_all{
-    /* margin-left: 300px; */
-    margin-top: 80px;
-    /* background-color: rgb(240, 207, 173); */
+.agree_all {
+  /* margin-left: 300px; */
+  margin-top: 80px;
+  /* background-color: rgb(240, 207, 173); */
 }
 
 .btnType04 {
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(168, 134, 101);
-    color: white;
-    text-align: center;
-    font-weight: bolder;
-    width: 100px;
-    height: 35px;
-    margin: 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(168, 134, 101);
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  width: 100px;
+  height: 35px;
+  margin: 14px;
 }
 
 /* 테이블 css */
 table {
-    border-top: 1px solid #c5c5c5;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-	table-layout: fixed;
+  border-top: 1px solid #c5c5c5;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  table-layout: fixed;
 }
-th, td {
-    border-bottom: 1px solid #c5c5c5;
-    border-left: 1px solid #c5c5c5;
-    padding: 10px;
-    text-align: left;
+th,
+td {
+  border-bottom: 1px solid #c5c5c5;
+  border-left: 1px solid #c5c5c5;
+  padding: 10px;
+  text-align: left;
 }
-th:first-child, td:first-child {
-    border-left: none;
-}
-
-.btn_wr04{
-    margin-top: 100px;
+th:first-child,
+td:first-child {
+  border-left: none;
 }
 
-.loginbody{
-    text-align: center;
+.btn_wr04 {
+  margin-top: 100px;
 }
 
-span{
-    font-size: small;
+.loginbody {
+  text-align: center;
 }
 
-.btnType11{
-    outline: 0;
-    border: 0;
-}
-.btnType02{
-    outline: 0;
-    border: 0;
+span {
+  font-size: small;
 }
 
-#custPw, #custPwConf{
-    outline-color: #ebebeb;
+.btnType11 {
+  outline: 0;
+  border: 0;
+}
+.btnType02 {
+  outline: 0;
+  border: 0;
 }
 
-select{
-    /* -moz-appearance: none;
+#custPw,
+#custPwConf {
+  outline-color: #ebebeb;
+}
+
+select {
+  /* -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none; */
-    /* outline-color: #c5c5c5; */
-    height: 28px;
+  /* outline-color: #c5c5c5; */
+  height: 28px;
 }
 
 /* footer  */
-#footerhr{
-    bottom: 0;
-    margin-top: 1500px;
-    display: block;
-    overflow: hidden;
-    position: inherit;
+#footerhr {
+  bottom: 0;
+  margin-top: 1500px;
+  display: block;
+  overflow: hidden;
+  position: inherit;
 }
 #btn img {
-    margin-left: 50%;
-    width: 3%;
-    height: 3%;
-    margin-top: 30px;
+  margin-left: 50%;
+  width: 3%;
+  height: 3%;
+  margin-top: 30px;
 }
-#ft{
-    margin-left: 1%;
-    text-decoration: none;
-    list-style: none;
-    text-align: center;
+#ft {
+  margin-left: 1%;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
 }
-#ftft{
-    background-color: #CFB7A3;
+#ftft {
+  background-color: #cfb7a3;
 }

@@ -1,14 +1,102 @@
 * {
+  /*초기화*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
 }
+body {
+  /*x축 스크롤 없애기*/
+  overflow-x: hidden;
+}
+/*헤더 푸터용*/
 header {
   margin-bottom: 3em;
   height: 3em;
+  width: 100vw;
+  height: 40vh;
+  font-weight: bold;
+  font-size: 20px;
 }
+.silverClr {
+  color: silver;
+}
+.hiddenMenu {
+  display: none;
+}
+#signInSilv:hover {
+  display: inline;
+  color: silver;
+}
+#signIn_wrap {
+  height: 2em;
+  display: flex;
+}
+
+#signInSilv {
+  display: inline;
+  color: black;
+}
+#signInlink {
+  display: inline-block;
+}
+nav {
+  width: 100vw;
+  height: 37vh;
+}
+#sign {
+  float: right;
+  margin: 0.7em 5em 0 0;
+  width: 4.3em;
+  font-size: 16px;
+  display: inline;
+}
+#signimg {
+  display: inline;
+  width: 30px;
+  height: 30px;
+  margin-left: 87em;
+}
+#name {
+  margin-top: 0;
+  margin-left: 2.5em;
+  height: 100%;
+}
+#name2 {
+  width: 84.06px;
+  height: 28.2px;
+  float: right;
+  margin-right: 5.5em;
+  margin-top: 3.7em;
+  display: block;
+}
+#logoWrap {
+  height: 7em;
+}
+#logo {
+  width: 80px;
+  height: 90px;
+  margin-left: 1vw;
+}
+#menu {
+  display: inline-flex;
+  margin: 1em 0;
+  float: right;
+  width: 27.5em;
+  list-style: none;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align: center;
+}
+#mypage {
+  display: inline;
+  width: 1em;
+}
+a:hover {
+  color: silver;
+}
+/*헤더 푸터용 끝*/
 #menuMainWrap {
   /* width: 100vw; */
   height: 100%;
@@ -24,6 +112,15 @@ header {
 }
 h2 {
   color: #a88665;
+}
+#horiRu {
+  background-color: #e15c2d;
+  height: 5px;
+  border: none;
+  width: 100%;
+  margin-bottom: 3em;
+  float: right;
+  display: block;
 }
 #menuHr {
   margin: 0.5em 0;
@@ -43,7 +140,23 @@ h2 {
 img {
   width: 16em;
 }
-img:hover {
+footer {
+  background-color: #cfb7a3;
+  height: 16em;
+}
+#btn {
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+  display: block;
+}
+/*헤더 푸터 끝*/
+#drinkImg:hover {
+  transform: scale(1.2);
+}
+.imgDrinks:hover {
+  transform: scale(1.2);
+}
+.imgDrinks2:hover {
   transform: scale(1.2);
 }
 .drinkName {
@@ -66,17 +179,17 @@ a {
   text-decoration: none;
   color: black;
 }
-a:hover {
+.allItemsLink:hover {
   color: #e15c2d;
 }
-.drinkName {
-  display: inline;
+.cofLink:hover {
+  color: #e15c2d;
 }
-.drinkName2 {
-  display: inline;
+.tlink:hover {
+  color: #e15c2d;
 }
-.drinkName3 {
-  display: inline;
+.flink:hover {
+  color: #e15c2d;
 }
 #drinkKind {
   width: 90%;
@@ -113,12 +226,18 @@ a:hover {
   border: none;
   float: right;
   margin: 2em 1em 0 0;
+  background-color: white;
+}
+#leaveBtn {
+  font-weight: 900;
+  font-size: 2em;
 }
 .modal2.show {
   display: block;
   z-index: 100;
   height: 100%;
 }
+
 .modal2 {
   position: absolute;
   top: 0;
@@ -131,12 +250,12 @@ a:hover {
 }
 #relative_body2 {
   position: relative;
-  margin-top: 15%;
-  height: 70vh;
+  /* margin-top: 15%; */
+  height: 100%;
 }
 .modal_body {
-  position: absolute;
-  top: 75%;
+  position: fixed;
+  top: 85%;
   left: 50%;
   width: 50em;
   max-width: 60em;
