@@ -146,10 +146,9 @@ footer{
 </html>
 
 <script>
-    $('#menu2').hover(() => { //Menu hover시 Drinks로 변화
+ $('#menu2').hover(() => { //Menu hover시 Drinks로 변화
         $('#menu2').html
-            ('<a style="color:silver;">Menu</a><span><p><a id="dfm1" href="./menu_DRINKS_main.html">Drinks</a></p> <p> <a id="dfm" href="./menu_FOOD_main.html"><span> Food </span></a></p>');
-
+            ('<div><a id="menu2" style="color:silver"> Menu </a></div><div style="margin-top:1em" ><a href="./menu_DRINKS_main.html">Drinks</a></div><div style="margin-top:1em"><a href="./menu_FOOD_main.html">Food</a></div></div>');
     }, () => {
         $('#menu2').html('Menu');
     });
