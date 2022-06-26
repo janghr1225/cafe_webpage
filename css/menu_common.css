@@ -56,7 +56,7 @@ nav {
   display: inline;
   width: 30px;
   height: 30px;
-  margin-left: 87em;
+  float: right;
 }
 #name {
   margin-top: 0;
