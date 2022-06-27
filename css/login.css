@@ -163,7 +163,14 @@ input[type="text"] {
   width: 215px;
   height: 25px;
   border: 1px solid rgb(187, 187, 187);
+}input[type="password"] {
+  border-radius: 5px;
+  border-width: 1px;
+  width: 215px;
+  height: 25px;
+  border: 1px solid rgb(187, 187, 187);
 }
+
 
 .btn_next {
   margin-top: 80px;
