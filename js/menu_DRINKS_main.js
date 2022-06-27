@@ -35,20 +35,7 @@ let sign = document.getElementById("sign");
 //마이페이지 이용전 alert
 
 ///////////////////////////////////////////////////////////////////////////
-// sign.innerHTML = "Sign Out"; //설정 테스트
-// window.on;
 sign.innerHTML = "Sign out";
-//로그인 성공했을 떄에 따라서 signin의 innerHTML값을 바꿔줘야한다
-//http://127.0.0.1:5504/html/login.html
-// let url1 = new URL("http://127.0.0.1:5504/html/login.html/search"); //로그인화면
-// console.log(url1);
-// url1.searchParams.set("username", "cafe0123");
-// url1.searchParams.set("password", "cafe0123123!@");
-// for (let [name, value] of url1.searchParams) {
-//   alert(`${name}=${value}`); // username=cafe0123, then password=cafe0123123!@
-// }
-// console.log(url1);
-// console.log(url1);
 
 function changeLoginStatus() {
   if (sign.innerHTML == "Sign out") {
