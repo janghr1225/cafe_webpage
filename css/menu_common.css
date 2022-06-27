@@ -47,8 +47,8 @@ nav {
 }
 #sign {
   float: right;
-  margin: 0.7em 5em 0 0;
-  width: 4.3em;
+  margin: 0.7em 2em 0px 0px;
+  width: 4.2em;
   font-size: 16px;
   display: inline;
 }
@@ -56,7 +56,7 @@ nav {
   display: inline;
   width: 30px;
   height: 30px;
-  float: right;
+  /* float: right; */
 }
 #name {
   margin-top: 0;
