@@ -12,10 +12,10 @@ body {
 }
 /*헤더 푸터용*/
 header {
-  /* margin-bottom: 3em; */
+  margin-bottom: 3em;
   height: 3em;
   width: 100vw;
-  height: 42vh;
+  height: 40vh;
   font-weight: bold;
   font-size: 20px;
 }
@@ -28,7 +28,6 @@ header {
 #signInSilv:hover {
   display: inline;
   color: silver;
-  clear: both;
 }
 #signIn_wrap {
   height: 2em;
@@ -40,46 +39,29 @@ header {
   color: black;
 }
 #signInlink {
-  /* display: inline-block; */
-  /* float: right; */
-  width: 3em;
-  margin-left: 85%;
+  display: inline-block;
 }
 nav {
   width: 100vw;
-  height: 27vh;
+  height: 37vh;
 }
 #sign {
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: bold;
+  float: right;
+  margin: 0.7em 5em 0 0;
+  width: 4.3em;
   font-size: 16px;
-  color: black;
-  width: fit-content;
-  text-decoration: none;
-  float: right;
-  margin: 14px 77px 0 0;
   display: inline;
-}
-#signOutWrap {
-  float: right;
-  width: 10em;
-}
-#sign:hover {
-  color: silver;
 }
 #signimg {
   display: inline;
   width: 30px;
   height: 30px;
-  margin-top: 0;
-  /* float: right; */
-  /* margin-right: 8vw; */
+  float: right;
 }
 #name {
-  /* margin-top: 2.1em; */
+  margin-top: 0;
   margin-left: 2.5em;
   height: 100%;
-  clear: right;
 }
 #name2 {
   width: 84.06px;
@@ -99,7 +81,7 @@ nav {
 }
 #menu {
   display: inline-flex;
-  margin: 0 0 3em 0;
+  margin: 1em 0;
   float: right;
   width: 27.5em;
   list-style: none;
@@ -177,9 +159,6 @@ footer {
 .imgDrinks2:hover {
   transform: scale(1.2);
 }
-.imgDrinks3:hover {
-  transform: scale(1.2);
-}
 .drinkName {
   display: inline-block;
   font-size: 12px;
@@ -195,6 +174,7 @@ footer {
 a {
   display: inline-block;
   margin: 1em;
+  margin-left: 1.5em;
   width: 16em;
   text-align: center;
   text-decoration: none;
@@ -213,7 +193,7 @@ a {
   color: #e15c2d;
 }
 #drinkKind {
-  width: 90%;
+  width: 100%;
   font-size: 24px;
   padding: 0.5em;
   margin: 0 auto;
@@ -222,7 +202,7 @@ a {
   color: #fff;
 }
 #drinkKind2 {
-  width: 90%;
+  width: 100%;
   font-size: 24px;
   padding: 0.5em;
   margin: 0 auto;
@@ -231,7 +211,7 @@ a {
   color: #fff;
 }
 #drinkKind3 {
-  width: 90%;
+  width: 100%;
   font-size: 24px;
   padding: 0.5em;
   margin: 0 auto;
@@ -239,13 +219,9 @@ a {
   padding: 3px 30px;
   color: #fff;
 }
-#centerItems {
-  /* width: 95%; */
-  width: 95%;
-  margin: 0 auto;
-}
 #showDrinkList {
   margin-bottom: 3em;
+  margin: 4em auto;
 }
 /*모달창 띄워주기*/
 #leaveModal {
