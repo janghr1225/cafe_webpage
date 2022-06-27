@@ -12,10 +12,10 @@ body {
 }
 /*헤더 푸터용*/
 header {
-  margin-bottom: 3em;
+  /* margin-bottom: 3em; */
   height: 3em;
   width: 100vw;
-  height: 40vh;
+  height: 42vh;
   font-weight: bold;
   font-size: 20px;
 }
@@ -28,6 +28,7 @@ header {
 #signInSilv:hover {
   display: inline;
   color: silver;
+  clear: both;
 }
 #signIn_wrap {
   height: 2em;
@@ -39,27 +40,43 @@ header {
   color: black;
 }
 #signInlink {
-  display: inline-block;
+  /* display: inline-block; */
+  /* float: right; */
+  width: 3em;
+  margin-left: 85%;
 }
 nav {
   width: 100vw;
   height: 27vh;
 }
 #sign {
-  float: right;
-  margin: 0.7em 5em 0 0;
-  width: 4.3em;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
   font-size: 16px;
+  color: black;
+  width: fit-content;
+  text-decoration: none;
+  float: right;
+  margin: 14px 77px 0 0;
   display: inline;
+}
+#signOutWrap {
+  float: right;
+  width: 10em;
+}
+#sign:hover {
+  color: silver;
 }
 #signimg {
   display: inline;
   width: 30px;
   height: 30px;
-  float: right;
+  margin-top: 0;
+  /* float: right; */
+  /* margin-right: 8vw; */
 }
 #name {
-  margin-top: 2.1em;
+  /* margin-top: 2.1em; */
   margin-left: 2.5em;
   height: 100%;
   clear: right;
@@ -82,7 +99,7 @@ nav {
 }
 #menu {
   display: inline-flex;
-  margin: 2.4em 0 0 0;
+  margin: 0 0 3em 0;
   float: right;
   width: 27.5em;
   list-style: none;

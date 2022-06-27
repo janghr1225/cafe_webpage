@@ -16,17 +16,26 @@
   <body>
     <header id="header">
       <nav>
-        <a
-          id="sign"
-          onclick="
+        <div>
+          <img
+            src="../img/sign.png"
+            id="signimg"
+            style="
+              width: 30px;
+              height: 30px;
+              margin-top: 11px;
+              margin-left: 91%;
+              flex: right;
+            "
+          />
+          <a
+            href="#"
+            id="sign"
+            onclick="
         changeLoginStatus()"
-          >Sign out</a
-        >
-        <img
-          src="../img/sign.png"
-          id="signimg"
-          style="width: 30px; height: 30px; margin-top: 10px; flex: right"
-        />
+            >Sign out</a
+          >
+        </div>
         <div id="logoWrap">
           <a href="./CafeMain.html" id="name" style="height: 100%">
             <img id="logo" src="../img/logo4.png" alt="로고" />
@@ -39,6 +48,7 @@
           <ul id="menu">
             <li>
               <a
+                href="#"
                 onclick="
               accesMyPage()"
                 id="mypage"
